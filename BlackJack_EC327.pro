@@ -15,6 +15,7 @@ SOURCES += \
     mainwindow.cpp
 
 HEADERS += \
+    Card.h \
     mainwindow.h
 
 FORMS += \
