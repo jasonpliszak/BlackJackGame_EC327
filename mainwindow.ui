@@ -17,37 +17,20 @@
    <string notr="true">background-color: rgb(34, 129, 20);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="play_button">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>180</x>
       <y>260</y>
-      <width>100</width>
-      <height>32</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);
-</string>
-    </property>
-    <property name="text">
-     <string>PushButton</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>150</x>
-      <y>260</y>
-      <width>100</width>
-      <height>32</height>
+      <width>150</width>
+      <height>40</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(235, 255, 240);</string>
     </property>
     <property name="text">
-     <string>PushButton</string>
+     <string>Play BlackJack</string>
     </property>
    </widget>
   </widget>

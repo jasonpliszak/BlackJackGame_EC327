@@ -55,13 +55,13 @@ OBJECTS_DIR   = ./
 SOURCES       = ../../Card.cpp \
 		../../Deck.cpp \
 		../../main.cpp \
-		../../mainwindow.cpp moc_Card.cpp \
+		../../mainwindow.cpp qrc_qmake_qmake_immediate.cpp \
 		moc_mainwindow.cpp
 OBJECTS       = Card.o \
 		Deck.o \
 		main.o \
 		mainwindow.o \
-		moc_Card.o \
+		qrc_qmake_qmake_immediate.o \
 		moc_mainwindow.o
 DIST          = /Qt/6.7.0/macos/mkspecs/features/spec_pre.prf \
 		/Qt/6.7.0/macos/mkspecs/features/device_config.prf \
@@ -263,6 +263,7 @@ DIST          = /Qt/6.7.0/macos/mkspecs/features/spec_pre.prf \
 		/Qt/6.7.0/macos/mkspecs/features/qt_config.prf \
 		/Qt/6.7.0/macos/mkspecs/macx-clang/qmake.conf \
 		/Qt/6.7.0/macos/mkspecs/features/spec_post.prf \
+		../../.qmake.stash \
 		/Qt/6.7.0/macos/mkspecs/features/exclusive_builds.prf \
 		/Qt/6.7.0/macos/mkspecs/features/mac/sdk.prf \
 		/Qt/6.7.0/macos/mkspecs/features/toolchain.prf \
@@ -305,7 +306,7 @@ TARGET        = BlackJack_EC327.app/Contents/MacOS/BlackJack_EC327
 EXPORT_QMAKE_MAC_SDK = macosx
 EXPORT_QMAKE_MAC_SDK_VERSION = 14.4
 EXPORT_QMAKE_XCODE_DEVELOPER_PATH = /Library/Developer/CommandLineTools
-EXPORT__QMAKE_STASH_ = 
+EXPORT__QMAKE_STASH_ = /Users/jasonpliszak/BlackJack_EC327/build/Qt_6_7_0_for_macOS-Debug/.qmake.stash
 EXPORT_VALID_ARCHS = x86_64 arm64
 EXPORT_DEFAULT_ARCHS = arm64
 EXPORT_ARCHS = $(filter $(EXPORT_VALID_ARCHS), $(if $(ARCHS), $(ARCHS), $(if $(EXPORT_DEFAULT_ARCHS), $(EXPORT_DEFAULT_ARCHS), $(EXPORT_VALID_ARCHS))))
@@ -521,6 +522,7 @@ Makefile: ../../BlackJack_EC327.pro ../../../Qt/6.7.0/macos/mkspecs/features/spe
 		../../../Qt/6.7.0/macos/mkspecs/features/qt_config.prf \
 		../../../Qt/6.7.0/macos/mkspecs/macx-clang/qmake.conf \
 		../../../Qt/6.7.0/macos/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		../../../Qt/6.7.0/macos/mkspecs/features/exclusive_builds.prf \
 		../../../Qt/6.7.0/macos/mkspecs/features/mac/sdk.prf \
 		../../../Qt/6.7.0/macos/mkspecs/features/toolchain.prf \
@@ -551,6 +553,7 @@ Makefile: ../../BlackJack_EC327.pro ../../../Qt/6.7.0/macos/mkspecs/features/spe
 		../../../Qt/6.7.0/macos/mkspecs/features/yacc.prf \
 		../../../Qt/6.7.0/macos/mkspecs/features/lex.prf \
 		../../BlackJack_EC327.pro \
+		qmake_qmake_immediate.qrc \
 		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Resources/QtWidgets.prl \
 		../../../Qt/6.7.0/macos/lib/QtGui.framework/Resources/QtGui.prl \
 		../../../Qt/6.7.0/macos/lib/QtCore.framework/Resources/QtCore.prl
@@ -755,6 +758,7 @@ Makefile: ../../BlackJack_EC327.pro ../../../Qt/6.7.0/macos/mkspecs/features/spe
 ../../../Qt/6.7.0/macos/mkspecs/features/qt_config.prf:
 ../../../Qt/6.7.0/macos/mkspecs/macx-clang/qmake.conf:
 ../../../Qt/6.7.0/macos/mkspecs/features/spec_post.prf:
+.qmake.stash:
 ../../../Qt/6.7.0/macos/mkspecs/features/exclusive_builds.prf:
 ../../../Qt/6.7.0/macos/mkspecs/features/mac/sdk.prf:
 ../../../Qt/6.7.0/macos/mkspecs/features/toolchain.prf:
@@ -785,6 +789,7 @@ Makefile: ../../BlackJack_EC327.pro ../../../Qt/6.7.0/macos/mkspecs/features/spe
 ../../../Qt/6.7.0/macos/mkspecs/features/yacc.prf:
 ../../../Qt/6.7.0/macos/mkspecs/features/lex.prf:
 ../../BlackJack_EC327.pro:
+qmake_qmake_immediate.qrc:
 ../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Resources/QtWidgets.prl:
 ../../../Qt/6.7.0/macos/lib/QtGui.framework/Resources/QtGui.prl:
 ../../../Qt/6.7.0/macos/lib/QtCore.framework/Resources/QtCore.prl:
@@ -812,6 +817,7 @@ dist: distdir FORCE
 distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
+	$(COPY_FILE) --parents qmake_qmake_immediate.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents ../../Card.h ../../mainwindow.h $(DISTDIR)/
 	$(COPY_FILE) --parents ../../Card.cpp ../../Deck.cpp ../../main.cpp ../../mainwindow.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../../mainwindow.ui $(DISTDIR)/
@@ -824,6 +830,7 @@ clean: compiler_clean
 
 distclean: clean 
 	-$(DEL_FILE) -r BlackJack_EC327.app
+	-$(DEL_FILE) .qmake.stash
 	-$(DEL_FILE) Makefile
 
 
@@ -840,19 +847,161 @@ check: first
 
 benchmark: first
 
-compiler_rcc_make_all:
+compiler_rcc_make_all: qrc_qmake_qmake_immediate.cpp
 compiler_rcc_clean:
-compiler_moc_header_make_all: moc_Card.cpp moc_mainwindow.cpp
-compiler_moc_header_clean:
-	-$(DEL_FILE) moc_Card.cpp moc_mainwindow.cpp
-moc_Card.cpp: ../../Card.h \
-		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/QGraphicsObject \
-		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/qgraphicsitem.h \
-		../../../Qt/6.7.0/macos/lib/QtCore.framework/Headers/QPointF \
-		../../../Qt/6.7.0/macos/lib/QtCore.framework/Headers/qpoint.h \
-		../../../Qt/6.7.0/macos/libexec/moc
-	/Users/jasonpliszak/Qt/6.7.0/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=15 -D__clang_minor__=0 -D__clang_patchlevel__=0 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Users/jasonpliszak/Qt/6.7.0/macos/mkspecs/macx-clang -I/Users/jasonpliszak/BlackJack_EC327 -I/Users/jasonpliszak/Qt/6.7.0/macos/lib/QtWidgets.framework/Headers -I/Users/jasonpliszak/Qt/6.7.0/macos/lib/QtGui.framework/Headers -I/Users/jasonpliszak/Qt/6.7.0/macos/lib/QtCore.framework/Headers -I. -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -I/Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I/Library/Developer/CommandLineTools/usr/include -F/Users/jasonpliszak/Qt/6.7.0/macos/lib ../../Card.h -o moc_Card.cpp
+	-$(DEL_FILE) qrc_qmake_qmake_immediate.cpp
+qrc_qmake_qmake_immediate.cpp: qmake_qmake_immediate.qrc \
+		../../../Qt/6.7.0/macos/libexec/rcc \
+		../../../Downloads/Blackjack/app/src/main/res/drawable/eight_of_hearts.xml \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-xxhdpi/king_of_spades.png \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-xhdpi/king_of_spades.png \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-mdpi/king_of_spades.png \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-hdpi/king_of_spades.png \
+		../../../Downloads/Blackjack/app/src/main/java/com/bryancapps/blackjack/views/CardFlip.java \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-xxhdpi/queen_of_hearts.png \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-xhdpi/queen_of_hearts.png \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-mdpi/queen_of_hearts.png \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-hdpi/queen_of_hearts.png \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-xxhdpi/main_image.png \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-xhdpi/main_image.png \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-mdpi/main_image.png \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-hdpi/main_image.png \
+		../../../Downloads/Blackjack/app/src/test/java/com/bryancapps/blackjack/Models/HandTest.java \
+		../../../Downloads/Blackjack/app/src/main/java/com/bryancapps/blackjack/views/GameActivity.java \
+		../../../Downloads/Blackjack/app/src/main/java/com/bryancapps/blackjack/views/GameFragment.java \
+		../../../Downloads/Blackjack/app/src/main/res/layout/fragment_game.xml \
+		../../../Downloads/Blackjack/screenshot1.png \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-xxhdpi/jack_of_diamonds.png \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-xhdpi/jack_of_diamonds.png \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-mdpi/jack_of_diamonds.png \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-hdpi/jack_of_diamonds.png \
+		../../../Downloads/Blackjack/app/src/main/res/drawable/nine_of_diamonds.xml \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-xxhdpi/king_of_diamonds.png \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-xhdpi/king_of_diamonds.png \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-mdpi/king_of_diamonds.png \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-hdpi/king_of_diamonds.png \
+		../../../Downloads/Blackjack/gradlew \
+		../../../Downloads/Blackjack/app/src/main/res/drawable/ten_of_hearts.xml \
+		../../../Downloads/Blackjack/app/src/test/java/com/bryancapps/blackjack/Models/PlayerTest.java \
+		../../../Downloads/Blackjack/gradlew.bat \
+		../../../Downloads/Blackjack/app/proguard-rules.pro \
+		../../../Downloads/Blackjack/gradle.properties \
+		../../../Downloads/Blackjack/app/src/main/res/drawable/nine_of_hearts.xml \
+		../../../Downloads/Blackjack/app/src/main/res/values/strings.xml \
+		../../../Downloads/Blackjack/app/src/main/res/drawable/three_of_clubs.xml \
+		../../../Downloads/Blackjack/app/src/main/res/drawable/ten_of_clubs.xml \
+		../../../Downloads/Blackjack/app/src/main/res/values/styles.xml \
+		../../../Downloads/Blackjack/app/src/main/res/drawable/two_of_diamonds.xml \
+		../../../Downloads/Blackjack/app/src/main/res/drawable/ten_of_spades.xml \
+		../../../Downloads/Blackjack/app/src/main/res/drawable/four_of_diamonds.xml \
+		../../../Downloads/Blackjack/screenshot2.png \
+		../../../Downloads/Blackjack/app/src/main/java/com/bryancapps/blackjack/Models/GameStatus.java \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-xxhdpi/queen_of_spades.png \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-xhdpi/queen_of_spades.png \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-mdpi/queen_of_spades.png \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-hdpi/queen_of_spades.png \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-xxhdpi/jack_of_spades.png \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-xhdpi/jack_of_spades.png \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-mdpi/jack_of_spades.png \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-hdpi/jack_of_spades.png \
+		../../../Downloads/Blackjack/README.md \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-xxhdpi/king_of_hearts.png \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-xhdpi/king_of_hearts.png \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-mdpi/king_of_hearts.png \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-hdpi/king_of_hearts.png \
+		../../../Downloads/Blackjack/app/src/main/res/xml/backupscheme.xml \
+		../../../Downloads/Blackjack/app/src/main/res/drawable/six_of_hearts.xml \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-xxhdpi/jack_of_hearts.png \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-xhdpi/jack_of_hearts.png \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-mdpi/jack_of_hearts.png \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-hdpi/jack_of_hearts.png \
+		../../../Downloads/Blackjack/app/src/main/res/values/integers.xml \
+		../../../Downloads/Blackjack/app/src/main/AndroidManifest.xml \
+		../../../Downloads/Blackjack/app/src/main/java/com/bryancapps/blackjack/Models/Player.java \
+		../../../Downloads/Blackjack/app/src/test/java/com/bryancapps/blackjack/Models/Strategy.java \
+		../../../Downloads/Blackjack/app/src/main/res/drawable/seven_of_diamonds.xml \
+		../../../Downloads/Blackjack/app/src/main/res/layout/activity_main.xml \
+		../../../Downloads/Blackjack/app/src/main/java/com/bryancapps/blackjack/Models/Hand.java \
+		../../../Downloads/Blackjack/app/src/main/res/drawable/eight_of_clubs.xml \
+		../../../Downloads/Blackjack/settings.gradle \
+		../../../Downloads/Blackjack/app/src/main/res/values-w820dp/dimens.xml \
+		../../../Downloads/Blackjack/app/src/main/res/values/dimens.xml \
+		../../../Downloads/Blackjack/app/src/main/res/drawable/nine_of_spades.xml \
+		../../../Downloads/Blackjack/app/src/main/res/layout/activity_game.xml \
+		../../../Downloads/Blackjack/gradle/wrapper/gradle-wrapper.properties \
+		../../../Downloads/Blackjack/app/src/main/res/drawable/four_of_hearts.xml \
+		../../../Downloads/Blackjack/app/src/main/res/drawable/red_back.xml \
+		../../../Downloads/Blackjack/app/src/main/res/drawable/eight_of_spades.xml \
+		../../../Downloads/Blackjack/screenshot3.png \
+		../../../Downloads/Blackjack/app/src/main/java/com/bryancapps/blackjack/Models/Deck.java \
+		../../../Downloads/Blackjack/app/src/main/java/com/bryancapps/blackjack/Models/GameOutcome.java \
+		../../../Downloads/Blackjack/app/src/main/res/drawable/seven_of_spades.xml \
+		../../../Downloads/Blackjack/app/src/main/res/layout/card_item.xml \
+		../../../Downloads/Blackjack/app/src/main/res/drawable/three_of_spades.xml \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-xxhdpi/king_of_clubs.png \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-xhdpi/king_of_clubs.png \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-mdpi/king_of_clubs.png \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-hdpi/king_of_clubs.png \
+		../../../Downloads/Blackjack/app/src/main/res/drawable/nine_of_clubs.xml \
+		../../../Downloads/Blackjack/app/src/main/res/drawable/two_of_hearts.xml \
+		../../../Downloads/Blackjack/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png \
+		../../../Downloads/Blackjack/app/src/main/res/mipmap-xxhdpi/ic_launcher.png \
+		../../../Downloads/Blackjack/app/src/main/res/mipmap-xhdpi/ic_launcher.png \
+		../../../Downloads/Blackjack/app/src/main/res/mipmap-mdpi/ic_launcher.png \
+		../../../Downloads/Blackjack/app/src/main/res/mipmap-hdpi/ic_launcher.png \
+		../../../Downloads/Blackjack/app/src/main/java/com/bryancapps/blackjack/Models/DealerHand.java \
+		../../../Downloads/Blackjack/app/src/main/res/drawable/three_of_diamonds.xml \
+		../../../Downloads/Blackjack/app/src/main/java/com/bryancapps/blackjack/Models/GameState.java \
+		../../../Downloads/Blackjack/app/src/main/res/drawable/ace_of_spades.xml \
+		../../../Downloads/Blackjack/app/src/test/java/com/bryancapps/blackjack/Models/GameTest.java \
+		../../../Downloads/Blackjack/app/src/test/java/com/bryancapps/blackjack/Models/CardTest.java \
+		../../../Downloads/Blackjack/app/src/main/res/drawable/seven_of_hearts.xml \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-xxhdpi/jack_of_clubs.png \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-xhdpi/jack_of_clubs.png \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-mdpi/jack_of_clubs.png \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-hdpi/jack_of_clubs.png \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-xxhdpi/queen_of_clubs.png \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-xhdpi/queen_of_clubs.png \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-mdpi/queen_of_clubs.png \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-hdpi/queen_of_clubs.png \
+		../../../Downloads/Blackjack/app/src/main/res/drawable/five_of_diamonds.xml \
+		../../../Downloads/Blackjack/app/src/main/res/drawable/four_of_spades.xml \
+		../../../Downloads/Blackjack/app/src/main/java/com/bryancapps/blackjack/Models/PlayerState.java \
+		../../../Downloads/Blackjack/local.properties \
+		../../../Downloads/Blackjack/app/src/main/res/drawable/ace_of_hearts.xml \
+		../../../Downloads/Blackjack/app/src/main/res/drawable/five_of_hearts.xml \
+		../../../Downloads/Blackjack/app/src/main/res/drawable/six_of_spades.xml \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-xxhdpi/queen_of_diamonds.png \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-xhdpi/queen_of_diamonds.png \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-mdpi/queen_of_diamonds.png \
+		../../../Downloads/Blackjack/app/src/main/res/drawable-hdpi/queen_of_diamonds.png \
+		../../../Downloads/Blackjack/app/src/main/java/com/bryancapps/blackjack/Models/Game.java \
+		../../../Downloads/Blackjack/gradle/wrapper/gradle-wrapper.jar \
+		../../../Downloads/Blackjack/app/src/main/res/drawable/six_of_clubs.xml \
+		../../../Downloads/Blackjack/app/src/main/res/drawable/five_of_spades.xml \
+		../../../Downloads/Blackjack/app/src/main/res/drawable/six_of_diamonds.xml \
+		../../../Downloads/Blackjack/app/src/androidTest/java/com/bryancapps/blackjack/ApplicationTest.java \
+		../../../Downloads/Blackjack/app/src/main/res/drawable/ten_of_diamonds.xml \
+		../../../Downloads/Blackjack/app/src/test/java/com/bryancapps/blackjack/Models/DeckTest.java \
+		../../../Downloads/Blackjack/app/src/main/res/drawable/eight_of_diamonds.xml \
+		../../../Downloads/Blackjack/app/src/main/res/drawable/blue_back.xml \
+		../../../Downloads/Blackjack/app/src/main/res/drawable/four_of_clubs.xml \
+		../../../Downloads/Blackjack/app/src/main/res/drawable/seven_of_clubs.xml \
+		../../../Downloads/Blackjack/app/src/main/res/drawable/two_of_spades.xml \
+		../../../Downloads/Blackjack/app/src/main/res/drawable/three_of_hearts.xml \
+		../../../Downloads/Blackjack/app/src/main/res/drawable/five_of_clubs.xml \
+		../../../Downloads/Blackjack/app/src/main/res/drawable/ace_of_diamonds.xml \
+		../../../Downloads/Blackjack/app/src/main/java/com/bryancapps/blackjack/views/MainActivity.java \
+		../../../Downloads/Blackjack/app/src/main/res/drawable/two_of_clubs.xml \
+		../../../Downloads/Blackjack/app/src/main/res/drawable/ace_of_clubs.xml \
+		../../../Downloads/Blackjack/app/src/main/java/com/bryancapps/blackjack/Models/Card.java \
+		../../../Downloads/Blackjack/app/build.gradle \
+		../../../Downloads/Blackjack/build.gradle
+	/Users/jasonpliszak/Qt/6.7.0/macos/libexec/rcc -name qmake_qmake_immediate --no-zstd qmake_qmake_immediate.qrc -o qrc_qmake_qmake_immediate.cpp
 
+compiler_moc_header_make_all: moc_mainwindow.cpp
+compiler_moc_header_clean:
+	-$(DEL_FILE) moc_mainwindow.cpp
 moc_mainwindow.cpp: ../../mainwindow.h \
 		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/QMainWindow \
 		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
@@ -878,11 +1027,15 @@ compiler_yacc_impl_make_all:
 compiler_yacc_impl_clean:
 compiler_lex_make_all:
 compiler_lex_clean:
-compiler_clean: compiler_moc_header_clean compiler_uic_clean 
+compiler_clean: compiler_rcc_clean compiler_moc_header_clean compiler_uic_clean 
 
 ####### Compile
 
-Card.o: ../../Card.cpp 
+Card.o: ../../Card.cpp ../../Card.h \
+		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/QGraphicsItem \
+		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/qgraphicsitem.h \
+		../../../Qt/6.7.0/macos/lib/QtCore.framework/Headers/QDebug \
+		../../../Qt/6.7.0/macos/lib/QtCore.framework/Headers/qdebug.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Card.o ../../Card.cpp
 
 Deck.o: ../../Deck.cpp 
@@ -895,8 +1048,6 @@ main.o: ../../main.cpp ../../mainwindow.h \
 		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/qapplication.h \
 		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/QGraphicsScene \
 		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/qgraphicsscene.h \
-		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/QGraphicsRectItem \
-		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/qgraphicsitem.h \
 		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/QGraphicsView \
 		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/qgraphicsview.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../../main.cpp
@@ -907,8 +1058,8 @@ mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
 		ui_mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../../mainwindow.cpp
 
-moc_Card.o: moc_Card.cpp 
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_Card.o moc_Card.cpp
+qrc_qmake_qmake_immediate.o: qrc_qmake_qmake_immediate.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_qmake_qmake_immediate.o qrc_qmake_qmake_immediate.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_mainwindow.o moc_mainwindow.cpp
