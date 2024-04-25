@@ -18,4 +18,4 @@ private:
     int count;
 };
 
-#endif // DECK_H
+#endif
