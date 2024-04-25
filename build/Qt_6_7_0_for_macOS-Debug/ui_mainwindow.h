@@ -34,18 +34,18 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(600, 400);
+        MainWindow->resize(1000, 650);
         MainWindow->setStyleSheet(QString::fromUtf8("background-color: rgb(34, 129, 20);"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         play_button = new QPushButton(centralwidget);
         play_button->setObjectName("play_button");
-        play_button->setGeometry(QRect(180, 260, 150, 40));
+        play_button->setGeometry(QRect(380, 330, 150, 40));
         play_button->setStyleSheet(QString::fromUtf8("color: rgb(235, 255, 240);"));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 600, 37));
+        menubar->setGeometry(QRect(0, 0, 1000, 37));
         menuBlackJack = new QMenu(menubar);
         menuBlackJack->setObjectName("menuBlackJack");
         MainWindow->setMenuBar(menubar);

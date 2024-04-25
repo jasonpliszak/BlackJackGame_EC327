@@ -52,18 +52,20 @@ OBJECTS_DIR   = ./
 
 ####### Files
 
-SOURCES       = ../../Card.cpp \
-		../../Deck.cpp \
+SOURCES       = ../../card.cpp \
+		../../deck.cpp \
 		../../game.cpp \
 		../../main.cpp \
-		../../mainwindow.cpp qrc_cards.cpp \
+		../../mainwindow.cpp \
+		../../player.cpp qrc_cards.cpp \
 		moc_game.cpp \
 		moc_mainwindow.cpp
-OBJECTS       = Card.o \
-		Deck.o \
+OBJECTS       = card.o \
+		deck.o \
 		game.o \
 		main.o \
 		mainwindow.o \
+		player.o \
 		qrc_cards.o \
 		moc_game.o \
 		moc_mainwindow.o
@@ -297,13 +299,16 @@ DIST          = /Qt/6.7.0/macos/mkspecs/features/spec_pre.prf \
 		/Qt/6.7.0/macos/mkspecs/features/exceptions.prf \
 		/Qt/6.7.0/macos/mkspecs/features/yacc.prf \
 		/Qt/6.7.0/macos/mkspecs/features/lex.prf \
-		../../../../BlackJack_EC327.pro ../../Card.h \
+		../../../../BlackJack_EC327.pro ../../card.h \
+		../../deck.h \
 		../../game.h \
-		../../mainwindow.h ../../Card.cpp \
-		../../Deck.cpp \
+		../../mainwindow.h \
+		../../player.h ../../card.cpp \
+		../../deck.cpp \
 		../../game.cpp \
 		../../main.cpp \
-		../../mainwindow.cpp
+		../../mainwindow.cpp \
+		../../player.cpp
 QMAKE_TARGET  = BlackJack_EC327
 DESTDIR       = 
 TARGET        = BlackJack_EC327.app/Contents/MacOS/BlackJack_EC327
@@ -824,8 +829,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../../cards.qrc $(DISTDIR)/
-	$(COPY_FILE) --parents ../../Card.h ../../game.h ../../mainwindow.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../../Card.cpp ../../Deck.cpp ../../game.cpp ../../main.cpp ../../mainwindow.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../../card.h ../../deck.h ../../game.h ../../mainwindow.h ../../player.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../../card.cpp ../../deck.cpp ../../game.cpp ../../main.cpp ../../mainwindow.cpp ../../player.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../../game.ui ../../mainwindow.ui $(DISTDIR)/
 
 
@@ -959,15 +964,15 @@ compiler_clean: compiler_rcc_clean compiler_moc_header_clean compiler_uic_clean
 
 ####### Compile
 
-Card.o: ../../Card.cpp ../../Card.h \
-		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/QGraphicsItem \
-		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/qgraphicsitem.h \
+card.o: ../../card.cpp ../../Card.h \
 		../../../Qt/6.7.0/macos/lib/QtCore.framework/Headers/QDebug \
-		../../../Qt/6.7.0/macos/lib/QtCore.framework/Headers/qdebug.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Card.o ../../Card.cpp
+		../../../Qt/6.7.0/macos/lib/QtCore.framework/Headers/qdebug.h \
+		../../card.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o card.o ../../card.cpp
 
-Deck.o: ../../Deck.cpp 
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Deck.o ../../Deck.cpp
+deck.o: ../../deck.cpp ../../card.h \
+		../../deck.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o deck.o ../../deck.cpp
 
 game.o: ../../game.cpp ../../game.h \
 		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/QWidget \
@@ -991,6 +996,10 @@ mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
 		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
 		ui_mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../../mainwindow.cpp
+
+player.o: ../../player.cpp ../../card.h \
+		../../player.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o player.o ../../player.cpp
 
 qrc_cards.o: qrc_cards.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_cards.o qrc_cards.cpp
