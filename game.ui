@@ -13,8 +13,11 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="autoFillBackground">
+   <bool>true</bool>
+  </property>
   <property name="styleSheet">
-   <string notr="true">background-image:url(:/images/bjtable.jpg); background-size:cover;</string>
+   <string notr="true"/>
   </property>
   <widget class="QLabel" name="PC1">
    <property name="geometry">
@@ -66,6 +69,10 @@
      <height>32</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 0, 0);
+border-color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
     <string>Hit</string>
    </property>
@@ -78,6 +85,10 @@
      <width>100</width>
      <height>32</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 0, 0);
+border-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>Stand</string>
@@ -92,11 +103,16 @@
      <height>32</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">border-color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+</string>
+   </property>
    <property name="text">
     <string>Deal</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="Player">
    <property name="geometry">
     <rect>
      <x>40</x>
@@ -109,7 +125,7 @@
     <string>Player</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_2">
+  <widget class="QLabel" name="Dealer">
    <property name="geometry">
     <rect>
      <x>40</x>
@@ -286,6 +302,35 @@
     <bool>true</bool>
    </property>
   </widget>
+  <widget class="QLabel" name="Background">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>-10</y>
+     <width>991</width>
+     <height>661</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>Background</zorder>
+  <zorder>DC5</zorder>
+  <zorder>DC4</zorder>
+  <zorder>DC3</zorder>
+  <zorder>DC2</zorder>
+  <zorder>DC1</zorder>
+  <zorder>PC1</zorder>
+  <zorder>PC2</zorder>
+  <zorder>PC5</zorder>
+  <zorder>PC4</zorder>
+  <zorder>PC3</zorder>
+  <zorder>Dealer</zorder>
+  <zorder>Player</zorder>
+  <zorder>Hit</zorder>
+  <zorder>Stand</zorder>
+  <zorder>Deal</zorder>
  </widget>
  <resources>
   <include location="cards.qrc"/>

@@ -15,6 +15,9 @@ public:
     explicit Game(QWidget *parent = nullptr);
     ~Game();
 
+public slots:
+    void loadDeck();
+
 private:
     Ui::Game *ui;
 };

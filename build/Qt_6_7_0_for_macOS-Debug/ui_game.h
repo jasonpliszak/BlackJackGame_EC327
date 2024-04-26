@@ -25,8 +25,8 @@ public:
     QPushButton *Hit;
     QPushButton *Stand;
     QPushButton *Deal;
-    QLabel *label;
-    QLabel *label_2;
+    QLabel *Player;
+    QLabel *Dealer;
     QLabel *DC2;
     QLabel *DC3;
     QLabel *DC4;
@@ -35,13 +35,15 @@ public:
     QLabel *PC3;
     QLabel *PC4;
     QLabel *PC5;
+    QLabel *Background;
 
     void setupUi(QWidget *Game)
     {
         if (Game->objectName().isEmpty())
             Game->setObjectName("Game");
         Game->resize(1000, 650);
-        Game->setStyleSheet(QString::fromUtf8("background-image:url(:/images/bjtable.jpg); background-size:cover;"));
+        Game->setAutoFillBackground(true);
+        Game->setStyleSheet(QString::fromUtf8(""));
         PC1 = new QLabel(Game);
         PC1->setObjectName("PC1");
         PC1->setGeometry(QRect(30, 30, 150, 225));
@@ -56,18 +58,25 @@ public:
         Hit = new QPushButton(Game);
         Hit->setObjectName("Hit");
         Hit->setGeometry(QRect(40, 550, 100, 32));
+        Hit->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 0, 0);\n"
+"border-color: rgb(255, 255, 255);"));
         Stand = new QPushButton(Game);
         Stand->setObjectName("Stand");
         Stand->setGeometry(QRect(150, 550, 100, 32));
+        Stand->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 0, 0);\n"
+"border-color: rgb(255, 255, 255);"));
         Deal = new QPushButton(Game);
         Deal->setObjectName("Deal");
         Deal->setGeometry(QRect(260, 550, 100, 32));
-        label = new QLabel(Game);
-        label->setObjectName("label");
-        label->setGeometry(QRect(40, 10, 141, 21));
-        label_2 = new QLabel(Game);
-        label_2->setObjectName("label_2");
-        label_2->setGeometry(QRect(40, 270, 131, 21));
+        Deal->setStyleSheet(QString::fromUtf8("border-color: rgb(255, 255, 255);\n"
+"background-color: rgb(0, 0, 0);\n"
+""));
+        Player = new QLabel(Game);
+        Player->setObjectName("Player");
+        Player->setGeometry(QRect(40, 10, 141, 21));
+        Dealer = new QLabel(Game);
+        Dealer->setObjectName("Dealer");
+        Dealer->setGeometry(QRect(40, 270, 131, 21));
         DC2 = new QLabel(Game);
         DC2->setObjectName("DC2");
         DC2->setGeometry(QRect(200, 300, 150, 225));
@@ -112,6 +121,25 @@ public:
         PC5->setStyleSheet(QString::fromUtf8("background-color: rgb(136, 255, 83)"));
         PC5->setPixmap(QPixmap(QString::fromUtf8(":/images/clubs_2.gif")));
         PC5->setScaledContents(true);
+        Background = new QLabel(Game);
+        Background->setObjectName("Background");
+        Background->setGeometry(QRect(10, -10, 991, 661));
+        Background->raise();
+        DC5->raise();
+        DC4->raise();
+        DC3->raise();
+        DC2->raise();
+        DC1->raise();
+        PC1->raise();
+        PC2->raise();
+        PC5->raise();
+        PC4->raise();
+        PC3->raise();
+        Dealer->raise();
+        Player->raise();
+        Hit->raise();
+        Stand->raise();
+        Deal->raise();
 
         retranslateUi(Game);
 
@@ -126,8 +154,8 @@ public:
         Hit->setText(QCoreApplication::translate("Game", "Hit", nullptr));
         Stand->setText(QCoreApplication::translate("Game", "Stand", nullptr));
         Deal->setText(QCoreApplication::translate("Game", "Deal", nullptr));
-        label->setText(QCoreApplication::translate("Game", "Player", nullptr));
-        label_2->setText(QCoreApplication::translate("Game", "Dealer", nullptr));
+        Player->setText(QCoreApplication::translate("Game", "Player", nullptr));
+        Dealer->setText(QCoreApplication::translate("Game", "Dealer", nullptr));
         DC2->setText(QString());
         DC3->setText(QString());
         DC4->setText(QString());
@@ -136,6 +164,7 @@ public:
         PC3->setText(QString());
         PC4->setText(QString());
         PC5->setText(QString());
+        Background->setText(QString());
     } // retranslateUi
 
 };
