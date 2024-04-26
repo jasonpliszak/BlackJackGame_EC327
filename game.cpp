@@ -2,6 +2,7 @@
 #include "ui_game.h"
 #include "card.h"
 #include "deck.h"
+#include "player.h"
 #include <QApplication>
 #include <QWidget>
 #include <QVBoxLayout>
@@ -9,6 +10,10 @@
 #include <QList>
 #include <map>
 #include <string>
+#include <time.h>
+
+using namespace std;
+
 
 Game::Game(QWidget *parent)
     : QWidget(parent)
@@ -28,6 +33,10 @@ Game::Game(QWidget *parent)
 void Game::loadDeck(){
     //insert load deck function here that intializes a list of card images
 
+
+}
+
+void Game::on_Deal_clicked(){
 
 }
 
