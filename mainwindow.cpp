@@ -8,11 +8,10 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    QPushButton *button = new QPushButton("Play BlackJack", this);
-    setCentralWidget(button);
+    QPushButton *play_button = new QPushButton;
 
     // Connect the button's clicked signal to slot
-    connect(button, &QPushButton::clicked, this, &MainWindow::on_play_button_clicked);
+    connect(play_button, &QPushButton::clicked, this, &MainWindow::on_play_button_clicked);
 
 
 }

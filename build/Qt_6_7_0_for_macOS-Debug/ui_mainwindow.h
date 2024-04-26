@@ -40,7 +40,7 @@ public:
         centralwidget->setObjectName("centralwidget");
         play_button = new QPushButton(centralwidget);
         play_button->setObjectName("play_button");
-        play_button->setGeometry(QRect(380, 330, 150, 40));
+        play_button->setGeometry(QRect(420, 520, 150, 40));
         play_button->setStyleSheet(QString::fromUtf8("color: rgb(235, 255, 240);"));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
