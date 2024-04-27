@@ -2,6 +2,7 @@
 #define GAME_H
 
 #include <QWidget>
+#include "deck.h"
 
 namespace Ui {
 class Game;
@@ -13,6 +14,7 @@ class Game : public QWidget
 
 public:
     explicit Game(QWidget *parent = nullptr);
+     deck Deck;
     ~Game();
 
 private slots:
