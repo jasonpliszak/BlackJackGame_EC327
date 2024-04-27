@@ -14,6 +14,8 @@ card::card(string suit, char rank, bool up){
     this->suit = suit;
     this->rank = rank;
     this->up = up;
+    QPixmap cardtemp(":/images/blank.gif");
+    this->img = cardtemp;
 }
 
 // copy constructor
@@ -21,6 +23,7 @@ card::card(const card &c){
     this->suit = c.suit;
     this->rank = c.rank;
     this->up = c.up;
+    this->img = c.img;
 }
 
 void card::flip(){

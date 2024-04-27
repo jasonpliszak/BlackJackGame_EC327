@@ -41,7 +41,7 @@ void Game::on_Deal_clicked(){
 
     card p2 = Deck.draw();
     p2.flip();
-    ui->PC2->setPixmap(p1.getImg());
+    ui->PC2->setPixmap(p2.getImg());
     User.addCard(p2);
     int pscore = User.getVal();
     ui->PlayerScore->setText("Score" + QString::number(pscore));
@@ -55,6 +55,8 @@ void Game::on_Deal_clicked(){
     card d2 = Deck.draw();
     ui->DC2->setPixmap(card0);
     House.addCard(d2);
+
+    ui->Deal->setDisabled(true);
 }
 
 
