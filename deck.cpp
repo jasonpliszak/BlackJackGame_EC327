@@ -16,16 +16,16 @@ deck::deck(){
     for(int i = 0; i < 52; i++){
         switch(j){
         case 0:
-            tempsuit = "Spades";
+            tempsuit = "spades";
             break;
         case 1:
-            tempsuit = "Hearts";
+            tempsuit = "hearts";
             break;
         case 2:
-            tempsuit = "Diamonds";
+            tempsuit = "diamonds";
             break;
         case 3:
-            tempsuit = "Clubs";
+            tempsuit = "clubs";
             break;
         }
         switch(k){

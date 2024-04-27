@@ -2,6 +2,7 @@
 #define CARD_H
 
 #include <string>
+#include <QPixmap>
 
 using namespace std;
 
@@ -16,11 +17,14 @@ public:
     char getRank() const;
     bool isUp() const;
     int getVal() const;
+    QPixmap getImg() const;
+    void setImg(QPixmap image);
 
 private:
     string suit;
     char rank;
     bool up;
+    QPixmap img;
 };
 
 #endif

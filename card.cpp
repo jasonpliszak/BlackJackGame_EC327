@@ -1,5 +1,5 @@
 #include "Card.h"
-
+#include <QPixmap>
 #include <QDebug>
 #include <string>
 #include "card.h"
@@ -51,4 +51,13 @@ int card::getVal() const{
     else {
         return rank - '0';
     }
+}
+
+QPixmap card::getImg() const{
+    return this->img;
+}
+
+void card::setImg(QPixmap image){
+    this->img = image;
+    return;
 }

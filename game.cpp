@@ -37,6 +37,8 @@ void Game::loadDeck(){
 }
 
 void Game::on_Deal_clicked(){
+    deck Deck;
+    card p1 = Deck.draw();
 
 }
 
