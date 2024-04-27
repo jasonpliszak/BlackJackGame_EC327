@@ -1,6 +1,4 @@
-#include "Card.h"
 #include <QPixmap>
-#include <QDebug>
 #include <string>
 #include "card.h"
 

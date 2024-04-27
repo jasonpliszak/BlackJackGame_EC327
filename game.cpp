@@ -30,13 +30,6 @@ Game::Game(QWidget *parent)
 
 }
 
-//load in card images
-void Game::loadDeck(){
-    //insert load deck function here that intializes a list of card images
-
-
-}
-
 void Game::on_Deal_clicked(){
     QPixmap card0(":/images/cardback.gif");
     deck Deck;
@@ -70,10 +63,5 @@ void Game::on_Deal_clicked(){
 Game::~Game()
 {
     delete ui;
-}
-
-void Game::on_Hit_clicked()
-{
-
 }
 

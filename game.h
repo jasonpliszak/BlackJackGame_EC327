@@ -15,14 +15,7 @@ public:
     explicit Game(QWidget *parent = nullptr);
     ~Game();
 
-public slots:
-    void loadDeck();
-
 private slots:
-    void on_Hit_clicked();
-
-    void on_Stand_clicked();
-
     void on_Deal_clicked();
 
 
