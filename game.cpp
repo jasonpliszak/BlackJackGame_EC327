@@ -27,7 +27,6 @@ Game::Game(QWidget *parent)
     ui->Background->lower();
 
 
-
 }
 
 void Game::on_Deal_clicked(){
@@ -44,7 +43,7 @@ void Game::on_Deal_clicked(){
     ui->PC2->setPixmap(p2.getImg());
     User.addCard(p2);
     int pscore = User.getVal();
-    ui->PlayerScore->setText("Score" + QString::number(pscore));
+    ui->PlayerScore->setText("Score: " + QString::number(pscore));
 
 
     card d1 = Deck.draw();

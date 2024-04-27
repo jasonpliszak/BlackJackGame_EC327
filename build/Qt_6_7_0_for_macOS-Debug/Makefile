@@ -863,63 +863,63 @@ compiler_rcc_clean:
 	-$(DEL_FILE) qrc_cards.cpp
 qrc_cards.cpp: ../../cards.qrc \
 		../../../Qt/6.7.0/macos/libexec/rcc \
-		../../images/diamonds_5.gif \
-		../../images/diamonds_K.gif \
-		../../images/spades_A.gif \
-		../../images/spades_9.gif \
-		../../images/spades_4.gif \
-		../../images/clubs_Q.gif \
-		../../images/diamonds_Q.gif \
+		../../images/heartsT.gif \
+		../../images/heartsJ.gif \
+		../../images/diamonds3.gif \
+		../../images/spades5.gif \
+		../../images/spades4.gif \
+		../../images/clubsA.gif \
 		../../images/blank_black.gif \
-		../../images/clubs_8.gif \
-		../../images/spades_8.gif \
-		../../images/spades_2.gif \
-		../../images/hearts_Q.gif \
+		../../images/clubsQ.gif \
+		../../images/clubsK.gif \
+		../../images/spadesA.gif \
+		../../images/diamonds4.gif \
+		../../images/diamonds9.gif \
+		../../images/diamonds2.gif \
+		../../images/clubs6.gif \
 		../../images/blank.gif \
-		../../images/hearts_T.gif \
-		../../images/hearts_2.gif \
-		../../images/hearts_K.gif \
-		../../images/spades_6.gif \
-		../../images/diamonds_J.gif \
+		../../images/diamondsA.gif \
+		../../images/diamonds5.gif \
+		../../images/heartsQ.gif \
+		../../images/hearts4.gif \
+		../../images/hearts7.gif \
+		../../images/spades9.gif \
+		../../images/clubs9.gif \
 		../../images/cardback.gif \
-		../../images/diamonds_T.gif \
-		../../images/hearts_9.gif \
-		../../images/diamonds_6.gif \
+		../../images/clubs2.gif \
+		../../images/diamondsJ.gif \
+		../../images/diamonds7.gif \
+		../../images/heartsA.gif \
 		../../images/blank.png \
-		../../images/clubs_J.gif \
-		../../images/diamonds_4.gif \
-		../../images/hearts_A.gif \
+		../../images/hearts5.gif \
+		../../images/hearts3.gif \
+		../../images/spadesJ.gif \
 		../../images/bjtable.jpg \
-		../../images/clubs_4.gif \
-		../../images/diamonds_8.gif \
-		../../images/spades_Q.gif \
-		../../images/hearts_6.gif \
-		../../images/spades_T.gif \
-		../../images/clubs_T.gif \
-		../../images/diamonds_9.gif \
-		../../images/clubs_6.gif \
-		../../images/clubs_9.gif \
-		../../images/hearts_8.gif \
-		../../images/spades_7.gif \
-		../../images/clubs_2.gif \
-		../../images/diamonds_7.gif \
-		../../images/clubs_7.gif \
-		../../images/hearts_3.gif \
-		../../images/diamonds_A.gif \
-		../../images/spades_5.gif \
-		../../images/hearts_7.gif \
-		../../images/diamonds_3.gif \
-		../../images/hearts_4.gif \
-		../../images/diamonds_2.gif \
-		../../images/spades_3.gif \
-		../../images/clubs_5.gif \
-		../../images/spades_J.gif \
-		../../images/spades_K.gif \
-		../../images/clubs_A.gif \
-		../../images/clubs_3.gif \
-		../../images/hearts_J.gif \
-		../../images/clubs_K.gif \
-		../../images/hearts_5.gif
+		../../images/clubs3.gif \
+		../../images/spades6.gif \
+		../../images/hearts8.gif \
+		../../images/diamondsT.gif \
+		../../images/spadesK.gif \
+		../../images/spades7.gif \
+		../../images/diamonds6.gif \
+		../../images/hearts2.gif \
+		../../images/clubsJ.gif \
+		../../images/clubs8.gif \
+		../../images/clubs4.gif \
+		../../images/spadesT.gif \
+		../../images/clubsT.gif \
+		../../images/clubs7.gif \
+		../../images/hearts9.gif \
+		../../images/diamondsK.gif \
+		../../images/spades3.gif \
+		../../images/hearts6.gif \
+		../../images/heartsK.gif \
+		../../images/clubs5.gif \
+		../../images/spades8.gif \
+		../../images/diamondsQ.gif \
+		../../images/spadesQ.gif \
+		../../images/spades2.gif \
+		../../images/diamonds8.gif
 	/Users/jasonpliszak/Qt/6.7.0/macos/libexec/rcc -name cards --no-zstd ../../cards.qrc -o qrc_cards.cpp
 
 compiler_moc_header_make_all: moc_game.cpp moc_mainwindow.cpp
@@ -964,20 +964,36 @@ compiler_clean: compiler_rcc_clean compiler_moc_header_clean compiler_uic_clean
 
 ####### Compile
 
-card.o: ../../card.cpp ../../Card.h \
-		../../../Qt/6.7.0/macos/lib/QtCore.framework/Headers/QDebug \
-		../../../Qt/6.7.0/macos/lib/QtCore.framework/Headers/qdebug.h \
+card.o: ../../card.cpp ../../../Qt/6.7.0/macos/lib/QtGui.framework/Headers/QPixmap \
+		../../../Qt/6.7.0/macos/lib/QtGui.framework/Headers/qpixmap.h \
 		../../card.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o card.o ../../card.cpp
 
 deck.o: ../../deck.cpp ../../card.h \
+		../../../Qt/6.7.0/macos/lib/QtGui.framework/Headers/QPixmap \
+		../../../Qt/6.7.0/macos/lib/QtGui.framework/Headers/qpixmap.h \
 		../../deck.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o deck.o ../../deck.cpp
 
 game.o: ../../game.cpp ../../game.h \
 		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/QWidget \
 		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/qwidget.h \
-		ui_game.h
+		ui_game.h \
+		../../card.h \
+		../../../Qt/6.7.0/macos/lib/QtGui.framework/Headers/QPixmap \
+		../../../Qt/6.7.0/macos/lib/QtGui.framework/Headers/qpixmap.h \
+		../../deck.h \
+		../../player.h \
+		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/QApplication \
+		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/qapplication.h \
+		../../../Qt/6.7.0/macos/lib/QtCore.framework/Headers/QString \
+		../../../Qt/6.7.0/macos/lib/QtCore.framework/Headers/qstring.h \
+		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/QVBoxLayout \
+		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/qboxlayout.h \
+		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/QPushButton \
+		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
+		../../../Qt/6.7.0/macos/lib/QtCore.framework/Headers/QList \
+		../../../Qt/6.7.0/macos/lib/QtCore.framework/Headers/qlist.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o game.o ../../game.cpp
 
 main.o: ../../main.cpp ../../mainwindow.h \
@@ -994,10 +1010,17 @@ main.o: ../../main.cpp ../../mainwindow.h \
 mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
 		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/QMainWindow \
 		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
-		ui_mainwindow.h
+		ui_mainwindow.h \
+		../../game.h \
+		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/QWidget \
+		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/qwidget.h \
+		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/QPushButton \
+		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/qpushbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../../mainwindow.cpp
 
 player.o: ../../player.cpp ../../card.h \
+		../../../Qt/6.7.0/macos/lib/QtGui.framework/Headers/QPixmap \
+		../../../Qt/6.7.0/macos/lib/QtGui.framework/Headers/qpixmap.h \
 		../../player.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o player.o ../../player.cpp
 

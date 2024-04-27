@@ -36,7 +36,7 @@ namespace {
 struct qt_meta_stringdata_CLASSGameENDCLASS_t {};
 constexpr auto qt_meta_stringdata_CLASSGameENDCLASS = QtMocHelpers::stringData(
     "Game",
-    "loadDeck",
+    "on_Deal_clicked",
     ""
 );
 #else  // !QT_MOC_HAS_STRINGDATA
@@ -58,7 +58,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSGameENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   20,    2, 0x0a,    1 /* Public */,
+       1,    0,   20,    2, 0x08,    1 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -75,7 +75,7 @@ Q_CONSTINIT const QMetaObject Game::staticMetaObject = { {
     qt_incomplete_metaTypeArray<qt_meta_stringdata_CLASSGameENDCLASS_t,
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<Game, std::true_type>,
-        // method 'loadDeck'
+        // method 'on_Deal_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -87,7 +87,7 @@ void Game::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void *
         auto *_t = static_cast<Game *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->loadDeck(); break;
+        case 0: _t->on_Deal_clicked(); break;
         default: ;
         }
     }
