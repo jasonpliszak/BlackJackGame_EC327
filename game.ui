@@ -106,7 +106,7 @@ background-color: rgb(0, 0, 0);
     <string>Deal</string>
    </property>
   </widget>
-  <widget class="QLabel" name="Player">
+  <widget class="QLabel" name="PlayerScore">
    <property name="geometry">
     <rect>
      <x>40</x>
@@ -116,7 +116,7 @@ background-color: rgb(0, 0, 0);
     </rect>
    </property>
    <property name="text">
-    <string>Player</string>
+    <string/>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -300,7 +300,7 @@ background-color: rgb(0, 0, 0);
   <zorder>PC4</zorder>
   <zorder>PC3</zorder>
   <zorder>Dealer</zorder>
-  <zorder>Player</zorder>
+  <zorder>PlayerScore</zorder>
   <zorder>Hit</zorder>
   <zorder>Stand</zorder>
   <zorder>Deal</zorder>

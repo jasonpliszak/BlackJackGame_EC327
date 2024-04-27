@@ -14,7 +14,7 @@ deck::deck(){
     this->cards = new card[52];
     int j = 0;
     int k = 1;
-    QPixmap card0(":/images/blank.gif");
+
     // Load in Spades
 
     QPixmap card1(":/images/spadesA.gif");

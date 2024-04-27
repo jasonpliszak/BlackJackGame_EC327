@@ -4,6 +4,7 @@
 #include "deck.h"
 #include "player.h"
 #include <QApplication>
+#include <QString>
 #include <QWidget>
 #include <QVBoxLayout>
 #include <QPushButton>
@@ -37,9 +38,30 @@ void Game::loadDeck(){
 }
 
 void Game::on_Deal_clicked(){
+    QPixmap card0(":/images/cardback.gif");
     deck Deck;
-    card p1 = Deck.draw();
 
+    card p1 = Deck.draw();
+    p1.flip();
+    ui->PC1->setPixmap(p1.getImg());
+    player User(p1);
+
+    card p2 = Deck.draw();
+    p2.flip();
+    ui->PC2->setPixmap(p1.getImg());
+    User.addCard(p2);
+    int pscore = User.getVal();
+    ui->PlayerScore->setText("Score" + QString::number(pscore));
+
+
+    card d1 = Deck.draw();
+    d1.flip();
+    ui->DC1->setPixmap(d1.getImg());
+    player House(d1);
+
+    card d2 = Deck.draw();
+    ui->DC2->setPixmap(card0);
+    House.addCard(d2);
 }
 
 
@@ -49,3 +71,9 @@ Game::~Game()
 {
     delete ui;
 }
+
+void Game::on_Hit_clicked()
+{
+
+}
+
