@@ -45,14 +45,16 @@ int card::getVal() const{
         return 11;
     }
     else {
-        return rank - '0';
+        return rank - '0'; //this setup allows the chars 2~9 to return an int of that value
     }
 }
 
+//returns image for use in UI
 QPixmap card::getImg() const{
     return this->img;
 }
 
+//allows image to be set externally
 void card::setImg(QPixmap image){
     this->img = image;
     return;

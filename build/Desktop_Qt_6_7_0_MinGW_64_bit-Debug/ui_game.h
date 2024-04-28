@@ -111,7 +111,7 @@ public:
         PC2->setScaledContents(true);
         PC5 = new QLabel(Game);
         PC5->setObjectName("PC5");
-        PC5->setGeometry(QRect(180, 30, 150, 225));
+        PC5->setGeometry(QRect(230, 30, 150, 225));
         PC5->setStyleSheet(QString::fromUtf8(""));
         PC5->setScaledContents(true);
         PC4 = new QLabel(Game);
