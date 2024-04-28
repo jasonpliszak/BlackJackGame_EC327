@@ -9,9 +9,6 @@
 #include <QVBoxLayout>
 #include <QPushButton>
 #include <QList>
-#include <map>
-#include <string>
-#include <time.h>
 #include "l.h"
 #include <QTimer>
 #include "t.h"
@@ -34,39 +31,40 @@ Game::Game(QWidget *parent)
 }
 
 void Game::on_Deal_clicked(){
-    QPixmap card0(":/images/cardback.png");
+    QPixmap card0(":/images/cardback.png"); //initialize cardback image for first dealer card
 
-
+    //draw player cards
     card p1 = Deck.draw();
-    ui->PC1->setPixmap(p1.getImg());
+    ui->PC1->setPixmap(p1.getImg()); //sets image with first player card
     User.addCard(p1);
 
     card p2 = Deck.draw();
     ui->PC2->setPixmap(p2.getImg());
     User.addCard(p2);
     int pscore = User.getVal();
-    ui->PlayerScore->setText("Score: " + QString::number(pscore));
+    ui->PlayerScore->setText("Score: " + QString::number(pscore)); //sets player score text
 
-
+    //draw dealer cards
     card d1 = Deck.draw();
-    ui->DC1->setPixmap(card0);
+    ui->DC1->setPixmap(card0); //set image of first player card to facedown
     House.addCard(d1);
 
     card d2 = Deck.draw();
     ui->DC2->setPixmap(d2.getImg());
     House.addCard(d2);
 
-    ui->Deal->setDisabled(true);
-    ui->Hit->setDisabled(false);
-    ui->Stand->setDisabled(false);
+    ui->Deal->setDisabled(true); //disable deal button
+    ui->Hit->setDisabled(false); //enable hit
+    ui->Stand->setDisabled(false); //enable stand
 
+    //auto-blackjack logic (if player or dealer draw blackjack from the deal button)
     if(House.getVal()==21 && User.getVal()==21){
         ui->DC1->setPixmap(d1.getImg());
         int dscore = House.getVal();
         ui->Dealer->setText("Score: " + QString::number(dscore));
         ui->Hit->setDisabled(true);
         ui->Stand->setDisabled(true);
-        QTimer::singleShot(1500, this, &Game::delayedTie);
+        QTimer::singleShot(1500, this, &Game::delayedTie); //allows you to see the cards for 1.5 sec before being sent to game over
     }
     else if(House.getVal()==21 && User.getVal()!=21){
         ui->DC1->setPixmap(d1.getImg());
@@ -87,8 +85,9 @@ void Game::on_Deal_clicked(){
 }
 
 void Game::on_Hit_clicked(){
-    hitcounter++;
+    hitcounter++; //amount of times hit has been pressed
     int pscore = 0;
+    //initialize cards outside of case statement (these are all test cards that cannot affect score value)
     card p3;
     card p4;
     card p5;
@@ -97,7 +96,9 @@ void Game::on_Hit_clicked(){
     card p8;
     card p9;
     card p10;
-    card p11;
+    card p11; //11 cards to catch the most extreme edge case of four A, four 2, three 3
+
+    //switch statement to handle multiple hits as needed
     switch(hitcounter){
     case 1:
         p3 = Deck.draw();
@@ -161,9 +162,10 @@ void Game::on_Hit_clicked(){
         User.addCard(p11);
         pscore = User.getVal();
         ui->PlayerScore->setText("Score: " + QString::number(pscore));
-        ui->Hit->setDisabled(true);
+        ui->Hit->setDisabled(true); //you can only have 11 cards at most
         break;
     }
+    //bust logic
     if(User.getVal()>21){
         ui->Hit->setDisabled(true);
         ui->Stand->setDisabled(true);
@@ -174,9 +176,11 @@ void Game::on_Hit_clicked(){
 void Game::on_Stand_clicked(){
     ui->Hit->setDisabled(true);
     ui->Stand->setDisabled(true);
-    ui->DC1->setPixmap(House.getCards()[0].getImg());
+    ui->DC1->setPixmap(House.getCards()[0].getImg()); //replace cardback image with image of the first dealer card
     int dscore = House.getVal();
-    ui->Dealer->setText("Score: " + QString::number(dscore));
+    ui->Dealer->setText("Score: " + QString::number(dscore)); //show dealer hand value
+
+    //dealer draws if their value is too low
     while(dscore<17){
         int dhit = 0;
         card d3;
@@ -186,7 +190,7 @@ void Game::on_Stand_clicked(){
         card d7;
         card d8;
         card d9;
-        card d10;
+        card d10; //10 cards to handle the extreme edge case of four A, four 2, two 3 for a total of 18
         dhit++;
         switch(dhit){
         case 1:
@@ -247,20 +251,21 @@ void Game::on_Stand_clicked(){
             break;
         }
     }
-    if(dscore>21){
+    if(dscore>21){ //dealer bust
         QTimer::singleShot(1500, this, &Game::delayedWin);
     }
-    else if(dscore == User.getVal()){
+    else if(dscore == User.getVal()){ //because auto blackjacks are already processed (you cannot stand if you get a blackjack on draw)
          QTimer::singleShot(1500, this, &Game::delayedTie);
     }
-    else if(dscore > User.getVal()){
+    else if(dscore > User.getVal()){ //because auto blackjacks are already processed (you cannot stand if you get a blackjack on draw)
         QTimer::singleShot(1500, this, &Game::delayedLose);
     }
-    else if(dscore < User.getVal()){
+    else if(dscore < User.getVal()){ //because auto blackjacks are already processed (you cannot stand if you get a blackjack on draw)
         QTimer::singleShot(1500, this, &Game::delayedWin);
     }
 }
 
+//delayed game over screen functions to use with QTimer::singleShot()
 void Game::delayedLose(){
             L *lose = new L;
             lose->show();
