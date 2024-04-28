@@ -42,7 +42,7 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: transparent;</string>
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>Play Again</string>

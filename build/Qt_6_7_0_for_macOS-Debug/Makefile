@@ -55,20 +55,32 @@ OBJECTS_DIR   = ./
 SOURCES       = ../../card.cpp \
 		../../deck.cpp \
 		../../game.cpp \
+		../../l.cpp \
 		../../main.cpp \
 		../../mainwindow.cpp \
-		../../player.cpp qrc_cards.cpp \
+		../../player.cpp \
+		../../t.cpp \
+		../../w.cpp qrc_cards.cpp \
 		moc_game.cpp \
-		moc_mainwindow.cpp
+		moc_l.cpp \
+		moc_mainwindow.cpp \
+		moc_t.cpp \
+		moc_w.cpp
 OBJECTS       = card.o \
 		deck.o \
 		game.o \
+		l.o \
 		main.o \
 		mainwindow.o \
 		player.o \
+		t.o \
+		w.o \
 		qrc_cards.o \
 		moc_game.o \
-		moc_mainwindow.o
+		moc_l.o \
+		moc_mainwindow.o \
+		moc_t.o \
+		moc_w.o
 DIST          = /Qt/6.7.0/macos/mkspecs/features/spec_pre.prf \
 		/Qt/6.7.0/macos/mkspecs/features/device_config.prf \
 		/Qt/6.7.0/macos/mkspecs/common/unix.conf \
@@ -302,13 +314,19 @@ DIST          = /Qt/6.7.0/macos/mkspecs/features/spec_pre.prf \
 		../../../../BlackJack_EC327.pro ../../card.h \
 		../../deck.h \
 		../../game.h \
+		../../l.h \
 		../../mainwindow.h \
-		../../player.h ../../card.cpp \
+		../../player.h \
+		../../t.h \
+		../../w.h ../../card.cpp \
 		../../deck.cpp \
 		../../game.cpp \
+		../../l.cpp \
 		../../main.cpp \
 		../../mainwindow.cpp \
-		../../player.cpp
+		../../player.cpp \
+		../../t.cpp \
+		../../w.cpp
 QMAKE_TARGET  = BlackJack_EC327
 DESTDIR       = 
 TARGET        = BlackJack_EC327.app/Contents/MacOS/BlackJack_EC327
@@ -329,7 +347,7 @@ include /Users/jasonpliszak/Qt/6.7.0/macos/mkspecs/features/mac/sdk.mk
 first: all
 ####### Build rules
 
-BlackJack_EC327.app/Contents/MacOS/BlackJack_EC327: ui_game.h ui_mainwindow.h $(OBJECTS)  
+BlackJack_EC327.app/Contents/MacOS/BlackJack_EC327: ui_game.h ui_l.h ui_mainwindow.h ui_t.h ui_w.h $(OBJECTS)  
 	@test -d BlackJack_EC327.app/Contents/MacOS/ || mkdir -p BlackJack_EC327.app/Contents/MacOS/
 	$(LINK) $(LFLAGS) -o $(TARGET)  $(OBJECTS) $(OBJCOMP) $(LIBS)
 
@@ -829,9 +847,9 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../../cards.qrc $(DISTDIR)/
-	$(COPY_FILE) --parents ../../card.h ../../deck.h ../../game.h ../../mainwindow.h ../../player.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../../card.cpp ../../deck.cpp ../../game.cpp ../../main.cpp ../../mainwindow.cpp ../../player.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../../game.ui ../../mainwindow.ui $(DISTDIR)/
+	$(COPY_FILE) --parents ../../card.h ../../deck.h ../../game.h ../../l.h ../../mainwindow.h ../../player.h ../../t.h ../../w.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../../card.cpp ../../deck.cpp ../../game.cpp ../../l.cpp ../../main.cpp ../../mainwindow.cpp ../../player.cpp ../../t.cpp ../../w.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../../game.ui ../../l.ui ../../mainwindow.ui ../../t.ui ../../w.ui $(DISTDIR)/
 
 
 clean: compiler_clean 
@@ -920,12 +938,13 @@ qrc_cards.cpp: ../../cards.qrc \
 		../../images/diamondsQ.gif \
 		../../images/spadesQ.gif \
 		../../images/spades2.gif \
-		../../images/diamonds8.gif
+		../../images/diamonds8.gif \
+		../../images/lose.jpeg
 	/Users/jasonpliszak/Qt/6.7.0/macos/libexec/rcc -name cards --no-zstd ../../cards.qrc -o qrc_cards.cpp
 
-compiler_moc_header_make_all: moc_game.cpp moc_mainwindow.cpp
+compiler_moc_header_make_all: moc_game.cpp moc_l.cpp moc_mainwindow.cpp moc_t.cpp moc_w.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_game.cpp moc_mainwindow.cpp
+	-$(DEL_FILE) moc_game.cpp moc_l.cpp moc_mainwindow.cpp moc_t.cpp moc_w.cpp
 moc_game.cpp: ../../game.h \
 		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/QWidget \
 		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/qwidget.h \
@@ -933,8 +952,15 @@ moc_game.cpp: ../../game.h \
 		../../card.h \
 		../../../Qt/6.7.0/macos/lib/QtGui.framework/Headers/QPixmap \
 		../../../Qt/6.7.0/macos/lib/QtGui.framework/Headers/qpixmap.h \
+		../../player.h \
 		../../../Qt/6.7.0/macos/libexec/moc
 	/Users/jasonpliszak/Qt/6.7.0/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=15 -D__clang_minor__=0 -D__clang_patchlevel__=0 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Users/jasonpliszak/Qt/6.7.0/macos/mkspecs/macx-clang -I/Users/jasonpliszak/BlackJack_EC327 -I/Users/jasonpliszak/Qt/6.7.0/macos/lib/QtWidgets.framework/Headers -I/Users/jasonpliszak/Qt/6.7.0/macos/lib/QtGui.framework/Headers -I/Users/jasonpliszak/Qt/6.7.0/macos/lib/QtCore.framework/Headers -I. -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -I/Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I/Library/Developer/CommandLineTools/usr/include -F/Users/jasonpliszak/Qt/6.7.0/macos/lib ../../game.h -o moc_game.cpp
+
+moc_l.cpp: ../../l.h \
+		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/QWidget \
+		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/qwidget.h \
+		../../../Qt/6.7.0/macos/libexec/moc
+	/Users/jasonpliszak/Qt/6.7.0/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=15 -D__clang_minor__=0 -D__clang_patchlevel__=0 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Users/jasonpliszak/Qt/6.7.0/macos/mkspecs/macx-clang -I/Users/jasonpliszak/BlackJack_EC327 -I/Users/jasonpliszak/Qt/6.7.0/macos/lib/QtWidgets.framework/Headers -I/Users/jasonpliszak/Qt/6.7.0/macos/lib/QtGui.framework/Headers -I/Users/jasonpliszak/Qt/6.7.0/macos/lib/QtCore.framework/Headers -I. -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -I/Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I/Library/Developer/CommandLineTools/usr/include -F/Users/jasonpliszak/Qt/6.7.0/macos/lib ../../l.h -o moc_l.cpp
 
 moc_mainwindow.cpp: ../../mainwindow.h \
 		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/QMainWindow \
@@ -942,20 +968,44 @@ moc_mainwindow.cpp: ../../mainwindow.h \
 		../../../Qt/6.7.0/macos/libexec/moc
 	/Users/jasonpliszak/Qt/6.7.0/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=15 -D__clang_minor__=0 -D__clang_patchlevel__=0 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Users/jasonpliszak/Qt/6.7.0/macos/mkspecs/macx-clang -I/Users/jasonpliszak/BlackJack_EC327 -I/Users/jasonpliszak/Qt/6.7.0/macos/lib/QtWidgets.framework/Headers -I/Users/jasonpliszak/Qt/6.7.0/macos/lib/QtGui.framework/Headers -I/Users/jasonpliszak/Qt/6.7.0/macos/lib/QtCore.framework/Headers -I. -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -I/Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I/Library/Developer/CommandLineTools/usr/include -F/Users/jasonpliszak/Qt/6.7.0/macos/lib ../../mainwindow.h -o moc_mainwindow.cpp
 
+moc_t.cpp: ../../t.h \
+		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/QWidget \
+		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/qwidget.h \
+		../../../Qt/6.7.0/macos/libexec/moc
+	/Users/jasonpliszak/Qt/6.7.0/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=15 -D__clang_minor__=0 -D__clang_patchlevel__=0 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Users/jasonpliszak/Qt/6.7.0/macos/mkspecs/macx-clang -I/Users/jasonpliszak/BlackJack_EC327 -I/Users/jasonpliszak/Qt/6.7.0/macos/lib/QtWidgets.framework/Headers -I/Users/jasonpliszak/Qt/6.7.0/macos/lib/QtGui.framework/Headers -I/Users/jasonpliszak/Qt/6.7.0/macos/lib/QtCore.framework/Headers -I. -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -I/Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I/Library/Developer/CommandLineTools/usr/include -F/Users/jasonpliszak/Qt/6.7.0/macos/lib ../../t.h -o moc_t.cpp
+
+moc_w.cpp: ../../w.h \
+		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/QWidget \
+		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/qwidget.h \
+		../../../Qt/6.7.0/macos/libexec/moc
+	/Users/jasonpliszak/Qt/6.7.0/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=15 -D__clang_minor__=0 -D__clang_patchlevel__=0 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Users/jasonpliszak/Qt/6.7.0/macos/mkspecs/macx-clang -I/Users/jasonpliszak/BlackJack_EC327 -I/Users/jasonpliszak/Qt/6.7.0/macos/lib/QtWidgets.framework/Headers -I/Users/jasonpliszak/Qt/6.7.0/macos/lib/QtGui.framework/Headers -I/Users/jasonpliszak/Qt/6.7.0/macos/lib/QtCore.framework/Headers -I. -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -I/Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I/Library/Developer/CommandLineTools/usr/include -F/Users/jasonpliszak/Qt/6.7.0/macos/lib ../../w.h -o moc_w.cpp
+
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
-compiler_uic_make_all: ui_game.h ui_mainwindow.h
+compiler_uic_make_all: ui_game.h ui_l.h ui_mainwindow.h ui_t.h ui_w.h
 compiler_uic_clean:
-	-$(DEL_FILE) ui_game.h ui_mainwindow.h
+	-$(DEL_FILE) ui_game.h ui_l.h ui_mainwindow.h ui_t.h ui_w.h
 ui_game.h: ../../game.ui \
 		../../../Qt/6.7.0/macos/libexec/uic
 	/Users/jasonpliszak/Qt/6.7.0/macos/libexec/uic ../../game.ui -o ui_game.h
 
+ui_l.h: ../../l.ui \
+		../../../Qt/6.7.0/macos/libexec/uic
+	/Users/jasonpliszak/Qt/6.7.0/macos/libexec/uic ../../l.ui -o ui_l.h
+
 ui_mainwindow.h: ../../mainwindow.ui \
 		../../../Qt/6.7.0/macos/libexec/uic
 	/Users/jasonpliszak/Qt/6.7.0/macos/libexec/uic ../../mainwindow.ui -o ui_mainwindow.h
+
+ui_t.h: ../../t.ui \
+		../../../Qt/6.7.0/macos/libexec/uic
+	/Users/jasonpliszak/Qt/6.7.0/macos/libexec/uic ../../t.ui -o ui_t.h
+
+ui_w.h: ../../w.ui \
+		../../../Qt/6.7.0/macos/libexec/uic
+	/Users/jasonpliszak/Qt/6.7.0/macos/libexec/uic ../../w.ui -o ui_w.h
 
 compiler_rez_source_make_all:
 compiler_rez_source_clean:
@@ -987,8 +1037,8 @@ game.o: ../../game.cpp ../../game.h \
 		../../card.h \
 		../../../Qt/6.7.0/macos/lib/QtGui.framework/Headers/QPixmap \
 		../../../Qt/6.7.0/macos/lib/QtGui.framework/Headers/qpixmap.h \
-		ui_game.h \
 		../../player.h \
+		ui_game.h \
 		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/QApplication \
 		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/qapplication.h \
 		../../../Qt/6.7.0/macos/lib/QtCore.framework/Headers/QString \
@@ -998,8 +1048,25 @@ game.o: ../../game.cpp ../../game.h \
 		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/QPushButton \
 		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
 		../../../Qt/6.7.0/macos/lib/QtCore.framework/Headers/QList \
-		../../../Qt/6.7.0/macos/lib/QtCore.framework/Headers/qlist.h
+		../../../Qt/6.7.0/macos/lib/QtCore.framework/Headers/qlist.h \
+		../../l.h \
+		../../../Qt/6.7.0/macos/lib/QtCore.framework/Headers/QTimer \
+		../../../Qt/6.7.0/macos/lib/QtCore.framework/Headers/qtimer.h \
+		../../t.h \
+		../../w.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o game.o ../../game.cpp
+
+l.o: ../../l.cpp ../../l.h \
+		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/QWidget \
+		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/qwidget.h \
+		ui_l.h \
+		../../game.h \
+		../../deck.h \
+		../../card.h \
+		../../../Qt/6.7.0/macos/lib/QtGui.framework/Headers/QPixmap \
+		../../../Qt/6.7.0/macos/lib/QtGui.framework/Headers/qpixmap.h \
+		../../player.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o l.o ../../l.cpp
 
 main.o: ../../main.cpp ../../mainwindow.h \
 		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/QMainWindow \
@@ -1023,6 +1090,7 @@ mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
 		../../card.h \
 		../../../Qt/6.7.0/macos/lib/QtGui.framework/Headers/QPixmap \
 		../../../Qt/6.7.0/macos/lib/QtGui.framework/Headers/qpixmap.h \
+		../../player.h \
 		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/QPushButton \
 		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/qpushbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../../mainwindow.cpp
@@ -1033,14 +1101,35 @@ player.o: ../../player.cpp ../../card.h \
 		../../player.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o player.o ../../player.cpp
 
+t.o: ../../t.cpp ../../t.h \
+		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/QWidget \
+		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/qwidget.h \
+		ui_t.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o t.o ../../t.cpp
+
+w.o: ../../w.cpp ../../w.h \
+		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/QWidget \
+		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/qwidget.h \
+		ui_w.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o w.o ../../w.cpp
+
 qrc_cards.o: qrc_cards.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_cards.o qrc_cards.cpp
 
 moc_game.o: moc_game.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_game.o moc_game.cpp
 
+moc_l.o: moc_l.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_l.o moc_l.cpp
+
 moc_mainwindow.o: moc_mainwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_mainwindow.o moc_mainwindow.cpp
+
+moc_t.o: moc_t.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_t.o moc_t.cpp
+
+moc_w.o: moc_w.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_w.o moc_w.cpp
 
 ####### Install
 
