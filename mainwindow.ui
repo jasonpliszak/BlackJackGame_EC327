@@ -109,7 +109,7 @@ color: rgb(0, 0, 0);</string>
 background-color: transparent;</string>
     </property>
     <property name="text">
-     <string>Set Balance:</string>
+     <string>Balance: $1000</string>
     </property>
    </widget>
    <zorder>home_screen</zorder>
