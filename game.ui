@@ -138,7 +138,7 @@ background-color: rgb(0, 0, 0);
   <widget class="QLabel" name="DC2">
    <property name="geometry">
     <rect>
-     <x>150</x>
+     <x>125</x>
      <y>200</y>
      <width>100</width>
      <height>125</height>
@@ -154,7 +154,7 @@ background-color: rgb(0, 0, 0);
   <widget class="QLabel" name="DC3">
    <property name="geometry">
     <rect>
-     <x>200</x>
+     <x>150</x>
      <y>200</y>
      <width>100</width>
      <height>125</height>
@@ -170,7 +170,7 @@ background-color: rgb(0, 0, 0);
   <widget class="QLabel" name="DC4">
    <property name="geometry">
     <rect>
-     <x>250</x>
+     <x>175</x>
      <y>200</y>
      <width>100</width>
      <height>125</height>
@@ -186,7 +186,7 @@ background-color: rgb(0, 0, 0);
   <widget class="QLabel" name="DC5">
    <property name="geometry">
     <rect>
-     <x>300</x>
+     <x>200</x>
      <y>200</y>
      <width>100</width>
      <height>125</height>
@@ -202,7 +202,7 @@ background-color: rgb(0, 0, 0);
   <widget class="QLabel" name="PC2">
    <property name="geometry">
     <rect>
-     <x>150</x>
+     <x>125</x>
      <y>50</y>
      <width>100</width>
      <height>125</height>
@@ -221,7 +221,7 @@ background-color: rgb(0, 0, 0);
   <widget class="QLabel" name="PC5">
    <property name="geometry">
     <rect>
-     <x>300</x>
+     <x>200</x>
      <y>50</y>
      <width>100</width>
      <height>125</height>
@@ -240,7 +240,7 @@ background-color: rgb(0, 0, 0);
   <widget class="QLabel" name="PC4">
    <property name="geometry">
     <rect>
-     <x>250</x>
+     <x>175</x>
      <y>50</y>
      <width>100</width>
      <height>125</height>
@@ -259,7 +259,7 @@ background-color: rgb(0, 0, 0);
   <widget class="QLabel" name="PC3">
    <property name="geometry">
     <rect>
-     <x>200</x>
+     <x>150</x>
      <y>50</y>
      <width>100</width>
      <height>125</height>
@@ -297,7 +297,7 @@ background-color: rgb(0, 0, 0);
   <widget class="QLabel" name="PC6">
    <property name="geometry">
     <rect>
-     <x>350</x>
+     <x>225</x>
      <y>50</y>
      <width>100</width>
      <height>125</height>
@@ -316,7 +316,7 @@ background-color: rgb(0, 0, 0);
   <widget class="QLabel" name="PC7">
    <property name="geometry">
     <rect>
-     <x>400</x>
+     <x>250</x>
      <y>50</y>
      <width>100</width>
      <height>125</height>
@@ -335,7 +335,7 @@ background-color: rgb(0, 0, 0);
   <widget class="QLabel" name="PC8">
    <property name="geometry">
     <rect>
-     <x>450</x>
+     <x>250</x>
      <y>50</y>
      <width>100</width>
      <height>125</height>
@@ -354,7 +354,7 @@ background-color: rgb(0, 0, 0);
   <widget class="QLabel" name="PC9">
    <property name="geometry">
     <rect>
-     <x>500</x>
+     <x>275</x>
      <y>50</y>
      <width>100</width>
      <height>125</height>
@@ -373,7 +373,7 @@ background-color: rgb(0, 0, 0);
   <widget class="QLabel" name="PC10">
    <property name="geometry">
     <rect>
-     <x>550</x>
+     <x>300</x>
      <y>50</y>
      <width>100</width>
      <height>125</height>
@@ -392,7 +392,7 @@ background-color: rgb(0, 0, 0);
   <widget class="QLabel" name="PC11">
    <property name="geometry">
     <rect>
-     <x>600</x>
+     <x>325</x>
      <y>50</y>
      <width>100</width>
      <height>125</height>
@@ -411,7 +411,7 @@ background-color: rgb(0, 0, 0);
   <widget class="QLabel" name="DC6">
    <property name="geometry">
     <rect>
-     <x>350</x>
+     <x>225</x>
      <y>200</y>
      <width>100</width>
      <height>125</height>
@@ -427,7 +427,7 @@ background-color: rgb(0, 0, 0);
   <widget class="QLabel" name="DC7">
    <property name="geometry">
     <rect>
-     <x>400</x>
+     <x>250</x>
      <y>200</y>
      <width>100</width>
      <height>125</height>
@@ -443,7 +443,7 @@ background-color: rgb(0, 0, 0);
   <widget class="QLabel" name="DC8">
    <property name="geometry">
     <rect>
-     <x>450</x>
+     <x>275</x>
      <y>200</y>
      <width>100</width>
      <height>125</height>
@@ -459,7 +459,7 @@ background-color: rgb(0, 0, 0);
   <widget class="QLabel" name="DC9">
    <property name="geometry">
     <rect>
-     <x>500</x>
+     <x>300</x>
      <y>200</y>
      <width>100</width>
      <height>125</height>
@@ -475,7 +475,7 @@ background-color: rgb(0, 0, 0);
   <widget class="QLabel" name="DC10">
    <property name="geometry">
     <rect>
-     <x>550</x>
+     <x>325</x>
      <y>200</y>
      <width>100</width>
      <height>125</height>
@@ -491,7 +491,7 @@ background-color: rgb(0, 0, 0);
   <widget class="QLabel" name="DC11">
    <property name="geometry">
     <rect>
-     <x>600</x>
+     <x>350</x>
      <y>200</y>
      <width>100</width>
      <height>125</height>
@@ -515,6 +515,137 @@ background-color: rgb(0, 0, 0);
    </property>
    <property name="text">
     <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Split">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>550</y>
+     <width>100</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Split</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="SC1">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>50</y>
+     <width>100</width>
+     <height>125</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="SC2">
+   <property name="geometry">
+    <rect>
+     <x>425</x>
+     <y>50</y>
+     <width>100</width>
+     <height>125</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="SC3">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>50</y>
+     <width>100</width>
+     <height>125</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="SC4">
+   <property name="geometry">
+    <rect>
+     <x>475</x>
+     <y>50</y>
+     <width>100</width>
+     <height>125</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="SC5">
+   <property name="geometry">
+    <rect>
+     <x>500</x>
+     <y>50</y>
+     <width>100</width>
+     <height>125</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="SC6">
+   <property name="geometry">
+    <rect>
+     <x>525</x>
+     <y>50</y>
+     <width>100</width>
+     <height>125</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
    </property>
   </widget>
   <zorder>backtexture</zorder>
@@ -546,6 +677,13 @@ background-color: rgb(0, 0, 0);
   <zorder>PC7</zorder>
   <zorder>PC8</zorder>
   <zorder>PC9</zorder>
+  <zorder>Split</zorder>
+  <zorder>SC1</zorder>
+  <zorder>SC2</zorder>
+  <zorder>SC3</zorder>
+  <zorder>SC4</zorder>
+  <zorder>SC5</zorder>
+  <zorder>SC6</zorder>
  </widget>
  <resources/>
  <connections/>

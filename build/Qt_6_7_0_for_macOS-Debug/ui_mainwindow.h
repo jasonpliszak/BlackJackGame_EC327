@@ -14,6 +14,7 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QSlider>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -25,6 +26,8 @@ public:
     QPushButton *play_button;
     QLabel *home_screen;
     QLabel *label;
+    QSlider *BetBalance;
+    QLabel *Balance;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -37,7 +40,11 @@ public:
         centralwidget->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 0, 0);"));
         play_button = new QPushButton(centralwidget);
         play_button->setObjectName("play_button");
-        play_button->setGeometry(QRect(420, 520, 150, 40));
+        play_button->setGeometry(QRect(450, 525, 150, 40));
+        QFont font;
+        font.setPointSize(15);
+        font.setBold(true);
+        play_button->setFont(font);
         play_button->setStyleSheet(QString::fromUtf8("background-color: rgb(252, 255, 255);\n"
 "color: rgb(0, 0, 0);"));
         home_screen = new QLabel(centralwidget);
@@ -47,19 +54,37 @@ public:
         label = new QLabel(centralwidget);
         label->setObjectName("label");
         label->setGeometry(QRect(350, 0, 291, 61));
-        QFont font;
-        font.setFamilies({QString::fromUtf8("PT Sans Caption")});
-        font.setPointSize(25);
-        font.setBold(true);
-        label->setFont(font);
+        QFont font1;
+        font1.setFamilies({QString::fromUtf8("PT Sans Caption")});
+        font1.setPointSize(25);
+        font1.setBold(true);
+        label->setFont(font1);
         label->setAutoFillBackground(false);
         label->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
 "color: rgb(0, 0, 0);"));
         label->setAlignment(Qt::AlignCenter);
+        BetBalance = new QSlider(centralwidget);
+        BetBalance->setObjectName("BetBalance");
+        BetBalance->setGeometry(QRect(100, 525, 160, 25));
+        BetBalance->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
+"color: rgb(0, 0, 0);"));
+        BetBalance->setMinimum(1);
+        BetBalance->setMaximum(150);
+        BetBalance->setOrientation(Qt::Horizontal);
+        BetBalance->setTickPosition(QSlider::NoTicks);
+        BetBalance->setTickInterval(0);
+        Balance = new QLabel(centralwidget);
+        Balance->setObjectName("Balance");
+        Balance->setGeometry(QRect(125, 490, 121, 16));
+        Balance->setFont(font);
+        Balance->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
+"background-color: transparent;"));
         MainWindow->setCentralWidget(centralwidget);
         home_screen->raise();
         play_button->raise();
         label->raise();
+        BetBalance->raise();
+        Balance->raise();
 
         retranslateUi(MainWindow);
 
@@ -72,6 +97,7 @@ public:
         play_button->setText(QCoreApplication::translate("MainWindow", "Play BlackJack", nullptr));
         home_screen->setText(QString());
         label->setText(QCoreApplication::translate("MainWindow", "EC327 Casino App", nullptr));
+        Balance->setText(QCoreApplication::translate("MainWindow", "Set Balance:", nullptr));
     } // retranslateUi
 
 };
