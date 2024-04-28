@@ -14,7 +14,6 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QSlider>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -26,7 +25,6 @@ public:
     QPushButton *play_button;
     QLabel *home_screen;
     QLabel *label;
-    QSlider *BetBalance;
     QLabel *Balance;
 
     void setupUi(QMainWindow *MainWindow)
@@ -63,16 +61,6 @@ public:
         label->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
 "color: rgb(0, 0, 0);"));
         label->setAlignment(Qt::AlignCenter);
-        BetBalance = new QSlider(centralwidget);
-        BetBalance->setObjectName("BetBalance");
-        BetBalance->setGeometry(QRect(100, 525, 160, 25));
-        BetBalance->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
-"color: rgb(0, 0, 0);"));
-        BetBalance->setMinimum(1);
-        BetBalance->setMaximum(150);
-        BetBalance->setOrientation(Qt::Horizontal);
-        BetBalance->setTickPosition(QSlider::NoTicks);
-        BetBalance->setTickInterval(0);
         Balance = new QLabel(centralwidget);
         Balance->setObjectName("Balance");
         Balance->setGeometry(QRect(100, 490, 151, 16));
@@ -83,7 +71,6 @@ public:
         home_screen->raise();
         play_button->raise();
         label->raise();
-        BetBalance->raise();
         Balance->raise();
 
         retranslateUi(MainWindow);

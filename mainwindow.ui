@@ -89,35 +89,6 @@ color: rgb(0, 0, 0);</string>
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QSlider" name="BetBalance">
-    <property name="geometry">
-     <rect>
-      <x>100</x>
-      <y>525</y>
-      <width>160</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: transparent;
-color: rgb(0, 0, 0);</string>
-    </property>
-    <property name="minimum">
-     <number>1</number>
-    </property>
-    <property name="maximum">
-     <number>150</number>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-    <property name="tickPosition">
-     <enum>QSlider::NoTicks</enum>
-    </property>
-    <property name="tickInterval">
-     <number>0</number>
-    </property>
-   </widget>
    <widget class="QLabel" name="Balance">
     <property name="geometry">
      <rect>
@@ -144,7 +115,6 @@ background-color: transparent;</string>
    <zorder>home_screen</zorder>
    <zorder>play_button</zorder>
    <zorder>label</zorder>
-   <zorder>BetBalance</zorder>
    <zorder>Balance</zorder>
   </widget>
  </widget>
