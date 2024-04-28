@@ -163,6 +163,7 @@ debug/qrc_cards.cpp: ../../cards.qrc \
 		../../images/spades9.gif \
 		../../images/clubs9.gif \
 		../../images/cardback.gif \
+		../../images/cardback.png \
 		../../images/clubs2.gif \
 		../../images/diamondsJ.gif \
 		../../images/diamonds7.gif \
@@ -1845,7 +1846,19 @@ debug/l.o: ../../l.cpp ../../l.h \
 		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qlabel.h \
 		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qframe.h \
 		C:/Qt/6.7.0/mingw_64/include/QtGui/qpicture.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qtextdocument.h
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qtextdocument.h \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QPushButton \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qpushbutton.h \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qabstractbutton.h \
+		../../game.h \
+		../../deck.h \
+		../../card.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/QPixmap \
+		../../player.h \
+		../../mainwindow.h \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QMainWindow \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qmainwindow.h \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qtabwidget.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\l.o ..\..\l.cpp
 
 debug/main.o: ../../main.cpp ../../mainwindow.h \
@@ -2564,7 +2577,27 @@ debug/t.o: ../../t.cpp ../../t.h \
 		C:/Qt/6.7.0/mingw_64/include/QtGui/qinputmethod.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qlocale.h \
 		C:/Qt/6.7.0/mingw_64/include/QtGui/qguiapplication_platform.h \
-		ui_t.h
+		ui_t.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/QVariant \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QApplication \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qapplication.h \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QLabel \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qlabel.h \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qframe.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qpicture.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qtextdocument.h \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QPushButton \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qpushbutton.h \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qabstractbutton.h \
+		../../game.h \
+		../../deck.h \
+		../../card.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/QPixmap \
+		../../player.h \
+		../../mainwindow.h \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QMainWindow \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qmainwindow.h \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qtabwidget.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\t.o ..\..\t.cpp
 
 debug/w.o: ../../w.cpp ../../w.h \
@@ -2754,7 +2787,27 @@ debug/w.o: ../../w.cpp ../../w.h \
 		C:/Qt/6.7.0/mingw_64/include/QtGui/qinputmethod.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qlocale.h \
 		C:/Qt/6.7.0/mingw_64/include/QtGui/qguiapplication_platform.h \
-		ui_w.h
+		ui_w.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/QVariant \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QApplication \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qapplication.h \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QLabel \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qlabel.h \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qframe.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qpicture.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qtextdocument.h \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QPushButton \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qpushbutton.h \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qabstractbutton.h \
+		../../game.h \
+		../../deck.h \
+		../../card.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/QPixmap \
+		../../player.h \
+		../../mainwindow.h \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QMainWindow \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qmainwindow.h \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qtabwidget.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\w.o ..\..\w.cpp
 
 debug/qrc_cards.o: debug/qrc_cards.cpp 

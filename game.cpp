@@ -26,7 +26,7 @@ Game::Game(QWidget *parent)
 {
     //set background of widget to table felt
     ui->setupUi(this);
-    QPixmap pix(":/images/bgtable.png");
+    QPixmap pix(":/images/bg.png");
     ui->Background->setPixmap(pix);
     ui->Background->lower();
     ui->Hit->setDisabled(true);
@@ -65,6 +65,7 @@ void Game::on_Deal_clicked(){
         int dscore = House.getVal();
         ui->Dealer->setText("Score: " + QString::number(dscore));
         ui->Hit->setDisabled(true);
+        ui->Stand->setDisabled(true);
         QTimer::singleShot(1500, this, &Game::delayedTie);
     }
     else if(House.getVal()==21 && User.getVal()!=21){
@@ -72,6 +73,7 @@ void Game::on_Deal_clicked(){
         int dscore = House.getVal();
         ui->Dealer->setText("Score: " + QString::number(dscore));
         ui->Hit->setDisabled(true);
+        ui->Stand->setDisabled(true);
         QTimer::singleShot(1500, this, &Game::delayedLose);
     }
     else if(User.getVal() == 21 && House.getVal()!=21){
@@ -79,6 +81,7 @@ void Game::on_Deal_clicked(){
         int dscore = House.getVal();
         ui->Dealer->setText("Score: " + QString::number(dscore));
         ui->Hit->setDisabled(true);
+        ui->Stand->setDisabled(true);
         QTimer::singleShot(1500, this, &Game::delayedWin);
     }
 }
@@ -89,6 +92,12 @@ void Game::on_Hit_clicked(){
     card p3;
     card p4;
     card p5;
+    card p6;
+    card p7;
+    card p8;
+    card p9;
+    card p10;
+    card p11;
     switch(hitcounter){
     case 1:
         p3 = Deck.draw();
@@ -108,6 +117,48 @@ void Game::on_Hit_clicked(){
         p5 = Deck.draw();
         ui->PC5->setPixmap(p5.getImg());
         User.addCard(p5);
+        pscore = User.getVal();
+        ui->PlayerScore->setText("Score: " + QString::number(pscore));
+        break;
+    case 4:
+        p6 = Deck.draw();
+        ui->PC6->setPixmap(p6.getImg());
+        User.addCard(p6);
+        pscore = User.getVal();
+        ui->PlayerScore->setText("Score: " + QString::number(pscore));
+        break;
+    case 5:
+        p7 = Deck.draw();
+        ui->PC7->setPixmap(p7.getImg());
+        User.addCard(p7);
+        pscore = User.getVal();
+        ui->PlayerScore->setText("Score: " + QString::number(pscore));
+        break;
+    case 6:
+        p8 = Deck.draw();
+        ui->PC8->setPixmap(p8.getImg());
+        User.addCard(p8);
+        pscore = User.getVal();
+        ui->PlayerScore->setText("Score: " + QString::number(pscore));
+        break;
+    case 7:
+        p9 = Deck.draw();
+        ui->PC9->setPixmap(p9.getImg());
+        User.addCard(p9);
+        pscore = User.getVal();
+        ui->PlayerScore->setText("Score: " + QString::number(pscore));
+        break;
+    case 8:
+        p10 = Deck.draw();
+        ui->PC10->setPixmap(p10.getImg());
+        User.addCard(p10);
+        pscore = User.getVal();
+        ui->PlayerScore->setText("Score: " + QString::number(pscore));
+        break;
+    case 9:
+        p11 = Deck.draw();
+        ui->PC11->setPixmap(p11.getImg());
+        User.addCard(p11);
         pscore = User.getVal();
         ui->PlayerScore->setText("Score: " + QString::number(pscore));
         ui->Hit->setDisabled(true);

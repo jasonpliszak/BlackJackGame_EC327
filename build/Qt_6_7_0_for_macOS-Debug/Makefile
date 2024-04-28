@@ -882,6 +882,7 @@ compiler_rcc_clean:
 qrc_cards.cpp: ../../cards.qrc \
 		../../../Qt/6.7.0/macos/libexec/rcc \
 		../../images/heartsT.gif \
+		../../images/bg.png \
 		../../images/heartsJ.gif \
 		../../images/diamonds3.gif \
 		../../images/spades5.gif \
