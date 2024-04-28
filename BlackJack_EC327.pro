@@ -16,6 +16,7 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     player.cpp \
+    t.cpp \
     w.cpp
 
 HEADERS += \
@@ -25,12 +26,14 @@ HEADERS += \
     l.h \
     mainwindow.h \
     player.h \
+    t.h \
     w.h
 
 FORMS += \
     game.ui \
     l.ui \
     mainwindow.ui \
+    t.ui \
     w.ui
 
 # Default rules for deployment.
