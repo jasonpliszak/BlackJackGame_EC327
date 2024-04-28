@@ -83,7 +83,7 @@ color: rgb(0, 0, 0);</string>
 color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>EC327 Casino App</string>
+     <string>EC327 BlackJack App</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>

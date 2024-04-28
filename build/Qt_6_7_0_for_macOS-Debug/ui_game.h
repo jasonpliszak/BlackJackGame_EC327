@@ -239,7 +239,7 @@ public:
         horizontalScrollBar->setOrientation(Qt::Horizontal);
         availibleBalance = new QLabel(Game);
         availibleBalance->setObjectName("availibleBalance");
-        availibleBalance->setGeometry(QRect(500, 530, 58, 16));
+        availibleBalance->setGeometry(QRect(500, 525, 111, 21));
         SplitScore = new QLabel(Game);
         SplitScore->setObjectName("SplitScore");
         SplitScore->setGeometry(QRect(400, 25, 141, 21));
@@ -327,7 +327,7 @@ public:
         SC4->setText(QString());
         SC5->setText(QString());
         SC6->setText(QString());
-        availibleBalance->setText(QCoreApplication::translate("Game", "TextLabel", nullptr));
+        availibleBalance->setText(QString());
         SplitScore->setText(QString());
     } // retranslateUi
 
