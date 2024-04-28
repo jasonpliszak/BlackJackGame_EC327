@@ -58,5 +58,6 @@
         <file>images/spades3.gif</file>
         <file>images/spades2.gif</file>
         <file>images/homescreen.png</file>
+        <file>images/lose.jpeg</file>
     </qresource>
 </RCC>

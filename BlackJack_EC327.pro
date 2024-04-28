@@ -12,6 +12,7 @@ SOURCES += \
     card.cpp \
     deck.cpp \
     game.cpp \
+    l.cpp \
     main.cpp \
     mainwindow.cpp \
     player.cpp
@@ -20,11 +21,13 @@ HEADERS += \
     card.h \
     deck.h \
     game.h \
+    l.h \
     mainwindow.h \
     player.h
 
 FORMS += \
     game.ui \
+    l.ui \
     mainwindow.ui
 
 # Default rules for deployment.
