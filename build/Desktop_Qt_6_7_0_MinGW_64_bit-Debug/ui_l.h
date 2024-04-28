@@ -48,7 +48,7 @@ public:
 "background-color: rgb(255, 255, 255);"));
         HandOver = new QLabel(L);
         HandOver->setObjectName("HandOver");
-        HandOver->setGeometry(QRect(400, 30, 251, 111));
+        HandOver->setGeometry(QRect(325, 30, 400, 61));
         QFont font;
         font.setPointSize(45);
         font.setBold(true);

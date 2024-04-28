@@ -96,7 +96,7 @@ public:
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         play_button->setText(QCoreApplication::translate("MainWindow", "Play BlackJack", nullptr));
         home_screen->setText(QString());
-        label->setText(QCoreApplication::translate("MainWindow", "EC327 Casino App", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "EC327 BlackJack App", nullptr));
         Balance->setText(QCoreApplication::translate("MainWindow", "Set Balance:", nullptr));
     } // retranslateUi
 

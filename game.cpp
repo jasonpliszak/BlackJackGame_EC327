@@ -91,6 +91,7 @@ void Game::on_Deal_clicked(){
 
 void Game::on_Split_clicked(){
     splitFlag = true;
+    ui->Split->setDisabled(true);
     QPixmap bcard(":/images/blank.png");
     card s1 = User.getCards()[1];
     User.removeCard();
@@ -99,7 +100,6 @@ void Game::on_Split_clicked(){
     ui->SC1->setPixmap(s1.getImg());
     ui->PlayerScore->setText("Score: " + QString::number(User.getVal()));
     ui->SplitScore->setText("Score: " + QString::number(split.getVal()));
-    ui->Split->setDisabled(true);
     hitcounter--; //hitcounter decrement to ensure on_Hit_clicked() works for split hand
 }
 
@@ -241,6 +241,11 @@ void Game::on_Hit_clicked(){
     }
     //bust logic
     if(User.getVal()>21){
+        if(splitFlag){
+            spStandFlag = true;
+            hitcounter = 0;
+            return;
+        }
         ui->Hit->setDisabled(true);
         ui->Stand->setDisabled(true);
         QTimer::singleShot(1500, this, &Game::delayedLose);
@@ -248,11 +253,13 @@ void Game::on_Hit_clicked(){
 }
 
 void Game::on_Stand_clicked(){
-    if(splitFlag){
+    if(splitFlag && !spStandFlag){
         spStandFlag = true;
         hitcounter = 0;
         return;
     }
+
+    if(splitFlag == false || (splitFlag == true && spStandFlag == true)){
     ui->Hit->setDisabled(true);
     ui->Stand->setDisabled(true);
     ui->DC1->setPixmap(House.getCards()[0].getImg()); //replace cardback image with image of the first dealer card
@@ -341,6 +348,8 @@ void Game::on_Stand_clicked(){
     }
     else if(dscore < User.getVal()){ //because auto blackjacks are already processed (you cannot stand if you get a blackjack on draw)
         QTimer::singleShot(1500, this, &Game::delayedWin);
+    }
+    //implement code to check against split hand if split flag is true
     }
 }
 

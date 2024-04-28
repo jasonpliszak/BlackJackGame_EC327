@@ -21,9 +21,6 @@ MainWindow::MainWindow(QWidget *parent)
 
     QSlider *slider = new QSlider(Qt::Horizontal);
     slider->setRange(0, 150); // Set the range
-
-
-
 }
 
 MainWindow::~MainWindow()
