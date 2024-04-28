@@ -138,7 +138,7 @@ background-color: rgb(0, 0, 0);
   <widget class="QLabel" name="DC2">
    <property name="geometry">
     <rect>
-     <x>200</x>
+     <x>120</x>
      <y>300</y>
      <width>150</width>
      <height>225</height>
@@ -154,7 +154,7 @@ background-color: rgb(0, 0, 0);
   <widget class="QLabel" name="DC3">
    <property name="geometry">
     <rect>
-     <x>370</x>
+     <x>140</x>
      <y>300</y>
      <width>150</width>
      <height>225</height>
@@ -170,7 +170,7 @@ background-color: rgb(0, 0, 0);
   <widget class="QLabel" name="DC4">
    <property name="geometry">
     <rect>
-     <x>540</x>
+     <x>160</x>
      <y>300</y>
      <width>150</width>
      <height>225</height>
@@ -186,7 +186,7 @@ background-color: rgb(0, 0, 0);
   <widget class="QLabel" name="DC5">
    <property name="geometry">
     <rect>
-     <x>710</x>
+     <x>180</x>
      <y>300</y>
      <width>150</width>
      <height>225</height>
@@ -202,7 +202,7 @@ background-color: rgb(0, 0, 0);
   <widget class="QLabel" name="PC2">
    <property name="geometry">
     <rect>
-     <x>200</x>
+     <x>80</x>
      <y>30</y>
      <width>150</width>
      <height>225</height>
@@ -221,7 +221,7 @@ background-color: rgb(0, 0, 0);
   <widget class="QLabel" name="PC5">
    <property name="geometry">
     <rect>
-     <x>710</x>
+     <x>180</x>
      <y>30</y>
      <width>150</width>
      <height>225</height>
@@ -240,7 +240,7 @@ background-color: rgb(0, 0, 0);
   <widget class="QLabel" name="PC4">
    <property name="geometry">
     <rect>
-     <x>540</x>
+     <x>170</x>
      <y>30</y>
      <width>150</width>
      <height>225</height>
@@ -259,7 +259,7 @@ background-color: rgb(0, 0, 0);
   <widget class="QLabel" name="PC3">
    <property name="geometry">
     <rect>
-     <x>370</x>
+     <x>150</x>
      <y>30</y>
      <width>150</width>
      <height>225</height>
@@ -288,6 +288,216 @@ background-color: rgb(0, 0, 0);
     <string/>
    </property>
   </widget>
+  <widget class="QLabel" name="PC6">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>30</y>
+     <width>150</width>
+     <height>225</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(136, 255, 83)</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="PC7">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>30</y>
+     <width>150</width>
+     <height>225</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(136, 255, 83)</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="PC8">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>30</y>
+     <width>150</width>
+     <height>225</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(136, 255, 83)</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="PC9">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>30</y>
+     <width>150</width>
+     <height>225</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(136, 255, 83)</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="PC10">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>30</y>
+     <width>150</width>
+     <height>225</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(136, 255, 83)</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="PC11">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>30</y>
+     <width>150</width>
+     <height>225</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(136, 255, 83)</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="DC6">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>300</y>
+     <width>150</width>
+     <height>225</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="DC7">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>300</y>
+     <width>150</width>
+     <height>225</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="DC8">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>300</y>
+     <width>150</width>
+     <height>225</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="DC9">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>300</y>
+     <width>150</width>
+     <height>225</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="DC10">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>300</y>
+     <width>150</width>
+     <height>225</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="DC11">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>300</y>
+     <width>150</width>
+     <height>225</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
   <zorder>Background</zorder>
   <zorder>DC5</zorder>
   <zorder>DC4</zorder>
@@ -304,6 +514,18 @@ background-color: rgb(0, 0, 0);
   <zorder>Hit</zorder>
   <zorder>Stand</zorder>
   <zorder>Deal</zorder>
+  <zorder>PC6</zorder>
+  <zorder>PC7</zorder>
+  <zorder>PC8</zorder>
+  <zorder>PC9</zorder>
+  <zorder>PC10</zorder>
+  <zorder>PC11</zorder>
+  <zorder>DC6</zorder>
+  <zorder>DC7</zorder>
+  <zorder>DC8</zorder>
+  <zorder>DC9</zorder>
+  <zorder>DC10</zorder>
+  <zorder>DC11</zorder>
  </widget>
  <resources/>
  <connections/>
