@@ -23,7 +23,6 @@ public:
     int hitcounter = 0;
     bool splitFlag = false;
     bool spStandFlag = false; //stand on first split hand
-    static int const money = 0;
 
     ~Game();
 

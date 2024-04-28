@@ -314,6 +314,7 @@ DIST          = /Qt/6.7.0/macos/mkspecs/features/spec_pre.prf \
 		../../../../BlackJack_EC327.pro ../../card.h \
 		../../deck.h \
 		../../game.h \
+		../../global.h \
 		../../l.h \
 		../../mainwindow.h \
 		../../player.h \
@@ -847,7 +848,7 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../../cards.qrc $(DISTDIR)/
-	$(COPY_FILE) --parents ../../card.h ../../deck.h ../../game.h ../../l.h ../../mainwindow.h ../../player.h ../../t.h ../../w.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../../card.h ../../deck.h ../../game.h ../../global.h ../../l.h ../../mainwindow.h ../../player.h ../../t.h ../../w.h $(DISTDIR)/
 	$(COPY_FILE) --parents ../../card.cpp ../../deck.cpp ../../game.cpp ../../l.cpp ../../main.cpp ../../mainwindow.cpp ../../player.cpp ../../t.cpp ../../w.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../../game.ui ../../l.ui ../../mainwindow.ui ../../t.ui ../../w.ui $(DISTDIR)/
 
@@ -1096,7 +1097,10 @@ mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
 		../../../Qt/6.7.0/macos/lib/QtGui.framework/Headers/qpixmap.h \
 		../../player.h \
 		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/QPushButton \
-		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/qpushbutton.h
+		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
+		../../../Qt/6.7.0/macos/lib/QtCore.framework/Headers/QString \
+		../../../Qt/6.7.0/macos/lib/QtCore.framework/Headers/qstring.h \
+		../../global.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../../mainwindow.cpp
 
 player.o: ../../player.cpp ../../card.h \
