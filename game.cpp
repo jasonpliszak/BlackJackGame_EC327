@@ -14,6 +14,7 @@
 #include "t.h"
 #include "w.h"
 #include "global.h"
+#include <QSlider>
 
 using namespace std;
 
@@ -30,6 +31,7 @@ Game::Game(QWidget *parent)
     ui->Hit->setDisabled(true);
     ui->Stand->setDisabled(true);
     ui->Split->setDisabled(true);
+    ui->Deal->setDisabled(true);
 
     QSlider *slider = new QSlider(Qt::Horizontal);
     slider->setRange(0, money); // Set the range
@@ -399,6 +401,6 @@ Game::~Game()
 
 void Game::on_horizontalSlider_valueChanged(int value)
 {
-
+    bet = value;
 }
 

@@ -20,6 +20,7 @@ public:
     player User; //player hand
     player House; //dealer hand
     player split; //split hand
+    int bet = 0;
     int hitcounter = 0;
     bool splitFlag = false;
     bool spStandFlag = false; //stand on first split hand
