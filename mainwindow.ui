@@ -67,6 +67,13 @@
       <pointsize>19</pointsize>
      </font>
     </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;
+color: rgb(0, 0, 0);</string>
+    </property>
     <property name="text">
      <string>WELCOME TO BLACKJACK</string>
     </property>

@@ -55,6 +55,9 @@ public:
         font.setFamilies({QString::fromUtf8("PT Sans Caption")});
         font.setPointSize(19);
         label->setFont(font);
+        label->setAutoFillBackground(false);
+        label->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
+"color: rgb(0, 0, 0);"));
         label->setAlignment(Qt::AlignCenter);
         MainWindow->setCentralWidget(centralwidget);
         home_screen->raise();
