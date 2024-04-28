@@ -40,7 +40,8 @@ private slots:
     void delayedBJW();
     void delayedBJL();
 
-    void on_horizontalSlider_valueChanged(int value);
+
+    void on_BetSlider_valueChanged(int value);
 
 private:
     Ui::Game *ui;

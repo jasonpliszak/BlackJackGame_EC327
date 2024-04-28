@@ -33,8 +33,7 @@ Game::Game(QWidget *parent)
     ui->Split->setDisabled(true);
     ui->Deal->setDisabled(true);
 
-    QSlider *slider = new QSlider(Qt::Horizontal);
-    slider->setRange(0, money); // Set the range
+    ui->BetSlider->setRange(1, money); // Set the range
 }
 
 void Game::on_Deal_clicked(){
@@ -398,9 +397,9 @@ Game::~Game()
 
 
 
-
-void Game::on_horizontalSlider_valueChanged(int value)
+void Game::on_BetSlider_valueChanged(int value)
 {
     bet = value;
+    ui->BetValue->setText("Bet Value: $" + QString::number(bet));
 }
 

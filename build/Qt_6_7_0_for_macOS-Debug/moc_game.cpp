@@ -46,7 +46,7 @@ constexpr auto qt_meta_stringdata_CLASSGameENDCLASS = QtMocHelpers::stringData(
     "delayedWin",
     "delayedBJW",
     "delayedBJL",
-    "on_horizontalSlider_valueChanged",
+    "on_BetSlider_valueChanged",
     "value"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
@@ -121,7 +121,7 @@ Q_CONSTINIT const QMetaObject Game::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'delayedBJL'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'on_horizontalSlider_valueChanged'
+        // method 'on_BetSlider_valueChanged'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<int, std::false_type>
     >,
@@ -143,7 +143,7 @@ void Game::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void *
         case 6: _t->delayedWin(); break;
         case 7: _t->delayedBJW(); break;
         case 8: _t->delayedBJL(); break;
-        case 9: _t->on_horizontalSlider_valueChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 9: _t->on_BetSlider_valueChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
         default: ;
         }
     }

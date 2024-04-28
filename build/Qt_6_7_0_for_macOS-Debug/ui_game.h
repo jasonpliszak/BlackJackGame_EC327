@@ -60,6 +60,7 @@ public:
     QLabel *availibleBalance;
     QLabel *SplitScore;
     QSlider *BetSlider;
+    QLabel *BetValue;
 
     void setupUi(QWidget *Game)
     {
@@ -243,6 +244,9 @@ public:
         BetSlider->setObjectName("BetSlider");
         BetSlider->setGeometry(QRect(490, 550, 160, 25));
         BetSlider->setOrientation(Qt::Horizontal);
+        BetValue = new QLabel(Game);
+        BetValue->setObjectName("BetValue");
+        BetValue->setGeometry(QRect(490, 520, 111, 16));
         backtexture->raise();
         DC1->raise();
         Background->raise();
@@ -282,6 +286,7 @@ public:
         SC5->raise();
         SC6->raise();
         BetSlider->raise();
+        BetValue->raise();
 
         retranslateUi(Game);
 
@@ -329,6 +334,7 @@ public:
         SC6->setText(QString());
         availibleBalance->setText(QString());
         SplitScore->setText(QString());
+        BetValue->setText(QString());
     } // retranslateUi
 
 };
