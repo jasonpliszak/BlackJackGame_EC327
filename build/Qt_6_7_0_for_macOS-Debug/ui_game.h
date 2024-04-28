@@ -273,15 +273,15 @@ public:
         PC8->raise();
         PC9->raise();
         Split->raise();
+        horizontalScrollBar->raise();
+        availibleBalance->raise();
+        SplitScore->raise();
         SC1->raise();
         SC2->raise();
         SC3->raise();
         SC4->raise();
         SC5->raise();
         SC6->raise();
-        horizontalScrollBar->raise();
-        availibleBalance->raise();
-        SplitScore->raise();
 
         retranslateUi(Game);
 

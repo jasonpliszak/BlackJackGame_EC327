@@ -40,7 +40,7 @@ public:
         centralwidget->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 0, 0);"));
         play_button = new QPushButton(centralwidget);
         play_button->setObjectName("play_button");
-        play_button->setGeometry(QRect(450, 525, 150, 40));
+        play_button->setGeometry(QRect(425, 525, 150, 40));
         QFont font;
         font.setPointSize(15);
         font.setBold(true);
@@ -53,7 +53,7 @@ public:
         home_screen->setScaledContents(true);
         label = new QLabel(centralwidget);
         label->setObjectName("label");
-        label->setGeometry(QRect(350, 0, 291, 61));
+        label->setGeometry(QRect(290, 0, 381, 121));
         QFont font1;
         font1.setFamilies({QString::fromUtf8("PT Sans Caption")});
         font1.setPointSize(25);
@@ -96,7 +96,7 @@ public:
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         play_button->setText(QCoreApplication::translate("MainWindow", "Play BlackJack", nullptr));
         home_screen->setText(QString());
-        label->setText(QCoreApplication::translate("MainWindow", "EC327 Casino App", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "EC327 BlackJack App", nullptr));
         Balance->setText(QCoreApplication::translate("MainWindow", "Set Balance:", nullptr));
     } // retranslateUi
 
