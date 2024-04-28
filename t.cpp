@@ -6,6 +6,9 @@ T::T(QWidget *parent)
     , ui(new Ui::T)
 {
     ui->setupUi(this);
+    QPixmap pix(":/images/lose.jpeg");
+    ui->TScreen->setPixmap(pix);
+    ui->TScreen->lower();
 }
 
 T::~T()

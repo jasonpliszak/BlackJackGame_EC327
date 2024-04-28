@@ -6,6 +6,9 @@ W::W(QWidget *parent)
     , ui(new Ui::W)
 {
     ui->setupUi(this);
+    QPixmap pix(":/images/lose.jpeg");
+    ui->Wscreen->setPixmap(pix);
+    ui->Wscreen->lower();
 }
 
 W::~W()
