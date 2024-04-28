@@ -26,14 +26,17 @@ card::card(const card &c){
     this->img = c.img;
 }
 
+//returns the suit of the card
 string card::getSuit() const{
     return this->suit;
 }
 
+//returns the rank of the card
 char card::getRank() const{
     return this->rank;
 }
 
+//returns the value of the card in the context of blackjack
 int card::getVal() const{
     if (rank == 'J' || rank == 'Q' || rank == 'K' || rank == 'T') {
         return 10;

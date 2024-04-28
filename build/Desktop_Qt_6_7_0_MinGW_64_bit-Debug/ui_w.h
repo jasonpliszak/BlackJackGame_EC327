@@ -32,19 +32,26 @@ public:
         W->resize(1000, 650);
         Wscreen = new QLabel(W);
         Wscreen->setObjectName("Wscreen");
-        Wscreen->setGeometry(QRect(0, 0, 991, 641));
+        Wscreen->setGeometry(QRect(0, 0, 1000, 650));
+        Wscreen->setAutoFillBackground(true);
+        Wscreen->setScaledContents(true);
         Play_Again1 = new QPushButton(W);
         Play_Again1->setObjectName("Play_Again1");
         Play_Again1->setGeometry(QRect(320, 560, 100, 32));
-        Play_Again1->setStyleSheet(QString::fromUtf8("background-color: transparent; \n"
+        Play_Again1->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 ""));
         pushButton_2 = new QPushButton(W);
         pushButton_2->setObjectName("pushButton_2");
         pushButton_2->setGeometry(QRect(560, 560, 100, 32));
-        pushButton_2->setStyleSheet(QString::fromUtf8("background-color: transparent;"));
+        pushButton_2->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         label = new QLabel(W);
         label->setObjectName("label");
-        label->setGeometry(QRect(460, 50, 58, 16));
+        label->setGeometry(QRect(460, 50, 91, 61));
+        QFont font;
+        font.setPointSize(30);
+        font.setBold(true);
+        label->setFont(font);
+        label->setStyleSheet(QString::fromUtf8("color: rgb(34, 129, 24);"));
         label->setAlignment(Qt::AlignCenter);
 
         retranslateUi(W);

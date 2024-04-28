@@ -115,6 +115,7 @@ void Game::on_Hit_clicked(){
     }
     if(User.getVal()>21){
         ui->Hit->setDisabled(true);
+        ui->Stand->setDisabled(true);
         QTimer::singleShot(1500, this, &Game::delayedLose);
     }
 }

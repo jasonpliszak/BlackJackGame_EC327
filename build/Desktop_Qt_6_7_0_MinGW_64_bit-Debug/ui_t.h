@@ -33,17 +33,24 @@ public:
         TScreen = new QLabel(T);
         TScreen->setObjectName("TScreen");
         TScreen->setGeometry(QRect(0, 0, 1000, 650));
+        TScreen->setAutoFillBackground(true);
+        TScreen->setScaledContents(true);
         Play_Again2 = new QPushButton(T);
         Play_Again2->setObjectName("Play_Again2");
         Play_Again2->setGeometry(QRect(350, 560, 100, 32));
-        Play_Again2->setStyleSheet(QString::fromUtf8("background-color: transparent;"));
+        Play_Again2->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         Return_Home2 = new QPushButton(T);
         Return_Home2->setObjectName("Return_Home2");
         Return_Home2->setGeometry(QRect(610, 560, 100, 32));
-        Return_Home2->setStyleSheet(QString::fromUtf8("background-color: transparent;"));
+        Return_Home2->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         label = new QLabel(T);
         label->setObjectName("label");
-        label->setGeometry(QRect(480, 70, 58, 16));
+        label->setGeometry(QRect(480, 70, 81, 41));
+        QFont font;
+        font.setPointSize(30);
+        font.setBold(true);
+        label->setFont(font);
+        label->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         label->setAlignment(Qt::AlignCenter);
 
         retranslateUi(T);
