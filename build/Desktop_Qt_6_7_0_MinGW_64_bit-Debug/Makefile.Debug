@@ -141,7 +141,6 @@ compiler_rcc_clean:
 debug/qrc_cards.cpp: ../../cards.qrc \
 		C:/Qt/6.7.0/mingw_64/bin/rcc.exe \
 		../../images/heartsT.gif \
-		../../images/bg.png \
 		../../images/heartsJ.gif \
 		../../images/diamonds3.gif \
 		../../images/spades5.gif \
@@ -163,7 +162,6 @@ debug/qrc_cards.cpp: ../../cards.qrc \
 		../../images/hearts7.gif \
 		../../images/spades9.gif \
 		../../images/clubs9.gif \
-		../../images/cardback.gif \
 		../../images/cardback.png \
 		../../images/clubs2.gif \
 		../../images/diamondsJ.gif \
@@ -200,7 +198,7 @@ debug/qrc_cards.cpp: ../../cards.qrc \
 		../../images/spadesQ.gif \
 		../../images/spades2.gif \
 		../../images/diamonds8.gif \
-		../../images/bgtable.png \
+		../../images/bg.png \
 		../../images/lose.jpeg
 	C:\Qt\6.7.0\mingw_64\bin\rcc.exe -name cards --no-zstd ..\..\cards.qrc -o debug\qrc_cards.cpp
 
@@ -2277,7 +2275,8 @@ debug/mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
 		../../deck.h \
 		../../card.h \
 		C:/Qt/6.7.0/mingw_64/include/QtGui/QPixmap \
-		../../player.h
+		../../player.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/QString
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\mainwindow.o ..\..\mainwindow.cpp
 
 debug/player.o: ../../player.cpp ../../card.h \

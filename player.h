@@ -10,6 +10,7 @@ public:
     player();
     ~player();
     void addCard(card c);
+    void removeCard();
     int getVal();
     card* getCards();
 private:

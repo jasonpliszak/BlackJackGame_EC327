@@ -30,6 +30,10 @@ public:
         if (T->objectName().isEmpty())
             T->setObjectName("T");
         T->resize(1000, 650);
+        QFont font;
+        font.setPointSize(45);
+        font.setBold(true);
+        T->setFont(font);
         TScreen = new QLabel(T);
         TScreen->setObjectName("TScreen");
         TScreen->setGeometry(QRect(0, 0, 1000, 650));
@@ -42,15 +46,12 @@ public:
 "background-color: rgb(255, 255, 255);"));
         Return_Home2 = new QPushButton(T);
         Return_Home2->setObjectName("Return_Home2");
-        Return_Home2->setGeometry(QRect(610, 560, 100, 32));
+        Return_Home2->setGeometry(QRect(550, 560, 100, 32));
         Return_Home2->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "background-color: rgb(255, 255, 255);"));
         label = new QLabel(T);
         label->setObjectName("label");
-        label->setGeometry(QRect(480, 70, 81, 41));
-        QFont font;
-        font.setPointSize(30);
-        font.setBold(true);
+        label->setGeometry(QRect(450, 25, 81, 41));
         label->setFont(font);
         label->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         label->setAlignment(Qt::AlignCenter);

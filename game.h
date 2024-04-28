@@ -19,7 +19,10 @@ public:
     deck Deck;
     player User; //player hand
     player House; //dealer hand
+    player split; //split hand
     int hitcounter = 0;
+    bool splitFlag = false;
+    bool spStandFlag = false; //stand on first split hand
 
     ~Game();
 
@@ -27,11 +30,14 @@ private slots:
     void on_Deal_clicked();
     void on_Hit_clicked();
     void on_Stand_clicked();
+    void on_Split_clicked();
 
-    //delay functions so that you can see the state of the cards before you are sent to a game over screen
+    //delay functions so that you can see the state of the cards before you are sent to the game over screen
     void delayedLose();
     void delayedTie();
     void delayedWin();
+    void delayedBJW();
+    void delayedBJL();
 
 private:
     Ui::Game *ui;

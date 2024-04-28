@@ -23,6 +23,15 @@ void player::addCard(card c){
     this->count = this->count + 1; //increments the amount of cards in the hand
 }
 
+void player::removeCard(){
+    card* temp = new card[this->count-1]; //sets cards to be an array of one fewer card than before
+    for(int i = 0; i<this->count-1; i++){
+        temp[i] = this->cards[i]; //copies old cards omitting the last card
+    }
+    delete[] this->cards; //deletes old cards
+    this->cards = temp; //replaces old cards with copied cards
+    this-> count = this-> count - 1; //decrement amount of cards in the hand
+}
 int player::getVal(){
     int sum = 0;
     int aceCount = 0; //number of aces in hand

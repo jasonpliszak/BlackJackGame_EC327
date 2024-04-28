@@ -28,6 +28,7 @@ Game::Game(QWidget *parent)
     ui->Background->lower();
     ui->Hit->setDisabled(true);
     ui->Stand->setDisabled(true);
+    ui->Split->setDisabled(true);
 }
 
 void Game::on_Deal_clicked(){
@@ -38,7 +39,7 @@ void Game::on_Deal_clicked(){
     ui->PC1->setPixmap(p1.getImg()); //sets image with first player card
     User.addCard(p1);
 
-    card p2 = Deck.draw();
+    card p2 = p1; //FIX THIS WHEN DONE WITH SPLIT TESTING
     ui->PC2->setPixmap(p2.getImg());
     User.addCard(p2);
     int pscore = User.getVal();
@@ -56,6 +57,10 @@ void Game::on_Deal_clicked(){
     ui->Deal->setDisabled(true); //disable deal button
     ui->Hit->setDisabled(false); //enable hit
     ui->Stand->setDisabled(false); //enable stand
+    if(p1.getRank()==p2.getRank()){
+        ui->Split->setDisabled(false);
+    }
+
 
     //auto-blackjack logic (if player or dealer draw blackjack from the deal button)
     if(House.getVal()==21 && User.getVal()==21){
@@ -84,10 +89,72 @@ void Game::on_Deal_clicked(){
     }
 }
 
+void Game::on_Split_clicked(){
+    splitFlag = true;
+    QPixmap bcard(":/images/blank.png");
+    card s1 = User.getCards()[1];
+    User.removeCard();
+    ui->PC2->setPixmap(bcard);
+    split.addCard(s1);
+    ui->SC1->setPixmap(s1.getImg());
+    ui->PlayerScore->setText("Score: " + QString::number(User.getVal()));
+    ui->SplitScore->setText("Score: " + QString::number(split.getVal()));
+    ui->Split->setDisabled(true);
+    hitcounter--; //hitcounter decrement to ensure on_Hit_clicked() works for split hand
+}
+
 void Game::on_Hit_clicked(){
     hitcounter++; //amount of times hit has been pressed
     int pscore = 0;
     //initialize cards outside of case statement (these are all test cards that cannot affect score value)
+    if(spStandFlag){
+        int sscore = 0;
+        card s2;
+        card s3;
+        card s4;
+        card s5;
+        card s6;
+
+        switch(hitcounter){
+        case 1:
+            s2 = Deck.draw();
+            ui->SC2->setPixmap(s2.getImg());
+            split.addCard(s2);
+            sscore = split.getVal();
+            ui->SplitScore->setText("Score: " + QString::number(sscore));
+            break;
+        case 2:
+            s3 = Deck.draw();
+            ui->SC3->setPixmap(s3.getImg());
+            split.addCard(s3);
+            sscore = split.getVal();
+            ui->SplitScore->setText("Score: " + QString::number(sscore));
+            break;
+        case 3:
+            s4 = Deck.draw();
+            ui->SC4->setPixmap(s4.getImg());
+            split.addCard(s4);
+            sscore = split.getVal();
+            ui->SplitScore->setText("Score: " + QString::number(sscore));
+            break;
+        case 4:
+            s5 = Deck.draw();
+            ui->SC5->setPixmap(s5.getImg());
+            split.addCard(s5);
+            sscore = split.getVal();
+            ui->SplitScore->setText("Score: " + QString::number(sscore));
+            break;
+        case 5:
+            s6 = Deck.draw();
+            ui->SC6->setPixmap(s6.getImg());
+            split.addCard(s6);
+            sscore = split.getVal();
+            ui->SplitScore->setText("Score: " + QString::number(sscore));
+            break;
+        }
+        return;
+    }
+    card p2; //if split
     card p3;
     card p4;
     card p5;
@@ -100,6 +167,13 @@ void Game::on_Hit_clicked(){
 
     //switch statement to handle multiple hits as needed
     switch(hitcounter){
+    case 0: //if split
+        p2 = Deck.draw();
+        ui->PC2->setPixmap(p2.getImg());
+        User.addCard(p2);
+        pscore = User.getVal();
+        ui->PlayerScore->setText("Score: " + QString::number(pscore));
+        break;
     case 1:
         p3 = Deck.draw();
         ui->PC3->setPixmap(p3.getImg());
@@ -174,6 +248,11 @@ void Game::on_Hit_clicked(){
 }
 
 void Game::on_Stand_clicked(){
+    if(splitFlag){
+        spStandFlag = true;
+        hitcounter = 0;
+        return;
+    }
     ui->Hit->setDisabled(true);
     ui->Stand->setDisabled(true);
     ui->DC1->setPixmap(House.getCards()[0].getImg()); //replace cardback image with image of the first dealer card
@@ -267,20 +346,32 @@ void Game::on_Stand_clicked(){
 
 //delayed game over screen functions to use with QTimer::singleShot()
 void Game::delayedLose(){
-            L *lose = new L;
-            lose->show();
-            this->hide();
+        L *gameover = new L;
+        gameover->show();
+        this->hide();
     }
 
 void Game::delayedTie(){
-    T *tie = new T;
-    tie->show();
+    L *gameover = new L;
+    gameover->show();
     this->hide();
 }
 
 void Game::delayedWin(){
-    W *win = new W;
-    win->show();
+    L *gameover = new L;
+    gameover->show();
+    this->hide();
+}
+
+void Game::delayedBJL(){
+    L *gameover = new L;
+    gameover->show();
+    this->hide();
+}
+
+void Game::delayedBJW(){
+    L *gameover = new L;
+    gameover->show();
     this->hide();
 }
 
