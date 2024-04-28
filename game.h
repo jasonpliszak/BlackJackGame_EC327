@@ -24,7 +24,11 @@ public:
 private slots:
     void on_Deal_clicked();
     void on_Hit_clicked();
+    void on_Stand_clicked();
+
     void delayedLose();
+    void delayedTie();
+    void delayedWin();
 
 
 private:

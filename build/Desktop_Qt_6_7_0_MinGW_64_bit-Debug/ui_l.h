@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -20,6 +21,9 @@ class Ui_L
 {
 public:
     QLabel *Lscreen;
+    QPushButton *Play_Again;
+    QPushButton *return_Home;
+    QLabel *label;
 
     void setupUi(QWidget *L)
     {
@@ -30,6 +34,23 @@ public:
         Lscreen->setObjectName("Lscreen");
         Lscreen->setGeometry(QRect(0, 0, 1001, 651));
         Lscreen->setAutoFillBackground(true);
+        Lscreen->setScaledContents(true);
+        Play_Again = new QPushButton(L);
+        Play_Again->setObjectName("Play_Again");
+        Play_Again->setGeometry(QRect(350, 560, 100, 32));
+        return_Home = new QPushButton(L);
+        return_Home->setObjectName("return_Home");
+        return_Home->setGeometry(QRect(550, 560, 100, 32));
+        label = new QLabel(L);
+        label->setObjectName("label");
+        label->setGeometry(QRect(420, 230, 171, 121));
+        QFont font;
+        font.setPointSize(45);
+        font.setBold(true);
+        label->setFont(font);
+        label->setStyleSheet(QString::fromUtf8("background-color: transparent; \n"
+"color: rgb(187, 2, 0);"));
+        label->setAlignment(Qt::AlignCenter);
 
         retranslateUi(L);
 
@@ -40,6 +61,9 @@ public:
     {
         L->setWindowTitle(QCoreApplication::translate("L", "Form", nullptr));
         Lscreen->setText(QString());
+        Play_Again->setText(QCoreApplication::translate("L", "Play Again", nullptr));
+        return_Home->setText(QCoreApplication::translate("L", "Return Home", nullptr));
+        label->setText(QCoreApplication::translate("L", "LOSE!", nullptr));
     } // retranslateUi
 
 };

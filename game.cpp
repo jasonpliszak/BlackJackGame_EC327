@@ -14,6 +14,8 @@
 #include <time.h>
 #include "l.h"
 #include <QTimer>
+#include "t.h"
+#include "w.h"
 
 using namespace std;
 
@@ -47,14 +49,23 @@ void Game::on_Deal_clicked(){
 
 
     card d1 = Deck.draw();
-    ui->DC1->setPixmap(d1.getImg());
+    ui->DC1->setPixmap(card0);
     House.addCard(d1);
 
     card d2 = Deck.draw();
-    ui->DC2->setPixmap(card0);
+    ui->DC2->setPixmap(d2.getImg());
     House.addCard(d2);
 
     ui->Deal->setDisabled(true);
+
+    if(House.getVal()==21 && User.getVal()==21){
+        ui->DC1->setPixmap(d1.getImg());
+        QTimer::singleShot(1500, this, &Game::delayedTie);
+    }
+    else if(House.getVal()==21 && User.getVal()!=21){
+        ui->DC1->setPixmap(d1.getImg());
+        QTimer::singleShot(1500, this, &Game::delayedLose);
+    }
 }
 
 void Game::on_Hit_clicked(){
@@ -93,11 +104,27 @@ void Game::on_Hit_clicked(){
     }
 }
 
+void Game::on_Stand_clicked(){
+
+}
+
 void Game::delayedLose(){
             L *lose = new L;
             lose->show();
             this->hide();
     }
+
+void Game::delayedTie(){
+    T *tie = new T;
+    tie->show();
+    this->hide();
+}
+
+void Game::delayedWin(){
+    W *win = new W;
+    win->show();
+    this->hide();
+}
 
 Game::~Game()
 {
