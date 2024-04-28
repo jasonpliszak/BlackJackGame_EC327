@@ -15,7 +15,7 @@ public:
     card draw();
 private:
     card* cards;
-    int count;
+    int count; //number of cards currently present in deck object
 };
 
 #endif

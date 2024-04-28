@@ -38,7 +38,7 @@ char card::getRank() const{
 
 //returns the value of the card in the context of blackjack
 int card::getVal() const{
-    if (rank == 'J' || rank == 'Q' || rank == 'K' || rank == 'T') {
+    if (rank == 'J' || rank == 'Q' || rank == 'K' || rank == 'T') { //T is the rank for 10 because we are using char
         return 10;
     }
     else if (rank == 'A') {

@@ -7,15 +7,16 @@
 
 using namespace std;
 
+//generate a full standard deck
 deck::deck(){
-    string tempsuit = "test";
-    char rank = '0';
-    this->count = 52;
+    string tempsuit = "test"; //initialize a temporary suit assigner
+    char rank = '0'; //initialize a temporary rank
+    this->count = 52; //52 cards in a deck
     this->cards = new card[52];
-    int j = 0;
-    int k = 1;
+    int j = 0; //suit incrementer
+    int k = 1; //rank incrementer
 
-    // Load in Spades
+    // Load in spades images
 
     QPixmap card1(":/images/spadesA.gif");
     QPixmap card2(":/images/spades2.gif");
@@ -31,7 +32,7 @@ deck::deck(){
     QPixmap card12(":/images/spadesQ.gif");
     QPixmap card13(":/images/spadesK.gif");
 
-    // Load in Hearts
+    // Load in hearts images
 
     QPixmap card14(":/images/heartsA.gif");
     QPixmap card15(":/images/hearts2.gif");
@@ -47,7 +48,7 @@ deck::deck(){
     QPixmap card25(":/images/heartsQ.gif");
     QPixmap card26(":/images/heartsK.gif");
 
-    // Load in diamonds
+    // Load in diamonds images
 
     QPixmap card27(":/images/diamondsA.gif");
     QPixmap card28(":/images/diamonds2.gif");
@@ -62,7 +63,8 @@ deck::deck(){
     QPixmap card37(":/images/diamondsJ.gif");
     QPixmap card38(":/images/diamondsQ.gif");
     QPixmap card39(":/images/diamondsK.gif");
-        // Load in clubs
+
+    // Load in clubs images
 
     QPixmap card40(":/images/clubsA.gif");
     QPixmap card41(":/images/clubs2.gif");
@@ -78,8 +80,10 @@ deck::deck(){
     QPixmap card51(":/images/clubsQ.gif");
     QPixmap card52(":/images/clubsK.gif");
 
+    //create a list of images to assign to the cards as they are initialized
     list<QPixmap> cardlist;
 
+    //spades images
     cardlist.push_back(card1);
     cardlist.push_back(card2);
     cardlist.push_back(card3);
@@ -94,7 +98,7 @@ deck::deck(){
     cardlist.push_back(card12);
     cardlist.push_back(card13);
 
-
+    //hearts images
     cardlist.push_back(card14);
     cardlist.push_back(card15);
     cardlist.push_back(card16);
@@ -109,7 +113,7 @@ deck::deck(){
     cardlist.push_back(card25);
     cardlist.push_back(card26);
 
-
+    //diamonds images
     cardlist.push_back(card27);
     cardlist.push_back(card28);
     cardlist.push_back(card29);
@@ -124,7 +128,7 @@ deck::deck(){
     cardlist.push_back(card38);
     cardlist.push_back(card39);
 
-
+    //clubs images
     cardlist.push_back(card40);
     cardlist.push_back(card41);
     cardlist.push_back(card42);
@@ -139,7 +143,7 @@ deck::deck(){
     cardlist.push_back(card51);
     cardlist.push_back(card52);
 
-
+    //generates cards to populate the deck one by one
     for(int i = 0; i < 52; i++){
         switch(j){
         case 0:
@@ -170,17 +174,17 @@ deck::deck(){
             break ;
         case 13:
             rank = 'K';
-            k = 0;
-            j++;
+            k = 0; //reset rank incrementor upon reaching King
+            j++; //once the rank incrementor reaches King, move onto the next suit
             break;
         default:
-            rank = '0' + k;
+            rank = '0' + k; //sets rank to the char of its numeric value for 2~9
             break;
         }
-        k++;
-        this->cards[i] = card(tempsuit, rank);
-        this->cards[i].setImg(cardlist.front());
-        cardlist.pop_front();
+        k++; //increment rank incrementor
+        this->cards[i] = card(tempsuit, rank); //creates card at slot i
+        this->cards[i].setImg(cardlist.front()); //sets the image from the list by using the first image in the list
+        cardlist.pop_front(); //discards the first image from the list so that the next card has the correct image
     }
 
 }
@@ -192,11 +196,11 @@ deck::~deck(){
 
 card deck::draw(){
     srand (time(NULL));
-    int temp = rand() % this->count;
-    card tempcard = this->cards[temp];
+    int temp = rand() % this->count; //generate a random number from 0 to total number of cards-1
+    card tempcard = this->cards[temp]; //chooses a card based on the random index from rand()
     for(int i=temp; i<this->count-1; i++){
-        this->cards[i] = this->cards[i+1];
+        this->cards[i] = this->cards[i+1]; //changes the location of all the cards so that there are no empty indicies
     }
-    this->count--;
+    this->count--; //decrement amount of cards in the deck so that draw() works on next call
     return tempcard;
 }

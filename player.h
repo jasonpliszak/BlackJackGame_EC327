@@ -8,7 +8,6 @@ using namespace std;
 class player{
 public:
     player();
-    player(card c);
     ~player();
     void addCard(card c);
     int getVal();
