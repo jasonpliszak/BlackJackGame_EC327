@@ -10,12 +10,10 @@ class card
 {
 public:
     card();
-    card(string suit, char rank, bool up);
+    card(string suit, char rank);
     card(const card &c);
-    void flip();
     string getSuit() const;
     char getRank() const;
-    bool isUp() const;
     int getVal() const;
     QPixmap getImg() const;
     void setImg(QPixmap image);
@@ -23,7 +21,6 @@ public:
 private:
     string suit;
     char rank;
-    bool up;
     QPixmap img;
 };
 

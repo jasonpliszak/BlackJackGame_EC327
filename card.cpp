@@ -8,14 +8,13 @@ using namespace std;
 card::card(){
     this->suit = "test";
     this->rank = '0'; //ensures value of the card will be 0 in case of attempts to getValue() with a test card
-    this->up = 0;
 }
 
-//
-card::card(string suit, char rank, bool up){
+//card constructor
+card::card(string suit, char rank){
     this->suit = suit;
     this->rank = rank;
-    this->up = up;
+    //initializes a temporary card image (the actual image is assigned later)
     QPixmap cardtemp(":/images/blank.gif");
     this->img = cardtemp;
 }
@@ -24,12 +23,7 @@ card::card(string suit, char rank, bool up){
 card::card(const card &c){
     this->suit = c.suit;
     this->rank = c.rank;
-    this->up = c.up;
     this->img = c.img;
-}
-
-void card::flip(){
-    this->up = !this->up;
 }
 
 string card::getSuit() const{
@@ -38,10 +32,6 @@ string card::getSuit() const{
 
 char card::getRank() const{
     return this->rank;
-}
-
-bool card::isUp() const{
-    return this->up;
 }
 
 int card::getVal() const{

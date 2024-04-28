@@ -11,7 +11,6 @@ public:
     player(card c);
     ~player();
     void addCard(card c);
-    void flipCard(int index);
     int getVal();
     card* getCards();
 private:

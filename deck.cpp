@@ -178,7 +178,7 @@ deck::deck(){
             break;
         }
         k++;
-        this->cards[i] = card(tempsuit, rank, 0);
+        this->cards[i] = card(tempsuit, rank);
         this->cards[i].setImg(cardlist.front());
         cardlist.pop_front();
     }

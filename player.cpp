@@ -29,10 +29,6 @@ void player::addCard(card c){
     this->count = this->count + 1;
 }
 
-void player::flipCard(int index){
-    this->cards[index].flip();
-}
-
 int player::getVal(){
     int sum = 0;
     int aceCount = 0;
