@@ -23,6 +23,7 @@ HEADERS += \
     card.h \
     deck.h \
     game.h \
+    global.h \
     l.h \
     mainwindow.h \
     player.h \

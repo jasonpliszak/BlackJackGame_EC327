@@ -3,8 +3,8 @@
 #include "game.h"
 #include <QPushButton>
 #include <QString>
+#include "global.h"
 
-static int money = 0;
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
