@@ -30,7 +30,8 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(0,0, 0);</string>
+     <string notr="true">background-color: rgb(252, 255, 255);
+color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
      <string>Play BlackJack</string>
@@ -40,7 +41,7 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>-30</y>
+      <y>0</y>
       <width>1000</width>
       <height>650</height>
      </rect>
@@ -64,7 +65,8 @@
     <property name="font">
      <font>
       <family>PT Sans Caption</family>
-      <pointsize>19</pointsize>
+      <pointsize>25</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="autoFillBackground">
@@ -75,7 +77,7 @@
 color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>WELCOME TO BLACKJACK</string>
+     <string>EC327 Casino App</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -84,25 +86,6 @@ color: rgb(0, 0, 0);</string>
    <zorder>home_screen</zorder>
    <zorder>play_button</zorder>
    <zorder>label</zorder>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1000</width>
-     <height>37</height>
-    </rect>
-   </property>
-   <widget class="QMenu" name="menuBlackJack">
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(54, 148, 30);</string>
-    </property>
-    <property name="title">
-     <string>Game</string>
-    </property>
-   </widget>
-   <addaction name="menuBlackJack"/>
   </widget>
  </widget>
  <resources/>

@@ -882,7 +882,6 @@ compiler_rcc_clean:
 qrc_cards.cpp: ../../cards.qrc \
 		../../../Qt/6.7.0/macos/libexec/rcc \
 		../../images/heartsT.gif \
-		../../images/bg.png \
 		../../images/heartsJ.gif \
 		../../images/diamonds3.gif \
 		../../images/spades5.gif \
@@ -904,7 +903,6 @@ qrc_cards.cpp: ../../cards.qrc \
 		../../images/hearts7.gif \
 		../../images/spades9.gif \
 		../../images/clubs9.gif \
-		../../images/cardback.gif \
 		../../images/cardback.png \
 		../../images/clubs2.gif \
 		../../images/diamondsJ.gif \
@@ -941,7 +939,7 @@ qrc_cards.cpp: ../../cards.qrc \
 		../../images/spadesQ.gif \
 		../../images/spades2.gif \
 		../../images/diamonds8.gif \
-		../../images/bgtable.png \
+		../../images/bg.png \
 		../../images/lose.jpeg
 	/Users/jasonpliszak/Qt/6.7.0/macos/libexec/rcc -name cards --no-zstd ../../cards.qrc -o qrc_cards.cpp
 

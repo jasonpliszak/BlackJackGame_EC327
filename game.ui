@@ -109,8 +109,8 @@ background-color: rgb(0, 0, 0);
   <widget class="QLabel" name="PlayerScore">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>10</y>
+     <x>100</x>
+     <y>25</y>
      <width>141</width>
      <height>21</height>
     </rect>
@@ -125,8 +125,8 @@ background-color: rgb(0, 0, 0);
   <widget class="QLabel" name="Dealer">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>270</y>
+     <x>100</x>
+     <y>175</y>
      <width>131</width>
      <height>21</height>
     </rect>
@@ -278,8 +278,8 @@ background-color: rgb(0, 0, 0);
   <widget class="QLabel" name="Background">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>-10</y>
+     <x>0</x>
+     <y>0</y>
      <width>850</width>
      <height>600</height>
     </rect>
@@ -504,6 +504,20 @@ background-color: rgb(0, 0, 0);
     <bool>true</bool>
    </property>
   </widget>
+  <widget class="QLabel" name="backtexture">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>850</width>
+     <height>600</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>backtexture</zorder>
   <zorder>DC1</zorder>
   <zorder>Background</zorder>
   <zorder>PC1</zorder>

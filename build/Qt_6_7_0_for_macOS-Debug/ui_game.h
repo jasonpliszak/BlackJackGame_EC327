@@ -48,6 +48,7 @@ public:
     QLabel *DC9;
     QLabel *DC10;
     QLabel *DC11;
+    QLabel *backtexture;
 
     void setupUi(QWidget *Game)
     {
@@ -83,11 +84,11 @@ public:
 ""));
         PlayerScore = new QLabel(Game);
         PlayerScore->setObjectName("PlayerScore");
-        PlayerScore->setGeometry(QRect(40, 10, 141, 21));
+        PlayerScore->setGeometry(QRect(100, 25, 141, 21));
         PlayerScore->setScaledContents(true);
         Dealer = new QLabel(Game);
         Dealer->setObjectName("Dealer");
-        Dealer->setGeometry(QRect(40, 270, 131, 21));
+        Dealer->setGeometry(QRect(100, 175, 131, 21));
         DC2 = new QLabel(Game);
         DC2->setObjectName("DC2");
         DC2->setGeometry(QRect(150, 200, 100, 125));
@@ -126,7 +127,7 @@ public:
         PC3->setScaledContents(true);
         Background = new QLabel(Game);
         Background->setObjectName("Background");
-        Background->setGeometry(QRect(10, -10, 850, 600));
+        Background->setGeometry(QRect(0, 0, 850, 600));
         Background->setAutoFillBackground(true);
         Background->setScaledContents(true);
         PC6 = new QLabel(Game);
@@ -183,6 +184,10 @@ public:
         DC11->setObjectName("DC11");
         DC11->setGeometry(QRect(600, 200, 100, 125));
         DC11->setScaledContents(true);
+        backtexture = new QLabel(Game);
+        backtexture->setObjectName("backtexture");
+        backtexture->setGeometry(QRect(0, 0, 850, 600));
+        backtexture->raise();
         DC1->raise();
         Background->raise();
         PC1->raise();
@@ -248,6 +253,7 @@ public:
         DC9->setText(QString());
         DC10->setText(QString());
         DC11->setText(QString());
+        backtexture->setText(QString());
     } // retranslateUi
 
 };

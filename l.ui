@@ -69,8 +69,8 @@ background-color: rgb(255, 255, 255);</string>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>420</x>
-     <y>230</y>
+     <x>450</x>
+     <y>25</y>
      <width>171</width>
      <height>121</height>
     </rect>
@@ -86,7 +86,7 @@ background-color: rgb(255, 255, 255);</string>
 color: rgb(187, 2, 0);</string>
    </property>
    <property name="text">
-    <string>LOSE!</string>
+    <string>LOSE</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>

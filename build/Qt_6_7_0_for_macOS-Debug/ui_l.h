@@ -47,7 +47,7 @@ public:
 "background-color: rgb(255, 255, 255);"));
         label = new QLabel(L);
         label->setObjectName("label");
-        label->setGeometry(QRect(420, 230, 171, 121));
+        label->setGeometry(QRect(450, 25, 171, 121));
         QFont font;
         font.setPointSize(45);
         font.setBold(true);
@@ -67,7 +67,7 @@ public:
         Lscreen->setText(QString());
         Play_Again->setText(QCoreApplication::translate("L", "Play Again", nullptr));
         return_Home->setText(QCoreApplication::translate("L", "Return Home", nullptr));
-        label->setText(QCoreApplication::translate("L", "LOSE!", nullptr));
+        label->setText(QCoreApplication::translate("L", "LOSE", nullptr));
     } // retranslateUi
 
 };
