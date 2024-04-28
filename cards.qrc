@@ -60,5 +60,6 @@
         <file>images/homescreen.png</file>
         <file>images/lose.jpeg</file>
         <file>images/cardback.png</file>
+        <file>images/bgtable.png</file>
     </qresource>
 </RCC>

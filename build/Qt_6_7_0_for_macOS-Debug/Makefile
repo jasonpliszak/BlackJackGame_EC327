@@ -940,6 +940,7 @@ qrc_cards.cpp: ../../cards.qrc \
 		../../images/spadesQ.gif \
 		../../images/spades2.gif \
 		../../images/diamonds8.gif \
+		../../images/bgtable.png \
 		../../images/lose.jpeg
 	/Users/jasonpliszak/Qt/6.7.0/macos/libexec/rcc -name cards --no-zstd ../../cards.qrc -o qrc_cards.cpp
 

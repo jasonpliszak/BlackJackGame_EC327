@@ -26,7 +26,7 @@ Game::Game(QWidget *parent)
 {
     //set background of widget to table felt
     ui->setupUi(this);
-    QPixmap pix(":/images/bjtable.jpg");
+    QPixmap pix(":/images/bgtable.png");
     ui->Background->setPixmap(pix);
     ui->Background->lower();
     ui->Hit->setDisabled(true);

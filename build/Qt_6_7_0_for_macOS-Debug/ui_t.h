@@ -38,11 +38,13 @@ public:
         Play_Again2 = new QPushButton(T);
         Play_Again2->setObjectName("Play_Again2");
         Play_Again2->setGeometry(QRect(350, 560, 100, 32));
-        Play_Again2->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
+        Play_Again2->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
+"background-color: rgb(255, 255, 255);"));
         Return_Home2 = new QPushButton(T);
         Return_Home2->setObjectName("Return_Home2");
         Return_Home2->setGeometry(QRect(610, 560, 100, 32));
-        Return_Home2->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
+        Return_Home2->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
+"background-color: rgb(255, 255, 255);"));
         label = new QLabel(T);
         label->setObjectName("label");
         label->setGeometry(QRect(480, 70, 81, 41));
