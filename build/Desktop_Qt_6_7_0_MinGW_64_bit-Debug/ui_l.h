@@ -38,9 +38,11 @@ public:
         Play_Again = new QPushButton(L);
         Play_Again->setObjectName("Play_Again");
         Play_Again->setGeometry(QRect(350, 560, 100, 32));
+        Play_Again->setStyleSheet(QString::fromUtf8(""));
         return_Home = new QPushButton(L);
         return_Home->setObjectName("return_Home");
         return_Home->setGeometry(QRect(550, 560, 100, 32));
+        return_Home->setStyleSheet(QString::fromUtf8("background-color: transparent;"));
         label = new QLabel(L);
         label->setObjectName("label");
         label->setGeometry(QRect(420, 230, 171, 121));

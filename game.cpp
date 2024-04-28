@@ -62,18 +62,21 @@ void Game::on_Deal_clicked(){
         ui->DC1->setPixmap(d1.getImg());
         int dscore = House.getVal();
         ui->Dealer->setText("Score: " + QString::number(dscore));
+        ui->Hit->setDisabled(true);
         QTimer::singleShot(1500, this, &Game::delayedTie);
     }
     else if(House.getVal()==21 && User.getVal()!=21){
         ui->DC1->setPixmap(d1.getImg());
         int dscore = House.getVal();
         ui->Dealer->setText("Score: " + QString::number(dscore));
+        ui->Hit->setDisabled(true);
         QTimer::singleShot(1500, this, &Game::delayedLose);
     }
     else if(User.getVal() == 21 && House.getVal()!=21){
         ui->DC1->setPixmap(d1.getImg());
         int dscore = House.getVal();
         ui->Dealer->setText("Score: " + QString::number(dscore));
+        ui->Hit->setDisabled(true);
         QTimer::singleShot(1500, this, &Game::delayedWin);
     }
 }
