@@ -904,6 +904,7 @@ qrc_cards.cpp: ../../cards.qrc \
 		../../images/spades9.gif \
 		../../images/clubs9.gif \
 		../../images/cardback.gif \
+		../../images/cardback.png \
 		../../images/clubs2.gif \
 		../../images/diamondsJ.gif \
 		../../images/diamonds7.gif \
@@ -1065,7 +1066,10 @@ l.o: ../../l.cpp ../../l.h \
 		../../card.h \
 		../../../Qt/6.7.0/macos/lib/QtGui.framework/Headers/QPixmap \
 		../../../Qt/6.7.0/macos/lib/QtGui.framework/Headers/qpixmap.h \
-		../../player.h
+		../../player.h \
+		../../mainwindow.h \
+		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/QMainWindow \
+		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/qmainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o l.o ../../l.cpp
 
 main.o: ../../main.cpp ../../mainwindow.h \
@@ -1104,13 +1108,31 @@ player.o: ../../player.cpp ../../card.h \
 t.o: ../../t.cpp ../../t.h \
 		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/QWidget \
 		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/qwidget.h \
-		ui_t.h
+		ui_t.h \
+		../../game.h \
+		../../deck.h \
+		../../card.h \
+		../../../Qt/6.7.0/macos/lib/QtGui.framework/Headers/QPixmap \
+		../../../Qt/6.7.0/macos/lib/QtGui.framework/Headers/qpixmap.h \
+		../../player.h \
+		../../mainwindow.h \
+		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/QMainWindow \
+		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/qmainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o t.o ../../t.cpp
 
 w.o: ../../w.cpp ../../w.h \
 		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/QWidget \
 		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/qwidget.h \
-		ui_w.h
+		ui_w.h \
+		../../game.h \
+		../../deck.h \
+		../../card.h \
+		../../../Qt/6.7.0/macos/lib/QtGui.framework/Headers/QPixmap \
+		../../../Qt/6.7.0/macos/lib/QtGui.framework/Headers/qpixmap.h \
+		../../player.h \
+		../../mainwindow.h \
+		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/QMainWindow \
+		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/qmainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o w.o ../../w.cpp
 
 qrc_cards.o: qrc_cards.cpp 

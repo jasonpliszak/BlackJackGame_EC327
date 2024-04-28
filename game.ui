@@ -221,7 +221,7 @@ background-color: rgb(0, 0, 0);
   <widget class="QLabel" name="PC5">
    <property name="geometry">
     <rect>
-     <x>180</x>
+     <x>230</x>
      <y>30</y>
      <width>150</width>
      <height>225</height>

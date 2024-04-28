@@ -34,7 +34,7 @@ Game::Game(QWidget *parent)
 }
 
 void Game::on_Deal_clicked(){
-    QPixmap card0(":/images/cardback.gif");
+    QPixmap card0(":/images/cardback.png");
 
 
     card p1 = Deck.draw();
