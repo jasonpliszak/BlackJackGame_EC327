@@ -29,8 +29,8 @@ Game::Game(QWidget *parent)
     QPixmap pix(":/images/bjtable.jpg");
     ui->Background->setPixmap(pix);
     ui->Background->lower();
-
-
+    ui->Hit->setDisabled(true);
+    ui->Stand->setDisabled(true);
 }
 
 void Game::on_Deal_clicked(){
@@ -57,6 +57,8 @@ void Game::on_Deal_clicked(){
     House.addCard(d2);
 
     ui->Deal->setDisabled(true);
+    ui->Hit->setDisabled(false);
+    ui->Stand->setDisabled(false);
 
     if(House.getVal()==21 && User.getVal()==21){
         ui->DC1->setPixmap(d1.getImg());

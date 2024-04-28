@@ -4,12 +4,14 @@
 
 using namespace std;
 
+//no arguments constructor
 card::card(){
     this->suit = "test";
-    this->rank = '0';
+    this->rank = '0'; //ensures value of the card will be 0 in case of attempts to getValue() with a test card
     this->up = 0;
 }
 
+//
 card::card(string suit, char rank, bool up){
     this->suit = suit;
     this->rank = rank;
