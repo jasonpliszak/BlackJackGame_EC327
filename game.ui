@@ -665,13 +665,13 @@ color: rgb(255, 255, 255);</string>
    <property name="geometry">
     <rect>
      <x>500</x>
-     <y>530</y>
-     <width>58</width>
-     <height>16</height>
+     <y>525</y>
+     <width>111</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="SplitScore">
