@@ -10,6 +10,7 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
+    money = 0;
     ui->setupUi(this);
     QPushButton *play_button = new QPushButton;
     QPixmap pix(":/images/homescreen.png");
