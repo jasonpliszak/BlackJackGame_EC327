@@ -75,7 +75,7 @@ public:
         BetBalance->setTickInterval(0);
         Balance = new QLabel(centralwidget);
         Balance->setObjectName("Balance");
-        Balance->setGeometry(QRect(125, 490, 121, 16));
+        Balance->setGeometry(QRect(100, 490, 151, 16));
         Balance->setFont(font);
         Balance->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "background-color: transparent;"));

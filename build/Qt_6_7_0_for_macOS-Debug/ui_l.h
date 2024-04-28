@@ -23,7 +23,8 @@ public:
     QLabel *Lscreen;
     QPushButton *Play_Again;
     QPushButton *return_Home;
-    QLabel *label;
+    QLabel *HandOver;
+    QLabel *balance;
 
     void setupUi(QWidget *L)
     {
@@ -37,24 +38,31 @@ public:
         Lscreen->setScaledContents(true);
         Play_Again = new QPushButton(L);
         Play_Again->setObjectName("Play_Again");
-        Play_Again->setGeometry(QRect(350, 560, 100, 32));
+        Play_Again->setGeometry(QRect(375, 560, 100, 32));
         Play_Again->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "background-color: rgb(255, 255, 255);"));
         return_Home = new QPushButton(L);
         return_Home->setObjectName("return_Home");
-        return_Home->setGeometry(QRect(550, 560, 100, 32));
+        return_Home->setGeometry(QRect(575, 560, 100, 32));
         return_Home->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "background-color: rgb(255, 255, 255);"));
-        label = new QLabel(L);
-        label->setObjectName("label");
-        label->setGeometry(QRect(450, 25, 171, 121));
+        HandOver = new QLabel(L);
+        HandOver->setObjectName("HandOver");
+        HandOver->setGeometry(QRect(400, 30, 251, 111));
         QFont font;
         font.setPointSize(45);
         font.setBold(true);
-        label->setFont(font);
-        label->setStyleSheet(QString::fromUtf8("background-color: transparent; \n"
-"color: rgb(187, 2, 0);"));
-        label->setAlignment(Qt::AlignCenter);
+        HandOver->setFont(font);
+        HandOver->setStyleSheet(QString::fromUtf8("background-color: transparent; \n"
+"color: rgb(0, 0, 0)"));
+        HandOver->setAlignment(Qt::AlignCenter);
+        balance = new QLabel(L);
+        balance->setObjectName("balance");
+        balance->setGeometry(QRect(800, 30, 171, 61));
+        QFont font1;
+        font1.setPointSize(15);
+        font1.setBold(true);
+        balance->setFont(font1);
 
         retranslateUi(L);
 
@@ -67,7 +75,8 @@ public:
         Lscreen->setText(QString());
         Play_Again->setText(QCoreApplication::translate("L", "Play Again", nullptr));
         return_Home->setText(QCoreApplication::translate("L", "Return Home", nullptr));
-        label->setText(QCoreApplication::translate("L", "LOSE", nullptr));
+        HandOver->setText(QCoreApplication::translate("L", "Hand Over", nullptr));
+        balance->setText(QString());
     } // retranslateUi
 
 };
