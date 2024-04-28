@@ -60,11 +60,21 @@ void Game::on_Deal_clicked(){
 
     if(House.getVal()==21 && User.getVal()==21){
         ui->DC1->setPixmap(d1.getImg());
+        int dscore = House.getVal();
+        ui->Dealer->setText("Score: " + QString::number(dscore));
         QTimer::singleShot(1500, this, &Game::delayedTie);
     }
     else if(House.getVal()==21 && User.getVal()!=21){
         ui->DC1->setPixmap(d1.getImg());
+        int dscore = House.getVal();
+        ui->Dealer->setText("Score: " + QString::number(dscore));
         QTimer::singleShot(1500, this, &Game::delayedLose);
+    }
+    else if(User.getVal() == 21 && House.getVal()!=21){
+        ui->DC1->setPixmap(d1.getImg());
+        int dscore = House.getVal();
+        ui->Dealer->setText("Score: " + QString::number(dscore));
+        QTimer::singleShot(1500, this, &Game::delayedWin);
     }
 }
 
@@ -105,7 +115,93 @@ void Game::on_Hit_clicked(){
 }
 
 void Game::on_Stand_clicked(){
-
+    ui->Hit->setDisabled(true);
+    ui->Stand->setDisabled(true);
+    ui->DC1->setPixmap(House.getCards()[0].getImg());
+    int dscore = House.getVal();
+    ui->Dealer->setText("Score: " + QString::number(dscore));
+    while(dscore<17){
+        int dhit = 0;
+        card d3;
+        card d4;
+        card d5;
+        card d6;
+        card d7;
+        card d8;
+        card d9;
+        card d10;
+        dhit++;
+        switch(dhit){
+        case 1:
+            d3 = Deck.draw();
+            ui->DC3->setPixmap(d3.getImg());
+            House.addCard(d3);
+            dscore = House.getVal();
+            ui->Dealer->setText("Score: " + QString::number(dscore));
+            break;
+        case 2:
+            d4 = Deck.draw();
+            ui->DC3->setPixmap(d4.getImg());
+            House.addCard(d4);
+            dscore = House.getVal();
+            ui->Dealer->setText("Score: " + QString::number(dscore));
+            break;
+        case 3:
+            d5 = Deck.draw();
+            ui->DC3->setPixmap(d5.getImg());
+            House.addCard(d5);
+            dscore = House.getVal();
+            ui->Dealer->setText("Score: " + QString::number(dscore));
+            break;
+        case 4:
+            d6 = Deck.draw();
+            ui->DC3->setPixmap(d6.getImg());
+            House.addCard(d6);
+            dscore = House.getVal();
+            ui->Dealer->setText("Score: " + QString::number(dscore));
+            break;
+        case 5:
+            d7 = Deck.draw();
+            ui->DC3->setPixmap(d7.getImg());
+            House.addCard(d7);
+            dscore = House.getVal();
+            ui->Dealer->setText("Score: " + QString::number(dscore));
+            break;
+        case 6:
+            d8 = Deck.draw();
+            ui->DC3->setPixmap(d8.getImg());
+            House.addCard(d8);
+            dscore = House.getVal();
+            ui->Dealer->setText("Score: " + QString::number(dscore));
+            break;
+        case 7:
+            d9 = Deck.draw();
+            ui->DC3->setPixmap(d9.getImg());
+            House.addCard(d9);
+            dscore = House.getVal();
+            ui->Dealer->setText("Score: " + QString::number(dscore));
+            break;
+        case 8:
+            d10 = Deck.draw();
+            ui->DC3->setPixmap(d10.getImg());
+            House.addCard(d10);
+            dscore = House.getVal();
+            ui->Dealer->setText("Score: " + QString::number(dscore));
+            break;
+        }
+    }
+    if(dscore>21){
+        QTimer::singleShot(1500, this, &Game::delayedWin);
+    }
+    else if(dscore == User.getVal()){
+         QTimer::singleShot(1500, this, &Game::delayedTie);
+    }
+    else if(dscore > User.getVal()){
+        QTimer::singleShot(1500, this, &Game::delayedLose);
+    }
+    else if(dscore < User.getVal()){
+        QTimer::singleShot(1500, this, &Game::delayedWin);
+    }
 }
 
 void Game::delayedLose(){

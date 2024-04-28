@@ -30,7 +30,6 @@ private slots:
     void delayedTie();
     void delayedWin();
 
-
 private:
     Ui::Game *ui;
 };
