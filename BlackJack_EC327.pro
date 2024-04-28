@@ -15,7 +15,8 @@ SOURCES += \
     l.cpp \
     main.cpp \
     mainwindow.cpp \
-    player.cpp
+    player.cpp \
+    w.cpp
 
 HEADERS += \
     card.h \
@@ -23,12 +24,14 @@ HEADERS += \
     game.h \
     l.h \
     mainwindow.h \
-    player.h
+    player.h \
+    w.h
 
 FORMS += \
     game.ui \
     l.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    w.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
