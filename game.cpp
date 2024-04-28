@@ -34,12 +34,10 @@ void Game::on_Deal_clicked(){
 
 
     card p1 = Deck.draw();
-    p1.flip();
     ui->PC1->setPixmap(p1.getImg());
-    player User(p1);
+    User.addCard(p1);
 
     card p2 = Deck.draw();
-    p2.flip();
     ui->PC2->setPixmap(p2.getImg());
     User.addCard(p2);
     int pscore = User.getVal();
@@ -47,9 +45,8 @@ void Game::on_Deal_clicked(){
 
 
     card d1 = Deck.draw();
-    d1.flip();
     ui->DC1->setPixmap(d1.getImg());
-    player House(d1);
+    House.addCard(d1);
 
     card d2 = Deck.draw();
     ui->DC2->setPixmap(card0);
@@ -58,7 +55,40 @@ void Game::on_Deal_clicked(){
     ui->Deal->setDisabled(true);
 }
 
-
+void Game::on_Hit_clicked(){
+    hitcounter++;
+    int pscore = 0;
+    card p3;
+    card p4;
+    card p5;
+    switch(hitcounter){
+    case 1:
+        p3 = Deck.draw();
+        ui->PC3->setPixmap(p3.getImg());
+        User.addCard(p3);
+        pscore = User.getVal();
+        ui->PlayerScore->setText("Score: " + QString::number(pscore));
+        break;
+    case 2:
+        p4 = Deck.draw();
+        ui->PC4->setPixmap(p4.getImg());
+        User.addCard(p4);
+        pscore = User.getVal();
+        ui->PlayerScore->setText("Score: " + QString::number(pscore));
+        break;
+    case 3:
+        p5 = Deck.draw();
+        ui->PC5->setPixmap(p5.getImg());
+        User.addCard(p5);
+        pscore = User.getVal();
+        ui->PlayerScore->setText("Score: " + QString::number(pscore));
+        ui->Hit->setDisabled(true);
+        break;
+    }
+    if(User.getVal()>21){
+        ui->Hit->setDisabled(true);
+    }
+}
 
 
 Game::~Game()

@@ -6,7 +6,7 @@ using namespace std;
 
 card::card(){
     this->suit = "test";
-    this->rank = 't';
+    this->rank = '0';
     this->up = 0;
 }
 

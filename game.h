@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include "deck.h"
+#include "player.h"
 
 namespace Ui {
 class Game;
@@ -14,11 +15,15 @@ class Game : public QWidget
 
 public:
     explicit Game(QWidget *parent = nullptr);
-     deck Deck;
+    deck Deck;
+    player User;
+    player House;
+    int hitcounter = 0;
     ~Game();
 
 private slots:
     void on_Deal_clicked();
+    void on_Hit_clicked();
 
 
 private:

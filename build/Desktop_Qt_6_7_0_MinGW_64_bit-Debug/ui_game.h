@@ -32,9 +32,9 @@ public:
     QLabel *DC4;
     QLabel *DC5;
     QLabel *PC2;
-    QLabel *PC3;
-    QLabel *PC4;
     QLabel *PC5;
+    QLabel *PC4;
+    QLabel *PC3;
     QLabel *Background;
 
     void setupUi(QWidget *Game)
@@ -97,21 +97,21 @@ public:
         PC2->setGeometry(QRect(200, 30, 150, 225));
         PC2->setStyleSheet(QString::fromUtf8("background-color: rgb(136, 255, 83)"));
         PC2->setScaledContents(true);
-        PC3 = new QLabel(Game);
-        PC3->setObjectName("PC3");
-        PC3->setGeometry(QRect(710, 30, 150, 225));
-        PC3->setStyleSheet(QString::fromUtf8("background-color: rgb(136, 255, 83)"));
-        PC3->setScaledContents(true);
+        PC5 = new QLabel(Game);
+        PC5->setObjectName("PC5");
+        PC5->setGeometry(QRect(710, 30, 150, 225));
+        PC5->setStyleSheet(QString::fromUtf8("background-color: rgb(136, 255, 83)"));
+        PC5->setScaledContents(true);
         PC4 = new QLabel(Game);
         PC4->setObjectName("PC4");
         PC4->setGeometry(QRect(540, 30, 150, 225));
         PC4->setStyleSheet(QString::fromUtf8("background-color: rgb(136, 255, 83)"));
         PC4->setScaledContents(true);
-        PC5 = new QLabel(Game);
-        PC5->setObjectName("PC5");
-        PC5->setGeometry(QRect(370, 30, 150, 225));
-        PC5->setStyleSheet(QString::fromUtf8("background-color: rgb(136, 255, 83)"));
-        PC5->setScaledContents(true);
+        PC3 = new QLabel(Game);
+        PC3->setObjectName("PC3");
+        PC3->setGeometry(QRect(370, 30, 150, 225));
+        PC3->setStyleSheet(QString::fromUtf8("background-color: rgb(136, 255, 83)"));
+        PC3->setScaledContents(true);
         Background = new QLabel(Game);
         Background->setObjectName("Background");
         Background->setGeometry(QRect(10, -10, 991, 661));
@@ -123,9 +123,9 @@ public:
         DC1->raise();
         PC1->raise();
         PC2->raise();
-        PC5->raise();
-        PC4->raise();
         PC3->raise();
+        PC4->raise();
+        PC5->raise();
         Dealer->raise();
         PlayerScore->raise();
         Hit->raise();
@@ -152,9 +152,9 @@ public:
         DC4->setText(QString());
         DC5->setText(QString());
         PC2->setText(QString());
-        PC3->setText(QString());
-        PC4->setText(QString());
         PC5->setText(QString());
+        PC4->setText(QString());
+        PC3->setText(QString());
         Background->setText(QString());
     } // retranslateUi
 

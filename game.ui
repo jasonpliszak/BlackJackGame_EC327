@@ -218,7 +218,7 @@ background-color: rgb(0, 0, 0);
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QLabel" name="PC3">
+  <widget class="QLabel" name="PC5">
    <property name="geometry">
     <rect>
      <x>710</x>
@@ -256,7 +256,7 @@ background-color: rgb(0, 0, 0);
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QLabel" name="PC5">
+  <widget class="QLabel" name="PC3">
    <property name="geometry">
     <rect>
      <x>370</x>
@@ -296,9 +296,9 @@ background-color: rgb(0, 0, 0);
   <zorder>DC1</zorder>
   <zorder>PC1</zorder>
   <zorder>PC2</zorder>
-  <zorder>PC5</zorder>
-  <zorder>PC4</zorder>
   <zorder>PC3</zorder>
+  <zorder>PC4</zorder>
+  <zorder>PC5</zorder>
   <zorder>Dealer</zorder>
   <zorder>PlayerScore</zorder>
   <zorder>Hit</zorder>

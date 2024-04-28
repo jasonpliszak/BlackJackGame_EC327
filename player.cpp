@@ -3,6 +3,11 @@
 
 using namespace std;
 
+player::player(){
+    this->cards = nullptr;
+    this->count = 0;
+}
+
 player::player(card c){
     this->cards = new card[1];
     this->cards[0] = c;
