@@ -648,19 +648,6 @@ color: rgb(255, 255, 255);</string>
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QScrollBar" name="horizontalScrollBar">
-   <property name="geometry">
-    <rect>
-     <x>500</x>
-     <y>555</y>
-     <width>160</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="orientation">
-    <enum>Qt::Horizontal</enum>
-   </property>
-  </widget>
   <widget class="QLabel" name="availibleBalance">
    <property name="geometry">
     <rect>
@@ -685,6 +672,19 @@ color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string/>
+   </property>
+  </widget>
+  <widget class="QSlider" name="BetSlider">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>550</y>
+     <width>160</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
    </property>
   </widget>
   <zorder>backtexture</zorder>
@@ -717,7 +717,6 @@ color: rgb(255, 255, 255);</string>
   <zorder>PC8</zorder>
   <zorder>PC9</zorder>
   <zorder>Split</zorder>
-  <zorder>horizontalScrollBar</zorder>
   <zorder>availibleBalance</zorder>
   <zorder>SplitScore</zorder>
   <zorder>SC1</zorder>
@@ -726,6 +725,7 @@ color: rgb(255, 255, 255);</string>
   <zorder>SC4</zorder>
   <zorder>SC5</zorder>
   <zorder>SC6</zorder>
+  <zorder>BetSlider</zorder>
  </widget>
  <resources/>
  <connections/>

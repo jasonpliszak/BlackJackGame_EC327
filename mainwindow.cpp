@@ -10,7 +10,7 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
-    money = 0;
+    money = 1000;
     ui->setupUi(this);
     QPushButton *play_button = new QPushButton;
     QPixmap pix(":/images/homescreen.png");
@@ -20,8 +20,6 @@ MainWindow::MainWindow(QWidget *parent)
     // Connect the button's clicked signal to slot
     connect(play_button, &QPushButton::clicked, this, &MainWindow::on_play_button_clicked);
 
-    QSlider *slider = new QSlider(Qt::Horizontal);
-    slider->setRange(0, 150); // Set the range
 }
 
 MainWindow::~MainWindow()
@@ -35,11 +33,3 @@ void MainWindow::on_play_button_clicked()
     game->show();
     this->hide();
 }
-
-
-void MainWindow::on_BetBalance_valueChanged(int value)
-{
-    ui->Balance->setText("Balance: $" + QString::number(value));
-    money = value;
-}
-

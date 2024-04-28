@@ -13,6 +13,7 @@
 #include <QTimer>
 #include "t.h"
 #include "w.h"
+#include "global.h"
 
 using namespace std;
 
@@ -29,6 +30,9 @@ Game::Game(QWidget *parent)
     ui->Hit->setDisabled(true);
     ui->Stand->setDisabled(true);
     ui->Split->setDisabled(true);
+
+    QSlider *slider = new QSlider(Qt::Horizontal);
+    slider->setRange(0, money); // Set the range
 }
 
 void Game::on_Deal_clicked(){
@@ -387,5 +391,14 @@ void Game::delayedBJW(){
 Game::~Game()
 {
     delete ui;
+}
+
+
+
+
+
+void Game::on_horizontalSlider_valueChanged(int value)
+{
+
 }
 
