@@ -23,7 +23,7 @@
    <widget class="QPushButton" name="play_button">
     <property name="geometry">
      <rect>
-      <x>450</x>
+      <x>425</x>
       <y>525</y>
       <width>150</width>
       <height>40</height>
@@ -62,10 +62,10 @@ color: rgb(0, 0, 0);</string>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>350</x>
+      <x>290</x>
       <y>0</y>
-      <width>291</width>
-      <height>61</height>
+      <width>381</width>
+      <height>121</height>
      </rect>
     </property>
     <property name="font">

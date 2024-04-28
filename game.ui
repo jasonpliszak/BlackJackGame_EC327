@@ -717,15 +717,15 @@ color: rgb(255, 255, 255);</string>
   <zorder>PC8</zorder>
   <zorder>PC9</zorder>
   <zorder>Split</zorder>
+  <zorder>horizontalScrollBar</zorder>
+  <zorder>availibleBalance</zorder>
+  <zorder>SplitScore</zorder>
   <zorder>SC1</zorder>
   <zorder>SC2</zorder>
   <zorder>SC3</zorder>
   <zorder>SC4</zorder>
   <zorder>SC5</zorder>
   <zorder>SC6</zorder>
-  <zorder>horizontalScrollBar</zorder>
-  <zorder>availibleBalance</zorder>
-  <zorder>SplitScore</zorder>
  </widget>
  <resources/>
  <connections/>
