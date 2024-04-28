@@ -46,7 +46,7 @@ public:
         play_button->setStyleSheet(QString::fromUtf8("background-color: rgb(0,0, 0);"));
         home_screen = new QLabel(centralwidget);
         home_screen->setObjectName("home_screen");
-        home_screen->setGeometry(QRect(0, -30, 1001, 641));
+        home_screen->setGeometry(QRect(0, -30, 1000, 650));
         home_screen->setScaledContents(true);
         label = new QLabel(centralwidget);
         label->setObjectName("label");

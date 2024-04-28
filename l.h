@@ -18,6 +18,8 @@ public:
 private slots:
     void on_Play_Again_clicked();
 
+    void on_return_Home_clicked();
+
 private:
     Ui::L *ui;
 };

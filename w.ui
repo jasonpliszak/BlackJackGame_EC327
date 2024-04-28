@@ -18,12 +18,18 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>991</width>
-     <height>641</height>
+     <width>1000</width>
+     <height>650</height>
     </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>true</bool>
    </property>
    <property name="text">
     <string/>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QPushButton" name="Play_Again1">
@@ -36,7 +42,7 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: transparent; 
+    <string notr="true">color: rgb(0, 0, 0);
 </string>
    </property>
    <property name="text">
@@ -53,7 +59,7 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: transparent;</string>
+    <string notr="true">color: rgb(0, 0, 0);</string>
    </property>
    <property name="text">
     <string>Return Home</string>
@@ -64,9 +70,18 @@
     <rect>
      <x>460</x>
      <y>50</y>
-     <width>58</width>
-     <height>16</height>
+     <width>91</width>
+     <height>61</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>30</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(34, 129, 24);</string>
    </property>
    <property name="text">
     <string>WIN</string>
