@@ -4,6 +4,8 @@
 #include <QPushButton>
 #include <QString>
 
+static int money = 0;
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -40,5 +42,6 @@ void MainWindow::on_play_button_clicked()
 void MainWindow::on_BetBalance_valueChanged(int value)
 {
     ui->Balance->setText("Balance: $" + QString::number(value));
+    money = value;
 }
 
