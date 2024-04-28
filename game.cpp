@@ -12,6 +12,8 @@
 #include <map>
 #include <string>
 #include <time.h>
+#include "l.h"
+#include <QTimer>
 
 using namespace std;
 
@@ -87,9 +89,15 @@ void Game::on_Hit_clicked(){
     }
     if(User.getVal()>21){
         ui->Hit->setDisabled(true);
+        QTimer::singleShot(1500, this, &Game::delayedLose);
     }
 }
 
+void Game::delayedLose(){
+            L *lose = new L;
+            lose->show();
+            this->hide();
+    }
 
 Game::~Game()
 {
