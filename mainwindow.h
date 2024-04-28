@@ -20,7 +20,6 @@ public:
 private slots:
     void on_play_button_clicked();
 
-    void on_BetBalance_valueChanged(int value);
 
 private:
     Ui::MainWindow *ui;

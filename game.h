@@ -39,10 +39,6 @@ private slots:
     void delayedBJW();
     void delayedBJL();
 
-    void on_horizontalScrollBar_rangeChanged(int max);
-
-    void on_horizontalScrollBar_valueChanged(int value);
-
     void on_horizontalSlider_valueChanged(int value);
 
 private:

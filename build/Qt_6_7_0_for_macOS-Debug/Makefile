@@ -1055,7 +1055,8 @@ game.o: ../../game.cpp ../../game.h \
 		../../../Qt/6.7.0/macos/lib/QtCore.framework/Headers/QTimer \
 		../../../Qt/6.7.0/macos/lib/QtCore.framework/Headers/qtimer.h \
 		../../t.h \
-		../../w.h
+		../../w.h \
+		../../global.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o game.o ../../game.cpp
 
 l.o: ../../l.cpp ../../l.h \
@@ -1081,7 +1082,8 @@ main.o: ../../main.cpp ../../mainwindow.h \
 		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/QGraphicsScene \
 		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/qgraphicsscene.h \
 		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/QGraphicsView \
-		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/qgraphicsview.h
+		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/qgraphicsview.h \
+		../../global.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../../main.cpp
 
 mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
