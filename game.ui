@@ -132,7 +132,7 @@ background-color: rgb(0, 0, 0);
     </rect>
    </property>
    <property name="text">
-    <string>Dealer</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="DC2">
