@@ -13,6 +13,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QScrollBar>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -56,6 +57,9 @@ public:
     QLabel *SC4;
     QLabel *SC5;
     QLabel *SC6;
+    QScrollBar *horizontalScrollBar;
+    QLabel *availibleBalance;
+    QLabel *SplitScore;
 
     void setupUi(QWidget *Game)
     {
@@ -229,6 +233,16 @@ public:
         SC6->setGeometry(QRect(525, 50, 100, 125));
         SC6->setStyleSheet(QString::fromUtf8(""));
         SC6->setScaledContents(true);
+        horizontalScrollBar = new QScrollBar(Game);
+        horizontalScrollBar->setObjectName("horizontalScrollBar");
+        horizontalScrollBar->setGeometry(QRect(500, 555, 160, 16));
+        horizontalScrollBar->setOrientation(Qt::Horizontal);
+        availibleBalance = new QLabel(Game);
+        availibleBalance->setObjectName("availibleBalance");
+        availibleBalance->setGeometry(QRect(500, 530, 58, 16));
+        SplitScore = new QLabel(Game);
+        SplitScore->setObjectName("SplitScore");
+        SplitScore->setGeometry(QRect(400, 25, 141, 21));
         backtexture->raise();
         DC1->raise();
         Background->raise();
@@ -265,6 +279,9 @@ public:
         SC4->raise();
         SC5->raise();
         SC6->raise();
+        horizontalScrollBar->raise();
+        availibleBalance->raise();
+        SplitScore->raise();
 
         retranslateUi(Game);
 
@@ -310,6 +327,8 @@ public:
         SC4->setText(QString());
         SC5->setText(QString());
         SC6->setText(QString());
+        availibleBalance->setText(QCoreApplication::translate("Game", "TextLabel", nullptr));
+        SplitScore->setText(QString());
     } // retranslateUi
 
 };
