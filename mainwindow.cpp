@@ -9,6 +9,9 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     QPushButton *play_button = new QPushButton;
+    QPixmap pix(":/images/homescreen.png");
+    ui->home_screen->setPixmap(pix);
+    ui->home_screen->lower();
 
     // Connect the button's clicked signal to slot
     connect(play_button, &QPushButton::clicked, this, &MainWindow::on_play_button_clicked);

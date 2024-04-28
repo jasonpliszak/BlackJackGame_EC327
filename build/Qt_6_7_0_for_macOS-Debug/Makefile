@@ -901,6 +901,7 @@ qrc_cards.cpp: ../../cards.qrc \
 		../../images/diamondsT.gif \
 		../../images/spadesK.gif \
 		../../images/spades7.gif \
+		../../images/homescreen.png \
 		../../images/diamonds6.gif \
 		../../images/hearts2.gif \
 		../../images/clubsJ.gif \
@@ -928,6 +929,10 @@ compiler_moc_header_clean:
 moc_game.cpp: ../../game.h \
 		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/QWidget \
 		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/qwidget.h \
+		../../deck.h \
+		../../card.h \
+		../../../Qt/6.7.0/macos/lib/QtGui.framework/Headers/QPixmap \
+		../../../Qt/6.7.0/macos/lib/QtGui.framework/Headers/qpixmap.h \
 		../../../Qt/6.7.0/macos/libexec/moc
 	/Users/jasonpliszak/Qt/6.7.0/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=15 -D__clang_minor__=0 -D__clang_patchlevel__=0 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Users/jasonpliszak/Qt/6.7.0/macos/mkspecs/macx-clang -I/Users/jasonpliszak/BlackJack_EC327 -I/Users/jasonpliszak/Qt/6.7.0/macos/lib/QtWidgets.framework/Headers -I/Users/jasonpliszak/Qt/6.7.0/macos/lib/QtGui.framework/Headers -I/Users/jasonpliszak/Qt/6.7.0/macos/lib/QtCore.framework/Headers -I. -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -I/Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I/Library/Developer/CommandLineTools/usr/include -F/Users/jasonpliszak/Qt/6.7.0/macos/lib ../../game.h -o moc_game.cpp
 
@@ -978,11 +983,11 @@ deck.o: ../../deck.cpp ../../card.h \
 game.o: ../../game.cpp ../../game.h \
 		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/QWidget \
 		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/qwidget.h \
-		ui_game.h \
+		../../deck.h \
 		../../card.h \
 		../../../Qt/6.7.0/macos/lib/QtGui.framework/Headers/QPixmap \
 		../../../Qt/6.7.0/macos/lib/QtGui.framework/Headers/qpixmap.h \
-		../../deck.h \
+		ui_game.h \
 		../../player.h \
 		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/QApplication \
 		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/qapplication.h \
@@ -1014,6 +1019,10 @@ mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
 		../../game.h \
 		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/QWidget \
 		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/qwidget.h \
+		../../deck.h \
+		../../card.h \
+		../../../Qt/6.7.0/macos/lib/QtGui.framework/Headers/QPixmap \
+		../../../Qt/6.7.0/macos/lib/QtGui.framework/Headers/qpixmap.h \
 		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/QPushButton \
 		../../../Qt/6.7.0/macos/lib/QtWidgets.framework/Headers/qpushbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../../mainwindow.cpp
