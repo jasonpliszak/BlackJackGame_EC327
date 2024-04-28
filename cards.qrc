@@ -57,5 +57,6 @@
         <file>images/spades4.gif</file>
         <file>images/spades3.gif</file>
         <file>images/spades2.gif</file>
+        <file>images/homescreen.png</file>
     </qresource>
 </RCC>

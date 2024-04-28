@@ -17,6 +17,9 @@
    <string notr="true">background-color: rgb(34, 129, 20);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 0, 0);</string>
+   </property>
    <widget class="QPushButton" name="play_button">
     <property name="geometry">
      <rect>
@@ -27,12 +30,53 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(235, 255, 240);</string>
+     <string notr="true">background-color: rgb(0,0, 0);</string>
     </property>
     <property name="text">
      <string>Play BlackJack</string>
     </property>
    </widget>
+   <widget class="QLabel" name="home_screen">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>-30</y>
+      <width>1001</width>
+      <height>641</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>0</y>
+      <width>291</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>PT Sans Caption</family>
+      <pointsize>19</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>WELCOME TO BLACKJACK</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <zorder>home_screen</zorder>
+   <zorder>play_button</zorder>
+   <zorder>label</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -44,13 +88,15 @@
     </rect>
    </property>
    <widget class="QMenu" name="menuBlackJack">
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(54, 148, 30);</string>
+    </property>
     <property name="title">
      <string>Game</string>
     </property>
    </widget>
    <addaction name="menuBlackJack"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>
