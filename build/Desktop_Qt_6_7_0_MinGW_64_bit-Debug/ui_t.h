@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -19,6 +20,9 @@ QT_BEGIN_NAMESPACE
 class Ui_T
 {
 public:
+    QLabel *TScreen;
+    QPushButton *Play_Again2;
+    QPushButton *Return_Home2;
     QLabel *label;
 
     void setupUi(QWidget *T)
@@ -26,9 +30,21 @@ public:
         if (T->objectName().isEmpty())
             T->setObjectName("T");
         T->resize(1000, 650);
+        TScreen = new QLabel(T);
+        TScreen->setObjectName("TScreen");
+        TScreen->setGeometry(QRect(0, 0, 1000, 650));
+        Play_Again2 = new QPushButton(T);
+        Play_Again2->setObjectName("Play_Again2");
+        Play_Again2->setGeometry(QRect(350, 560, 100, 32));
+        Play_Again2->setStyleSheet(QString::fromUtf8("background-color: transparent;"));
+        Return_Home2 = new QPushButton(T);
+        Return_Home2->setObjectName("Return_Home2");
+        Return_Home2->setGeometry(QRect(610, 560, 100, 32));
+        Return_Home2->setStyleSheet(QString::fromUtf8("background-color: transparent;"));
         label = new QLabel(T);
         label->setObjectName("label");
-        label->setGeometry(QRect(7, 5, 1000, 650));
+        label->setGeometry(QRect(480, 70, 58, 16));
+        label->setAlignment(Qt::AlignCenter);
 
         retranslateUi(T);
 
@@ -38,7 +54,10 @@ public:
     void retranslateUi(QWidget *T)
     {
         T->setWindowTitle(QCoreApplication::translate("T", "Form", nullptr));
-        label->setText(QCoreApplication::translate("T", "Tie!!!!!!", nullptr));
+        TScreen->setText(QString());
+        Play_Again2->setText(QCoreApplication::translate("T", "Play Again", nullptr));
+        Return_Home2->setText(QCoreApplication::translate("T", "Return Home", nullptr));
+        label->setText(QCoreApplication::translate("T", "TIE", nullptr));
     } // retranslateUi
 
 };

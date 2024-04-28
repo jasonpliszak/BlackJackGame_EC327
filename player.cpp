@@ -35,14 +35,17 @@ void player::flipCard(int index){
 
 int player::getVal(){
     int sum = 0;
+    int aceCount = 0;
     for (int i = 0; i < this->count; i++){
         sum += this->cards[i].getVal();
+        if(this->cards[i].getVal()==11){
+            aceCount++;
+        }
     }
     if(sum > 21){
-        for(int i = 0; i < this->count; i++){
-            if(this->cards[i].getVal() == 11){
-                sum -= 10;
-            }
+        while(sum>21 && aceCount != 0){
+            sum -= 10;
+            aceCount--;
         }
     }
     return sum;
