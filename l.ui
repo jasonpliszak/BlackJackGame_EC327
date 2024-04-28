@@ -41,6 +41,9 @@
      <height>32</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: transparent;</string>
+   </property>
    <property name="text">
     <string>Play Again</string>
    </property>
@@ -53,6 +56,9 @@
      <width>100</width>
      <height>32</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: transparent;</string>
    </property>
    <property name="text">
     <string>Return Home</string>
