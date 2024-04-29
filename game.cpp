@@ -117,6 +117,9 @@ void Game::on_Split_clicked(){
 void Game::on_Hit_clicked(){
     hitcounter++; //amount of times hit has been pressed
     int pscore = 0;
+    if(!splitFlag){
+        ui->Split->setDisabled(true);
+    }
     //initialize cards outside of case statement (these are all test cards that cannot affect score value)
     if(spStandFlag){
         int sscore = 0;
@@ -277,6 +280,9 @@ void Game::on_Stand_clicked(){
         spStandFlag = true;
         hitcounter = 0;
         return;
+    }
+    if(!splitFlag){
+        ui->Split->setDisabled(true);
     }
 
     if((splitFlag == false) or (splitFlag == true && spStandFlag == true)){
