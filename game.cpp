@@ -46,7 +46,7 @@ void Game::on_Deal_clicked(){
     ui->PC1->setPixmap(p1.getImg()); //sets image with first player card
     User.addCard(p1);
 
-    card p2 = p1; //FIX THIS WHEN DONE WITH SPLIT TESTING
+    card p2 = Deck.draw(); //FIX THIS WHEN DONE WITH SPLIT TESTING
     ui->PC2->setPixmap(p2.getImg());
     User.addCard(p2);
     int pscore = User.getVal();
