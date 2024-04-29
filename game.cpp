@@ -40,6 +40,7 @@ void Game::on_Deal_clicked(){
     ui->BetSlider->hide();
     ui->BetSlider->setDisabled(true);
     money -= bet;
+    ui->BalanceLabel->setText("Balance: $" + QString::number(money));
     //draw player cards
     card p1 = Deck.draw();
     ui->PC1->setPixmap(p1.getImg()); //sets image with first player card
@@ -101,6 +102,7 @@ void Game::on_Split_clicked(){
     money = money - bet;
     bet = 2*bet;
     ui->BetValue->setText("Bet Value: $" + QString::number(bet));
+    ui->BalanceLabel->setText("Balance: $" + QString::number(money));
     QPixmap bcard(":/images/blank.png");
     card s1 = User.getCards()[1];
     User.removeCard();
@@ -358,7 +360,8 @@ void Game::on_Stand_clicked(){
     if(dscore>21 && User.getVal() <= 21){ //dealer bust
         QTimer::singleShot(1500, this, &Game::delayedWin);
     }
-    else if(dscore == User.getVal() && User.getVal() <= 21){ //ensures bust from split hand not counted
+    else if(dscore == User.getVal() && User.getVal() <= 21){        //ensures bust from split hand not counted
+        QTimer::singleShot(1500, this, &Game::delayedTie);
     }
     else if(dscore > User.getVal() && User.getVal() <= 21){ //ensures bust from split hand not counted
         QTimer::singleShot(1500, this, &Game::delayedLose);
@@ -372,15 +375,12 @@ void Game::on_Stand_clicked(){
             QTimer::singleShot(1500, this, &Game::delayedWin);
         }
         else if(dscore == split.getVal()){ //ensures bust from split hand not counted
-            spStandFlag = false;
             QTimer::singleShot(1500, this, &Game::delayedTie);
         }
         else if(dscore > split.getVal()){ //ensures bust from split hand not counted
-            spStandFlag = false;
             QTimer::singleShot(1500, this, &Game::delayedLose);
         }
         else if(dscore < split.getVal()){ //ensures bust from split hand not counted
-            spStandFlag = false;
             QTimer::singleShot(1500, this, &Game::delayedWin);
         }
     }
@@ -392,6 +392,7 @@ void Game::delayedLose(){
     if(!endCallFlag){
         bet = bet/2;
         ui->BetValue->setText("Bet Value: $" + QString::number(bet));
+        ui->BalanceLabel->setText("Balance: $" + QString::number(money));
         endCallFlag = true;
         return;
     }
@@ -405,6 +406,7 @@ void Game::delayedTie(){
         money = money + bet/2;
         bet = bet/2;
         ui->BetValue->setText("Bet Value: $" + QString::number(bet));
+        ui->BalanceLabel->setText("Balance: $" + QString::number(money));
         endCallFlag = true;
         return;
     }
@@ -419,6 +421,7 @@ void Game::delayedWin(){
         money = money + bet;
         bet = bet/2;
         ui->BetValue->setText("Bet Value: $" + QString::number(bet));
+        ui->BalanceLabel->setText("Balance: $" + QString::number(money));
         endCallFlag = true;
         return;
     }

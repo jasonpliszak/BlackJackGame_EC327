@@ -2,6 +2,7 @@
 #include "ui_l.h"
 #include "game.h"
 #include "mainwindow.h"
+#include "global.h"
 
 L::L(QWidget *parent)
     : QWidget(parent)
@@ -11,6 +12,10 @@ L::L(QWidget *parent)
     QPixmap pix(":/images/lose.jpeg");
     ui->Lscreen->setPixmap(pix);
     ui->Lscreen->lower();
+    ui->balanceLabel->setText("Balance: $" + QString::number(money));
+    if(money == 0){
+        ui->Play_Again->setDisabled(true);
+    }
 }
 
 L::~L()
