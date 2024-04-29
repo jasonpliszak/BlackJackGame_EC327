@@ -4,7 +4,7 @@
 #include <QGraphicsView>
 #include "global.h"
 
-int money;
+double money;
 
 
 int main(int argc, char *argv[])

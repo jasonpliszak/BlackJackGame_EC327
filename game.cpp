@@ -11,8 +11,6 @@
 #include <QList>
 #include "l.h"
 #include <QTimer>
-#include "t.h"
-#include "w.h"
 #include "global.h"
 #include <QSlider>
 
@@ -39,6 +37,9 @@ Game::Game(QWidget *parent)
 void Game::on_Deal_clicked(){
     QPixmap card0(":/images/cardback.png"); //initialize cardback image for first dealer card
 
+    ui->BetSlider->hide();
+    ui->BetSlider->setDisabled(true);
+    money -= bet;
     //draw player cards
     card p1 = Deck.draw();
     ui->PC1->setPixmap(p1.getImg()); //sets image with first player card
@@ -62,10 +63,6 @@ void Game::on_Deal_clicked(){
     ui->Deal->setDisabled(true); //disable deal button
     ui->Hit->setDisabled(false); //enable hit
     ui->Stand->setDisabled(false); //enable stand
-    if(p1.getRank()==p2.getRank()){
-        ui->Split->setDisabled(false);
-    }
-
 
     //auto-blackjack logic (if player or dealer draw blackjack from the deal button)
     if(House.getVal()==21 && User.getVal()==21){
@@ -90,13 +87,20 @@ void Game::on_Deal_clicked(){
         ui->Dealer->setText("Score: " + QString::number(dscore));
         ui->Hit->setDisabled(true);
         ui->Stand->setDisabled(true);
-        QTimer::singleShot(1500, this, &Game::delayedWin);
+        QTimer::singleShot(1500, this, &Game::delayedBJW);
+    }
+    if((p1.getRank()==p2.getRank() && money >= bet)){
+        ui->Split->setDisabled(false);
     }
 }
 
 void Game::on_Split_clicked(){
     splitFlag = true;
+    endCallFlag = false;
     ui->Split->setDisabled(true);
+    money = money - bet;
+    bet = 2*bet;
+    ui->BetValue->setText("Bet Value: $" + QString::number(bet));
     QPixmap bcard(":/images/blank.png");
     card s1 = User.getCards()[1];
     User.removeCard();
@@ -156,6 +160,14 @@ void Game::on_Hit_clicked(){
             sscore = split.getVal();
             ui->SplitScore->setText("Score: " + QString::number(sscore));
             break;
+        }
+        if(split.getVal()>21){
+            ui->Hit->setDisabled(true);
+            splitFlag = 0;
+            if(endCallFlag){
+                ui->Stand->setDisabled(true);
+            }
+            QTimer::singleShot(1500, this, &Game::delayedLose);
         }
         return;
     }
@@ -248,6 +260,7 @@ void Game::on_Hit_clicked(){
     if(User.getVal()>21){
         if(splitFlag){
             spStandFlag = true;
+            QTimer::singleShot(1500, this, &Game::delayedLose);
             hitcounter = 0;
             return;
         }
@@ -264,120 +277,152 @@ void Game::on_Stand_clicked(){
         return;
     }
 
-    if(splitFlag == false || (splitFlag == true && spStandFlag == true)){
-    ui->Hit->setDisabled(true);
-    ui->Stand->setDisabled(true);
-    ui->DC1->setPixmap(House.getCards()[0].getImg()); //replace cardback image with image of the first dealer card
-    int dscore = House.getVal();
-    ui->Dealer->setText("Score: " + QString::number(dscore)); //show dealer hand value
+    if((splitFlag == false) or (splitFlag == true && spStandFlag == true)){
+        ui->Hit->setDisabled(true);
+        ui->Stand->setDisabled(true);
+        ui->DC1->setPixmap(House.getCards()[0].getImg()); //replace cardback image with image of the first dealer card
+        int dscore = House.getVal();
+        ui->Dealer->setText("Score: " + QString::number(dscore)); //show dealer hand value
 
-    //dealer draws if their value is too low
-    while(dscore<17){
-        int dhit = 0;
-        card d3;
-        card d4;
-        card d5;
-        card d6;
-        card d7;
-        card d8;
-        card d9;
-        card d10; //10 cards to handle the extreme edge case of four A, four 2, two 3 for a total of 18
-        dhit++;
-        switch(dhit){
-        case 1:
-            d3 = Deck.draw();
-            ui->DC3->setPixmap(d3.getImg());
-            House.addCard(d3);
-            dscore = House.getVal();
-            ui->Dealer->setText("Score: " + QString::number(dscore));
-            break;
-        case 2:
-            d4 = Deck.draw();
-            ui->DC3->setPixmap(d4.getImg());
-            House.addCard(d4);
-            dscore = House.getVal();
-            ui->Dealer->setText("Score: " + QString::number(dscore));
-            break;
-        case 3:
-            d5 = Deck.draw();
-            ui->DC3->setPixmap(d5.getImg());
-            House.addCard(d5);
-            dscore = House.getVal();
-            ui->Dealer->setText("Score: " + QString::number(dscore));
-            break;
-        case 4:
-            d6 = Deck.draw();
-            ui->DC3->setPixmap(d6.getImg());
-            House.addCard(d6);
-            dscore = House.getVal();
-            ui->Dealer->setText("Score: " + QString::number(dscore));
-            break;
-        case 5:
-            d7 = Deck.draw();
-            ui->DC3->setPixmap(d7.getImg());
-            House.addCard(d7);
-            dscore = House.getVal();
-            ui->Dealer->setText("Score: " + QString::number(dscore));
-            break;
-        case 6:
-            d8 = Deck.draw();
-            ui->DC3->setPixmap(d8.getImg());
-            House.addCard(d8);
-            dscore = House.getVal();
-            ui->Dealer->setText("Score: " + QString::number(dscore));
-            break;
-        case 7:
-            d9 = Deck.draw();
-            ui->DC3->setPixmap(d9.getImg());
-            House.addCard(d9);
-            dscore = House.getVal();
-            ui->Dealer->setText("Score: " + QString::number(dscore));
-            break;
-        case 8:
-            d10 = Deck.draw();
-            ui->DC3->setPixmap(d10.getImg());
-            House.addCard(d10);
-            dscore = House.getVal();
-            ui->Dealer->setText("Score: " + QString::number(dscore));
-            break;
+        //dealer draws if their value is too low
+        while(dscore<17){
+            int dhit = 0;
+            card d3;
+            card d4;
+            card d5;
+            card d6;
+            card d7;
+            card d8;
+            card d9;
+            card d10; //10 cards to handle the extreme edge case of four A, four 2, two 3 for a total of 18
+            dhit++;
+            switch(dhit){
+            case 1:
+                d3 = Deck.draw();
+                ui->DC3->setPixmap(d3.getImg());
+                House.addCard(d3);
+                dscore = House.getVal();
+                ui->Dealer->setText("Score: " + QString::number(dscore));
+                break;
+            case 2:
+                d4 = Deck.draw();
+                ui->DC3->setPixmap(d4.getImg());
+                House.addCard(d4);
+                dscore = House.getVal();
+                ui->Dealer->setText("Score: " + QString::number(dscore));
+                break;
+            case 3:
+                d5 = Deck.draw();
+                ui->DC3->setPixmap(d5.getImg());
+                House.addCard(d5);
+                dscore = House.getVal();
+                ui->Dealer->setText("Score: " + QString::number(dscore));
+                break;
+            case 4:
+                d6 = Deck.draw();
+                ui->DC3->setPixmap(d6.getImg());
+                House.addCard(d6);
+                dscore = House.getVal();
+                ui->Dealer->setText("Score: " + QString::number(dscore));
+                break;
+            case 5:
+                d7 = Deck.draw();
+                ui->DC3->setPixmap(d7.getImg());
+                House.addCard(d7);
+                dscore = House.getVal();
+                ui->Dealer->setText("Score: " + QString::number(dscore));
+                break;
+            case 6:
+                d8 = Deck.draw();
+                ui->DC3->setPixmap(d8.getImg());
+                House.addCard(d8);
+                dscore = House.getVal();
+                ui->Dealer->setText("Score: " + QString::number(dscore));
+                break;
+            case 7:
+                d9 = Deck.draw();
+                ui->DC3->setPixmap(d9.getImg());
+                House.addCard(d9);
+                dscore = House.getVal();
+                ui->Dealer->setText("Score: " + QString::number(dscore));
+                break;
+            case 8:
+                d10 = Deck.draw();
+                ui->DC3->setPixmap(d10.getImg());
+                House.addCard(d10);
+                dscore = House.getVal();
+                ui->Dealer->setText("Score: " + QString::number(dscore));
+                break;
+            }
         }
-    }
-    if(dscore>21){ //dealer bust
+    if(dscore>21 && User.getVal() <= 21){ //dealer bust
         QTimer::singleShot(1500, this, &Game::delayedWin);
     }
-    else if(dscore == User.getVal()){ //because auto blackjacks are already processed (you cannot stand if you get a blackjack on draw)
-         QTimer::singleShot(1500, this, &Game::delayedTie);
+    else if(dscore == User.getVal() && User.getVal() <= 21){ //ensures bust from split hand not counted
     }
-    else if(dscore > User.getVal()){ //because auto blackjacks are already processed (you cannot stand if you get a blackjack on draw)
+    else if(dscore > User.getVal() && User.getVal() <= 21){ //ensures bust from split hand not counted
         QTimer::singleShot(1500, this, &Game::delayedLose);
     }
-    else if(dscore < User.getVal()){ //because auto blackjacks are already processed (you cannot stand if you get a blackjack on draw)
+    else if(dscore < User.getVal() && User.getVal() <= 21){ //ensures bust from split hand not counted
         QTimer::singleShot(1500, this, &Game::delayedWin);
     }
     //implement code to check against split hand if split flag is true
+    if(splitFlag){
+        if(dscore>21 && split.getVal() <= 21){ //dealer bust
+            QTimer::singleShot(1500, this, &Game::delayedWin);
+        }
+        else if(dscore == split.getVal()){ //ensures bust from split hand not counted
+            spStandFlag = false;
+            QTimer::singleShot(1500, this, &Game::delayedTie);
+        }
+        else if(dscore > split.getVal()){ //ensures bust from split hand not counted
+            spStandFlag = false;
+            QTimer::singleShot(1500, this, &Game::delayedLose);
+        }
+        else if(dscore < split.getVal()){ //ensures bust from split hand not counted
+            spStandFlag = false;
+            QTimer::singleShot(1500, this, &Game::delayedWin);
+        }
+    }
     }
 }
 
 //delayed game over screen functions to use with QTimer::singleShot()
 void Game::delayedLose(){
-        L *gameover = new L;
-        gameover->show();
-        this->hide();
+    if(!endCallFlag){
+        bet = bet/2;
+        ui->BetValue->setText("Bet Value: $" + QString::number(bet));
+        endCallFlag = true;
+        return;
+    }
+    L *gameover = new L;
+    gameover->show();
+    this->hide();
     }
 
 void Game::delayedTie(){
+    if(!endCallFlag){
+        money = money + bet/2;
+        bet = bet/2;
+        ui->BetValue->setText("Bet Value: $" + QString::number(bet));
+        endCallFlag = true;
+        return;
+    }
+    money += bet;
     L *gameover = new L;
     gameover->show();
     this->hide();
 }
 
 void Game::delayedWin(){
-    L *gameover = new L;
-    gameover->show();
-    this->hide();
-}
-
-void Game::delayedBJL(){
+    if(!endCallFlag){
+        money = money + bet;
+        bet = bet/2;
+        ui->BetValue->setText("Bet Value: $" + QString::number(bet));
+        endCallFlag = true;
+        return;
+    }
+    money = money + (2*bet);
     L *gameover = new L;
     gameover->show();
     this->hide();
@@ -385,6 +430,7 @@ void Game::delayedBJL(){
 
 void Game::delayedBJW(){
     L *gameover = new L;
+    money = money + (1.5*bet);
     gameover->show();
     this->hide();
 }
@@ -401,5 +447,8 @@ void Game::on_BetSlider_valueChanged(int value)
 {
     bet = value;
     ui->BetValue->setText("Bet Value: $" + QString::number(bet));
+    if(bet!=0){
+        ui->Deal->setDisabled(false);
+    }
 }
 

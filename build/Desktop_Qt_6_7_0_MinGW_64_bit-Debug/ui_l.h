@@ -58,7 +58,7 @@ public:
         HandOver->setAlignment(Qt::AlignCenter);
         balance = new QLabel(L);
         balance->setObjectName("balance");
-        balance->setGeometry(QRect(800, 30, 171, 61));
+        balance->setGeometry(QRect(740, 40, 171, 41));
         QFont font1;
         font1.setPointSize(15);
         font1.setBold(true);

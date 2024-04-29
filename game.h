@@ -24,6 +24,7 @@ public:
     int hitcounter = 0;
     bool splitFlag = false;
     bool spStandFlag = false; //stand on first split hand
+    bool endCallFlag = true; //check if endgame status reached for split hand
 
     ~Game();
 
@@ -38,8 +39,6 @@ private slots:
     void delayedTie();
     void delayedWin();
     void delayedBJW();
-    void delayedBJL();
-
 
     void on_BetSlider_valueChanged(int value);
 
