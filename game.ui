@@ -700,6 +700,22 @@ color: rgb(255, 255, 255);</string>
     <string/>
    </property>
   </widget>
+  <widget class="QLabel" name="BalanceLabel">
+   <property name="geometry">
+    <rect>
+     <x>660</x>
+     <y>550</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Balance: </string>
+   </property>
+  </widget>
   <zorder>backtexture</zorder>
   <zorder>DC1</zorder>
   <zorder>Background</zorder>
@@ -740,6 +756,7 @@ color: rgb(255, 255, 255);</string>
   <zorder>SC6</zorder>
   <zorder>BetSlider</zorder>
   <zorder>BetValue</zorder>
+  <zorder>BalanceLabel</zorder>
  </widget>
  <resources/>
  <connections/>

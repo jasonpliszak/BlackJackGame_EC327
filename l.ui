@@ -92,7 +92,7 @@ color: rgb(0, 0, 0)</string>
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="balance">
+  <widget class="QLabel" name="balanceLabel">
    <property name="geometry">
     <rect>
      <x>740</x>
@@ -107,8 +107,11 @@ color: rgb(0, 0, 0)</string>
      <bold>true</bold>
     </font>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(0, 0, 0);</string>
+   </property>
    <property name="text">
-    <string/>
+    <string>Balance: </string>
    </property>
   </widget>
  </widget>

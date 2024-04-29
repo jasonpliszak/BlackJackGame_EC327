@@ -24,7 +24,7 @@ public:
     QPushButton *Play_Again;
     QPushButton *return_Home;
     QLabel *HandOver;
-    QLabel *balance;
+    QLabel *balanceLabel;
 
     void setupUi(QWidget *L)
     {
@@ -56,13 +56,14 @@ public:
         HandOver->setStyleSheet(QString::fromUtf8("background-color: transparent; \n"
 "color: rgb(0, 0, 0)"));
         HandOver->setAlignment(Qt::AlignCenter);
-        balance = new QLabel(L);
-        balance->setObjectName("balance");
-        balance->setGeometry(QRect(800, 30, 171, 61));
+        balanceLabel = new QLabel(L);
+        balanceLabel->setObjectName("balanceLabel");
+        balanceLabel->setGeometry(QRect(740, 40, 171, 41));
         QFont font1;
         font1.setPointSize(15);
         font1.setBold(true);
-        balance->setFont(font1);
+        balanceLabel->setFont(font1);
+        balanceLabel->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
 
         retranslateUi(L);
 
@@ -76,7 +77,7 @@ public:
         Play_Again->setText(QCoreApplication::translate("L", "Play Again", nullptr));
         return_Home->setText(QCoreApplication::translate("L", "Return Home", nullptr));
         HandOver->setText(QCoreApplication::translate("L", "Hand Over", nullptr));
-        balance->setText(QString());
+        balanceLabel->setText(QCoreApplication::translate("L", "Balance: ", nullptr));
     } // retranslateUi
 
 };

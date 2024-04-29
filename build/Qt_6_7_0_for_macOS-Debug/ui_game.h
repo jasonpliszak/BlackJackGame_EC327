@@ -61,6 +61,7 @@ public:
     QLabel *SplitScore;
     QSlider *BetSlider;
     QLabel *BetValue;
+    QLabel *BalanceLabel;
 
     void setupUi(QWidget *Game)
     {
@@ -247,6 +248,10 @@ public:
         BetValue = new QLabel(Game);
         BetValue->setObjectName("BetValue");
         BetValue->setGeometry(QRect(490, 520, 111, 16));
+        BalanceLabel = new QLabel(Game);
+        BalanceLabel->setObjectName("BalanceLabel");
+        BalanceLabel->setGeometry(QRect(660, 550, 111, 21));
+        BalanceLabel->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         backtexture->raise();
         DC1->raise();
         Background->raise();
@@ -287,6 +292,7 @@ public:
         SC6->raise();
         BetSlider->raise();
         BetValue->raise();
+        BalanceLabel->raise();
 
         retranslateUi(Game);
 
@@ -335,6 +341,7 @@ public:
         availibleBalance->setText(QString());
         SplitScore->setText(QString());
         BetValue->setText(QString());
+        BalanceLabel->setText(QCoreApplication::translate("Game", "Balance: ", nullptr));
     } // retranslateUi
 
 };
