@@ -51,7 +51,7 @@ public:
         home_screen->setScaledContents(true);
         label = new QLabel(centralwidget);
         label->setObjectName("label");
-        label->setGeometry(QRect(290, 0, 381, 121));
+        label->setGeometry(QRect(310, -20, 381, 91));
         QFont font1;
         font1.setFamilies({QString::fromUtf8("PT Sans Caption")});
         font1.setPointSize(25);
@@ -63,7 +63,7 @@ public:
         label->setAlignment(Qt::AlignCenter);
         Balance = new QLabel(centralwidget);
         Balance->setObjectName("Balance");
-        Balance->setGeometry(QRect(100, 490, 151, 16));
+        Balance->setGeometry(QRect(100, 540, 151, 21));
         Balance->setFont(font);
         Balance->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "background-color: transparent;"));

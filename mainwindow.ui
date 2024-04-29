@@ -62,10 +62,10 @@ color: rgb(0, 0, 0);</string>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>290</x>
-      <y>0</y>
+      <x>310</x>
+      <y>-20</y>
       <width>381</width>
-      <height>121</height>
+      <height>91</height>
      </rect>
     </property>
     <property name="font">
@@ -92,10 +92,10 @@ color: rgb(0, 0, 0);</string>
    <widget class="QLabel" name="Balance">
     <property name="geometry">
      <rect>
-      <x>90</x>
+      <x>100</x>
       <y>540</y>
       <width>151</width>
-      <height>16</height>
+      <height>21</height>
      </rect>
     </property>
     <property name="font">

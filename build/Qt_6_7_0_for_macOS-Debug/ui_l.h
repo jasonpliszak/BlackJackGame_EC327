@@ -33,7 +33,7 @@ public:
         L->resize(1000, 650);
         Lscreen = new QLabel(L);
         Lscreen->setObjectName("Lscreen");
-        Lscreen->setGeometry(QRect(0, 0, 1001, 651));
+        Lscreen->setGeometry(QRect(0, 10, 1001, 651));
         Lscreen->setAutoFillBackground(true);
         Lscreen->setScaledContents(true);
         Play_Again = new QPushButton(L);
@@ -58,7 +58,7 @@ public:
         HandOver->setAlignment(Qt::AlignCenter);
         balanceLabel = new QLabel(L);
         balanceLabel->setObjectName("balanceLabel");
-        balanceLabel->setGeometry(QRect(740, 40, 171, 41));
+        balanceLabel->setGeometry(QRect(740, 550, 171, 41));
         QFont font1;
         font1.setPointSize(15);
         font1.setBold(true);
