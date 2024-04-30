@@ -60,5 +60,43 @@
         <file>images/lose.jpeg</file>
         <file>images/cardback.png</file>
         <file>images/bg.png</file>
+        <file>imagesWheel/Spin0.png</file>
+        <file>imagesWheel/Spin1.png</file>
+        <file>imagesWheel/Spin10.png</file>
+        <file>imagesWheel/Spin11.png</file>
+        <file>imagesWheel/Spin12.png</file>
+        <file>imagesWheel/Spin13.png</file>
+        <file>imagesWheel/Spin14.png</file>
+        <file>imagesWheel/Spin15.png</file>
+        <file>imagesWheel/Spin16.png</file>
+        <file>imagesWheel/Spin17.png</file>
+        <file>imagesWheel/Spin18.png</file>
+        <file>imagesWheel/Spin19.png</file>
+        <file>imagesWheel/Spin2.png</file>
+        <file>imagesWheel/Spin20.png</file>
+        <file>imagesWheel/Spin21.png</file>
+        <file>imagesWheel/Spin22.png</file>
+        <file>imagesWheel/Spin23.png</file>
+        <file>imagesWheel/Spin24.png</file>
+        <file>imagesWheel/Spin25.png</file>
+        <file>imagesWheel/Spin26.png</file>
+        <file>imagesWheel/Spin27.png</file>
+        <file>imagesWheel/Spin28.png</file>
+        <file>imagesWheel/Spin29.png</file>
+        <file>imagesWheel/Spin3.png</file>
+        <file>imagesWheel/Spin30.png</file>
+        <file>imagesWheel/Spin31.png</file>
+        <file>imagesWheel/Spin32.png</file>
+        <file>imagesWheel/Spin33.png</file>
+        <file>imagesWheel/Spin34.png</file>
+        <file>imagesWheel/Spin35.png</file>
+        <file>imagesWheel/Spin36.png</file>
+        <file>imagesWheel/Spin4.png</file>
+        <file>imagesWheel/Spin5.png</file>
+        <file>imagesWheel/Spin6.png</file>
+        <file>imagesWheel/Spin7.png</file>
+        <file>imagesWheel/Spin8.png</file>
+        <file>imagesWheel/Spin9.png</file>
+        <file>imagesWheel/Wheel.png</file>
     </qresource>
 </RCC>
