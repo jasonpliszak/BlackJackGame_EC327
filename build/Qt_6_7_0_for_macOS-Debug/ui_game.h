@@ -62,6 +62,7 @@ public:
     QSlider *BetSlider;
     QLabel *BetValue;
     QLabel *BalanceLabel;
+    QPushButton *Home;
 
     void setupUi(QWidget *Game)
     {
@@ -82,26 +83,45 @@ public:
         Hit = new QPushButton(Game);
         Hit->setObjectName("Hit");
         Hit->setGeometry(QRect(40, 550, 100, 32));
-        Hit->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 0, 0);\n"
-"border-color: rgb(255, 255, 255);"));
+        QFont font;
+        font.setFamilies({QString::fromUtf8("Kohinoor Gujarati")});
+        font.setBold(true);
+        Hit->setFont(font);
+        Hit->setStyleSheet(QString::fromUtf8("color:white;\n"
+"background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(58, 58, 58, 255), stop:1 rgba(0, 0, 0, 255));\n"
+"\n"
+"border-radius:10px;"));
         Stand = new QPushButton(Game);
         Stand->setObjectName("Stand");
         Stand->setGeometry(QRect(150, 550, 100, 32));
-        Stand->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 0, 0);\n"
-"border-color: rgb(255, 255, 255);"));
+        Stand->setFont(font);
+        Stand->setStyleSheet(QString::fromUtf8("color:white;\n"
+"background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(58, 58, 58, 255), stop:1 rgba(0, 0, 0, 255));\n"
+"\n"
+"border-radius:10px;"));
         Deal = new QPushButton(Game);
         Deal->setObjectName("Deal");
         Deal->setGeometry(QRect(260, 550, 100, 32));
-        Deal->setStyleSheet(QString::fromUtf8("border-color: rgb(255, 255, 255);\n"
-"background-color: rgb(0, 0, 0);\n"
-""));
+        QFont font1;
+        font1.setFamilies({QString::fromUtf8("Kohinoor Gujarati")});
+        font1.setPointSize(13);
+        font1.setBold(true);
+        Deal->setFont(font1);
+        Deal->setStyleSheet(QString::fromUtf8("color:white;\n"
+"background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(58, 58, 58, 255), stop:1 rgba(0, 0, 0, 255));\n"
+"\n"
+"border-radius:10px;"));
         PlayerScore = new QLabel(Game);
         PlayerScore->setObjectName("PlayerScore");
         PlayerScore->setGeometry(QRect(100, 25, 141, 21));
+        PlayerScore->setFont(font);
+        PlayerScore->setStyleSheet(QString::fromUtf8("color:white;"));
         PlayerScore->setScaledContents(true);
         Dealer = new QLabel(Game);
         Dealer->setObjectName("Dealer");
         Dealer->setGeometry(QRect(100, 175, 131, 21));
+        Dealer->setFont(font);
+        Dealer->setStyleSheet(QString::fromUtf8("color:white;"));
         DC2 = new QLabel(Game);
         DC2->setObjectName("DC2");
         DC2->setGeometry(QRect(125, 200, 100, 125));
@@ -141,7 +161,8 @@ public:
         Background = new QLabel(Game);
         Background->setObjectName("Background");
         Background->setGeometry(QRect(0, 0, 850, 600));
-        Background->setAutoFillBackground(true);
+        Background->setAutoFillBackground(false);
+        Background->setStyleSheet(QString::fromUtf8("background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(2, 74, 2, 255), stop:0.926108 rgba(0, 101, 0, 255))"));
         Background->setScaledContents(true);
         PC6 = new QLabel(Game);
         PC6->setObjectName("PC6");
@@ -202,9 +223,12 @@ public:
         backtexture->setGeometry(QRect(0, 0, 850, 600));
         Split = new QPushButton(Game);
         Split->setObjectName("Split");
-        Split->setGeometry(QRect(370, 550, 100, 32));
-        Split->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 0, 0);\n"
-"color: rgb(255, 255, 255);"));
+        Split->setGeometry(QRect(370, 551, 100, 31));
+        Split->setFont(font1);
+        Split->setStyleSheet(QString::fromUtf8("color:white;\n"
+"background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(58, 58, 58, 255), stop:1 rgba(0, 0, 0, 255));\n"
+"\n"
+"border-radius:10px;"));
         SC1 = new QLabel(Game);
         SC1->setObjectName("SC1");
         SC1->setGeometry(QRect(400, 50, 100, 125));
@@ -241,20 +265,40 @@ public:
         SplitScore = new QLabel(Game);
         SplitScore->setObjectName("SplitScore");
         SplitScore->setGeometry(QRect(400, 25, 141, 21));
+        SplitScore->setFont(font);
+        SplitScore->setStyleSheet(QString::fromUtf8("color:white;"));
         BetSlider = new QSlider(Game);
         BetSlider->setObjectName("BetSlider");
         BetSlider->setGeometry(QRect(490, 550, 160, 25));
+        BetSlider->setStyleSheet(QString::fromUtf8("QSlider::handle:horizontal{\n"
+"background: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(58, 58, 58, 255), stop:1 rgba(0, 0, 0, 255));\n"
+"border-radius:10px\n"
+"}"));
         BetSlider->setOrientation(Qt::Horizontal);
         BetValue = new QLabel(Game);
         BetValue->setObjectName("BetValue");
         BetValue->setGeometry(QRect(490, 520, 111, 16));
+        BetValue->setFont(font);
+        BetValue->setStyleSheet(QString::fromUtf8("color:white;"));
         BalanceLabel = new QLabel(Game);
         BalanceLabel->setObjectName("BalanceLabel");
         BalanceLabel->setGeometry(QRect(660, 550, 111, 21));
+        BalanceLabel->setFont(font);
         BalanceLabel->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
+        Home = new QPushButton(Game);
+        Home->setObjectName("Home");
+        Home->setGeometry(QRect(709, 50, 81, 32));
+        QFont font2;
+        font2.setFamilies({QString::fromUtf8("Kohinoor Gujarati")});
+        font2.setPointSize(14);
+        font2.setBold(true);
+        Home->setFont(font2);
+        Home->setStyleSheet(QString::fromUtf8("color:white;\n"
+"background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(58, 58, 58, 255), stop:1 rgba(0, 0, 0, 255));\n"
+"border-radius:10px;"));
+        Background->raise();
         backtexture->raise();
         DC1->raise();
-        Background->raise();
         PC1->raise();
         Dealer->raise();
         PlayerScore->raise();
@@ -293,6 +337,7 @@ public:
         BetSlider->raise();
         BetValue->raise();
         BalanceLabel->raise();
+        Home->raise();
 
         retranslateUi(Game);
 
@@ -342,6 +387,7 @@ public:
         SplitScore->setText(QString());
         BetValue->setText(QString());
         BalanceLabel->setText(QCoreApplication::translate("Game", "Balance: ", nullptr));
+        Home->setText(QCoreApplication::translate("Game", "Home", nullptr));
     } // retranslateUi
 
 };

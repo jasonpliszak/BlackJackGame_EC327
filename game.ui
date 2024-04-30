@@ -63,9 +63,17 @@
      <height>32</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Kohinoor Gujarati</family>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 0, 0);
-border-color: rgb(255, 255, 255);</string>
+    <string notr="true">color:white;
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(58, 58, 58, 255), stop:1 rgba(0, 0, 0, 255));
+
+border-radius:10px;</string>
    </property>
    <property name="text">
     <string>Hit</string>
@@ -80,9 +88,17 @@ border-color: rgb(255, 255, 255);</string>
      <height>32</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Kohinoor Gujarati</family>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 0, 0);
-border-color: rgb(255, 255, 255);</string>
+    <string notr="true">color:white;
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(58, 58, 58, 255), stop:1 rgba(0, 0, 0, 255));
+
+border-radius:10px;</string>
    </property>
    <property name="text">
     <string>Stand</string>
@@ -97,10 +113,18 @@ border-color: rgb(255, 255, 255);</string>
      <height>32</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Kohinoor Gujarati</family>
+     <pointsize>13</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="styleSheet">
-    <string notr="true">border-color: rgb(255, 255, 255);
-background-color: rgb(0, 0, 0);
-</string>
+    <string notr="true">color:white;
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(58, 58, 58, 255), stop:1 rgba(0, 0, 0, 255));
+
+border-radius:10px;</string>
    </property>
    <property name="text">
     <string>Deal</string>
@@ -114,6 +138,15 @@ background-color: rgb(0, 0, 0);
      <width>141</width>
      <height>21</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Kohinoor Gujarati</family>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:white;</string>
    </property>
    <property name="text">
     <string/>
@@ -130,6 +163,15 @@ background-color: rgb(0, 0, 0);
      <width>131</width>
      <height>21</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Kohinoor Gujarati</family>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:white;</string>
    </property>
    <property name="text">
     <string/>
@@ -285,7 +327,10 @@ background-color: rgb(0, 0, 0);
     </rect>
    </property>
    <property name="autoFillBackground">
-    <bool>true</bool>
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(2, 74, 2, 255), stop:0.926108 rgba(0, 101, 0, 255))</string>
    </property>
    <property name="text">
     <string/>
@@ -521,14 +566,23 @@ background-color: rgb(0, 0, 0);
    <property name="geometry">
     <rect>
      <x>370</x>
-     <y>550</y>
+     <y>551</y>
      <width>100</width>
-     <height>32</height>
+     <height>31</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Kohinoor Gujarati</family>
+     <pointsize>13</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 0, 0);
-color: rgb(255, 255, 255);</string>
+    <string notr="true">color:white;
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(58, 58, 58, 255), stop:1 rgba(0, 0, 0, 255));
+
+border-radius:10px;</string>
    </property>
    <property name="text">
     <string>Split</string>
@@ -670,6 +724,15 @@ color: rgb(255, 255, 255);</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Kohinoor Gujarati</family>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:white;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
@@ -682,6 +745,12 @@ color: rgb(255, 255, 255);</string>
      <width>160</width>
      <height>25</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QSlider::handle:horizontal{
+background: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(58, 58, 58, 255), stop:1 rgba(0, 0, 0, 255));
+border-radius:10px
+}</string>
    </property>
    <property name="orientation">
     <enum>Qt::Horizontal</enum>
@@ -696,6 +765,15 @@ color: rgb(255, 255, 255);</string>
      <height>16</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Kohinoor Gujarati</family>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:white;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
@@ -709,6 +787,12 @@ color: rgb(255, 255, 255);</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Kohinoor Gujarati</family>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">color: rgb(255, 255, 255);</string>
    </property>
@@ -716,9 +800,34 @@ color: rgb(255, 255, 255);</string>
     <string>Balance: </string>
    </property>
   </widget>
+  <widget class="QPushButton" name="Home">
+   <property name="geometry">
+    <rect>
+     <x>709</x>
+     <y>50</y>
+     <width>81</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Kohinoor Gujarati</family>
+     <pointsize>14</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:white;
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(58, 58, 58, 255), stop:1 rgba(0, 0, 0, 255));
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string>Home</string>
+   </property>
+  </widget>
+  <zorder>Background</zorder>
   <zorder>backtexture</zorder>
   <zorder>DC1</zorder>
-  <zorder>Background</zorder>
   <zorder>PC1</zorder>
   <zorder>Dealer</zorder>
   <zorder>PlayerScore</zorder>
@@ -757,6 +866,7 @@ color: rgb(255, 255, 255);</string>
   <zorder>BetSlider</zorder>
   <zorder>BetValue</zorder>
   <zorder>BalanceLabel</zorder>
+  <zorder>Home</zorder>
  </widget>
  <resources/>
  <connections/>

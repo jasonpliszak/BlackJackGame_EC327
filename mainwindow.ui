@@ -23,8 +23,8 @@
    <widget class="QPushButton" name="play_button">
     <property name="geometry">
      <rect>
-      <x>425</x>
-      <y>525</y>
+      <x>280</x>
+      <y>530</y>
       <width>150</width>
       <height>40</height>
      </rect>
@@ -36,8 +36,8 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(252, 255, 255);
-color: rgb(0, 0, 0);</string>
+     <string notr="true">color:white;
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(58, 58, 58, 255), stop:1 rgba(0, 0, 0, 255));</string>
     </property>
     <property name="text">
      <string>Play BlackJack</string>
@@ -112,10 +112,34 @@ background-color: transparent;</string>
      <string>Balance: $1000</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="play_roulette">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>530</y>
+      <width>150</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:white;
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(58, 58, 58, 255), stop:1 rgba(0, 0, 0, 255));</string>
+    </property>
+    <property name="text">
+     <string>Play Roulette</string>
+    </property>
+   </widget>
    <zorder>home_screen</zorder>
    <zorder>play_button</zorder>
    <zorder>label</zorder>
    <zorder>Balance</zorder>
+   <zorder>play_roulette</zorder>
   </widget>
  </widget>
  <resources/>

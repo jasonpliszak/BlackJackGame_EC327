@@ -1,10 +1,10 @@
 #include "mainwindow.h"
-#include "ui_mainwindow.h"
-#include "game.h"
 #include <QPushButton>
 #include <QString>
+#include "game.h"
+#include "roulette.h"
 #include "global.h"
-
+#include "ui_mainwindow.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -19,7 +19,6 @@ MainWindow::MainWindow(QWidget *parent)
 
     // Connect the button's clicked signal to slot
     connect(play_button, &QPushButton::clicked, this, &MainWindow::on_play_button_clicked);
-
 }
 
 MainWindow::~MainWindow()
@@ -31,5 +30,12 @@ void MainWindow::on_play_button_clicked()
 {
     Game *game = new Game;
     game->show();
+    this->hide();
+}
+
+void MainWindow::on_play_roulette_clicked()
+{
+    Roulette *roulette = new Roulette;
+    roulette->show();
     this->hide();
 }

@@ -19,7 +19,7 @@ public:
 
 private slots:
     void on_play_button_clicked();
-
+    void on_play_roulette_clicked();
 
 private:
     Ui::MainWindow *ui;

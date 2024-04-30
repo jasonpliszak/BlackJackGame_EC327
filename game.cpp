@@ -1,21 +1,21 @@
 #include "game.h"
-#include "ui_game.h"
+#include <QApplication>
+#include <QList>
+#include <QPushButton>
+#include <QSlider>
+#include <QString>
+#include <QTimer>
+#include <QVBoxLayout>
+#include <QWidget>
 #include "card.h"
 #include "deck.h"
-#include "player.h"
-#include <QApplication>
-#include <QString>
-#include <QWidget>
-#include <QVBoxLayout>
-#include <QPushButton>
-#include <QList>
-#include "l.h"
-#include <QTimer>
 #include "global.h"
-#include <QSlider>
+#include "l.h"
+#include "player.h"
+#include "ui_game.h"
+#include "mainwindow.h"
 
 using namespace std;
-
 
 Game::Game(QWidget *parent)
     : QWidget(parent)
@@ -34,7 +34,8 @@ Game::Game(QWidget *parent)
     ui->BetSlider->setRange(1, money); // Set the range
 }
 
-void Game::on_Deal_clicked(){
+void Game::on_Deal_clicked()
+{
     QPixmap card0(":/images/cardback.png"); //initialize cardback image for first dealer card
 
     ui->BetSlider->hide();
@@ -61,28 +62,29 @@ void Game::on_Deal_clicked(){
     ui->DC2->setPixmap(d2.getImg());
     House.addCard(d2);
 
-    ui->Deal->setDisabled(true); //disable deal button
-    ui->Hit->setDisabled(false); //enable hit
+    ui->Deal->setDisabled(true);   //disable deal button
+    ui->Hit->setDisabled(false);   //enable hit
     ui->Stand->setDisabled(false); //enable stand
 
     //auto-blackjack logic (if player or dealer draw blackjack from the deal button)
-    if(House.getVal()==21 && User.getVal()==21){
+    if (House.getVal() == 21 && User.getVal() == 21) {
         ui->DC1->setPixmap(d1.getImg());
         int dscore = House.getVal();
         ui->Dealer->setText("Score: " + QString::number(dscore));
         ui->Hit->setDisabled(true);
         ui->Stand->setDisabled(true);
-        QTimer::singleShot(1500, this, &Game::delayedTie); //allows you to see the cards for 1.5 sec before being sent to game over
-    }
-    else if(House.getVal()==21 && User.getVal()!=21){
+        QTimer::singleShot(
+            1500,
+            this,
+            &Game::delayedTie); //allows you to see the cards for 1.5 sec before being sent to game over
+    } else if (House.getVal() == 21 && User.getVal() != 21) {
         ui->DC1->setPixmap(d1.getImg());
         int dscore = House.getVal();
         ui->Dealer->setText("Score: " + QString::number(dscore));
         ui->Hit->setDisabled(true);
         ui->Stand->setDisabled(true);
         QTimer::singleShot(1500, this, &Game::delayedLose);
-    }
-    else if(User.getVal() == 21 && House.getVal()!=21){
+    } else if (User.getVal() == 21 && House.getVal() != 21) {
         ui->DC1->setPixmap(d1.getImg());
         int dscore = House.getVal();
         ui->Dealer->setText("Score: " + QString::number(dscore));
@@ -90,17 +92,18 @@ void Game::on_Deal_clicked(){
         ui->Stand->setDisabled(true);
         QTimer::singleShot(1500, this, &Game::delayedBJW);
     }
-    if((p1.getRank()==p2.getRank() && money >= bet)){
+    if ((p1.getRank() == p2.getRank() && money >= bet)) {
         ui->Split->setDisabled(false);
     }
 }
 
-void Game::on_Split_clicked(){
+void Game::on_Split_clicked()
+{
     splitFlag = true;
     endCallFlag = false;
     ui->Split->setDisabled(true);
     money = money - bet;
-    bet = 2*bet;
+    bet = 2 * bet;
     ui->BetValue->setText("Bet Value: $" + QString::number(bet));
     ui->BalanceLabel->setText("Balance: $" + QString::number(money));
     QPixmap bcard(":/images/blank.png");
@@ -114,14 +117,15 @@ void Game::on_Split_clicked(){
     hitcounter--; //hitcounter decrement to ensure on_Hit_clicked() works for split hand
 }
 
-void Game::on_Hit_clicked(){
+void Game::on_Hit_clicked()
+{
     hitcounter++; //amount of times hit has been pressed
     int pscore = 0;
-    if(!splitFlag){
+    if (!splitFlag) {
         ui->Split->setDisabled(true);
     }
     //initialize cards outside of case statement (these are all test cards that cannot affect score value)
-    if(spStandFlag){
+    if (spStandFlag) {
         int sscore = 0;
         card s2;
         card s3;
@@ -129,7 +133,7 @@ void Game::on_Hit_clicked(){
         card s5;
         card s6;
 
-        switch(hitcounter){
+        switch (hitcounter) {
         case 1:
             s2 = Deck.draw();
             ui->SC2->setPixmap(s2.getImg());
@@ -166,10 +170,10 @@ void Game::on_Hit_clicked(){
             ui->SplitScore->setText("Score: " + QString::number(sscore));
             break;
         }
-        if(split.getVal()>21){
+        if (split.getVal() > 21) {
             ui->Hit->setDisabled(true);
             splitFlag = 0;
-            if(endCallFlag){
+            if (endCallFlag) {
                 ui->Stand->setDisabled(true);
             }
             QTimer::singleShot(1500, this, &Game::delayedLose);
@@ -188,7 +192,7 @@ void Game::on_Hit_clicked(){
     card p11; //11 cards to catch the most extreme edge case of four A, four 2, three 3
 
     //switch statement to handle multiple hits as needed
-    switch(hitcounter){
+    switch (hitcounter) {
     case 0: //if split
         p2 = Deck.draw();
         ui->PC2->setPixmap(p2.getImg());
@@ -262,8 +266,8 @@ void Game::on_Hit_clicked(){
         break;
     }
     //bust logic
-    if(User.getVal()>21){
-        if(splitFlag){
+    if (User.getVal() > 21) {
+        if (splitFlag) {
             spStandFlag = true;
             QTimer::singleShot(1500, this, &Game::delayedLose);
             hitcounter = 0;
@@ -275,25 +279,27 @@ void Game::on_Hit_clicked(){
     }
 }
 
-void Game::on_Stand_clicked(){
-    if(splitFlag && !spStandFlag){
+void Game::on_Stand_clicked()
+{
+    if (splitFlag && !spStandFlag) {
         spStandFlag = true;
         hitcounter = 0;
         return;
     }
-    if(!splitFlag){
+    if (!splitFlag) {
         ui->Split->setDisabled(true);
     }
 
-    if((splitFlag == false) or (splitFlag == true && spStandFlag == true)){
+    if ((splitFlag == false) or (splitFlag == true && spStandFlag == true)) {
         ui->Hit->setDisabled(true);
         ui->Stand->setDisabled(true);
-        ui->DC1->setPixmap(House.getCards()[0].getImg()); //replace cardback image with image of the first dealer card
+        ui->DC1->setPixmap(
+            House.getCards()[0].getImg()); //replace cardback image with image of the first dealer card
         int dscore = House.getVal();
         ui->Dealer->setText("Score: " + QString::number(dscore)); //show dealer hand value
 
         //dealer draws if their value is too low
-        while(dscore<17){
+        while (dscore < 17) {
             int dhit = 0;
             card d3;
             card d4;
@@ -304,7 +310,7 @@ void Game::on_Stand_clicked(){
             card d9;
             card d10; //10 cards to handle the extreme edge case of four A, four 2, two 3 for a total of 18
             dhit++;
-            switch(dhit){
+            switch (dhit) {
             case 1:
                 d3 = Deck.draw();
                 ui->DC3->setPixmap(d3.getImg());
@@ -363,40 +369,38 @@ void Game::on_Stand_clicked(){
                 break;
             }
         }
-    if(dscore>21 && User.getVal() <= 21){ //dealer bust
-        QTimer::singleShot(1500, this, &Game::delayedWin);
-    }
-    else if(dscore == User.getVal() && User.getVal() <= 21){        //ensures bust from split hand not counted
-        QTimer::singleShot(1500, this, &Game::delayedTie);
-    }
-    else if(dscore > User.getVal() && User.getVal() <= 21){ //ensures bust from split hand not counted
-        QTimer::singleShot(1500, this, &Game::delayedLose);
-    }
-    else if(dscore < User.getVal() && User.getVal() <= 21){ //ensures bust from split hand not counted
-        QTimer::singleShot(1500, this, &Game::delayedWin);
-    }
-    //implement code to check against split hand if split flag is true
-    if(splitFlag){
-        if(dscore>21 && split.getVal() <= 21){ //dealer bust
+        if (dscore > 21 && User.getVal() <= 21) { //dealer bust
             QTimer::singleShot(1500, this, &Game::delayedWin);
-        }
-        else if(dscore == split.getVal()){ //ensures bust from split hand not counted
+        } else if (dscore == User.getVal()
+                   && User.getVal() <= 21) { //ensures bust from split hand not counted
             QTimer::singleShot(1500, this, &Game::delayedTie);
-        }
-        else if(dscore > split.getVal()){ //ensures bust from split hand not counted
+        } else if (dscore > User.getVal()
+                   && User.getVal() <= 21) { //ensures bust from split hand not counted
             QTimer::singleShot(1500, this, &Game::delayedLose);
-        }
-        else if(dscore < split.getVal()){ //ensures bust from split hand not counted
+        } else if (dscore < User.getVal()
+                   && User.getVal() <= 21) { //ensures bust from split hand not counted
             QTimer::singleShot(1500, this, &Game::delayedWin);
         }
-    }
+        //implement code to check against split hand if split flag is true
+        if (splitFlag) {
+            if (dscore > 21 && split.getVal() <= 21) { //dealer bust
+                QTimer::singleShot(1500, this, &Game::delayedWin);
+            } else if (dscore == split.getVal()) { //ensures bust from split hand not counted
+                QTimer::singleShot(1500, this, &Game::delayedTie);
+            } else if (dscore > split.getVal()) { //ensures bust from split hand not counted
+                QTimer::singleShot(1500, this, &Game::delayedLose);
+            } else if (dscore < split.getVal()) { //ensures bust from split hand not counted
+                QTimer::singleShot(1500, this, &Game::delayedWin);
+            }
+        }
     }
 }
 
 //delayed game over screen functions to use with QTimer::singleShot()
-void Game::delayedLose(){
-    if(!endCallFlag){
-        bet = bet/2;
+void Game::delayedLose()
+{
+    if (!endCallFlag) {
+        bet = bet / 2;
         ui->BetValue->setText("Bet Value: $" + QString::number(bet));
         ui->BalanceLabel->setText("Balance: $" + QString::number(money));
         endCallFlag = true;
@@ -405,12 +409,13 @@ void Game::delayedLose(){
     L *gameover = new L;
     gameover->show();
     this->hide();
-    }
+}
 
-void Game::delayedTie(){
-    if(!endCallFlag){
-        money = money + bet/2;
-        bet = bet/2;
+void Game::delayedTie()
+{
+    if (!endCallFlag) {
+        money = money + bet / 2;
+        bet = bet / 2;
         ui->BetValue->setText("Bet Value: $" + QString::number(bet));
         ui->BalanceLabel->setText("Balance: $" + QString::number(money));
         endCallFlag = true;
@@ -422,24 +427,26 @@ void Game::delayedTie(){
     this->hide();
 }
 
-void Game::delayedWin(){
-    if(!endCallFlag){
+void Game::delayedWin()
+{
+    if (!endCallFlag) {
         money = money + bet;
-        bet = bet/2;
+        bet = bet / 2;
         ui->BetValue->setText("Bet Value: $" + QString::number(bet));
         ui->BalanceLabel->setText("Balance: $" + QString::number(money));
         endCallFlag = true;
         return;
     }
-    money = money + (2*bet);
+    money = money + (2 * bet);
     L *gameover = new L;
     gameover->show();
     this->hide();
 }
 
-void Game::delayedBJW(){
+void Game::delayedBJW()
+{
     L *gameover = new L;
-    money = money + (1.5*bet);
+    money = money + (1.5 * bet);
     gameover->show();
     this->hide();
 }
@@ -449,15 +456,18 @@ Game::~Game()
     delete ui;
 }
 
-
-
-
 void Game::on_BetSlider_valueChanged(int value)
 {
     bet = value;
     ui->BetValue->setText("Bet Value: $" + QString::number(bet));
-    if(bet!=0){
+    if (bet != 0) {
         ui->Deal->setDisabled(false);
     }
 }
 
+void Game::on_Home_clicked()
+{
+    MainWindow *main = new MainWindow;
+    main->show();
+    this->hide();
+}

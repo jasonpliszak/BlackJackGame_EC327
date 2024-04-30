@@ -17,14 +17,14 @@ public:
     explicit Game(QWidget *parent = nullptr);
     //variables are initialized here so that they are accessible through all phases of the game
     deck Deck;
-    player User; //player hand
+    player User;  //player hand
     player House; //dealer hand
     player split; //split hand
     int bet = 0;
     int hitcounter = 0;
     bool splitFlag = false;
     bool spStandFlag = false; //stand on first split hand
-    bool endCallFlag = true; //check if endgame status reached for split hand
+    bool endCallFlag = true;  //check if endgame status reached for split hand
 
     ~Game();
 
@@ -41,6 +41,7 @@ private slots:
     void delayedBJW();
 
     void on_BetSlider_valueChanged(int value);
+    void on_Home_clicked();
 
 private:
     Ui::Game *ui;
