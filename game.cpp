@@ -41,7 +41,7 @@ void Game::on_Deal_clicked()
     ui->BetSlider->hide();
     ui->BetSlider->setDisabled(true);
     money -= bet;
-    ui->BalanceLabel->setText("Balance: $" + QString::number(money));
+    ui->BalanceLabel->setText("Balance: $" + QString::number(money, 'f', 2));
     //draw player cards
     card p1 = Deck.draw();
     ui->PC1->setPixmap(p1.getImg()); //sets image with first player card
@@ -105,7 +105,7 @@ void Game::on_Split_clicked()
     money = money - bet;
     bet = 2 * bet;
     ui->BetValue->setText("Bet Value: $" + QString::number(bet));
-    ui->BalanceLabel->setText("Balance: $" + QString::number(money));
+    ui->BalanceLabel->setText("Balance: $" + QString::number(money, 'f', 2));
     QPixmap bcard(":/images/blank.png");
     card s1 = User.getCards()[1];
     User.removeCard();
@@ -402,7 +402,7 @@ void Game::delayedLose()
     if (!endCallFlag) {
         bet = bet / 2;
         ui->BetValue->setText("Bet Value: $" + QString::number(bet));
-        ui->BalanceLabel->setText("Balance: $" + QString::number(money));
+        ui->BalanceLabel->setText("Balance: $" + QString::number(money, 'f', 2));
         endCallFlag = true;
         return;
     }
@@ -417,7 +417,7 @@ void Game::delayedTie()
         money = money + bet / 2;
         bet = bet / 2;
         ui->BetValue->setText("Bet Value: $" + QString::number(bet));
-        ui->BalanceLabel->setText("Balance: $" + QString::number(money));
+        ui->BalanceLabel->setText("Balance: $" + QString::number(money, 'f', 2));
         endCallFlag = true;
         return;
     }
@@ -433,7 +433,7 @@ void Game::delayedWin()
         money = money + bet;
         bet = bet / 2;
         ui->BetValue->setText("Bet Value: $" + QString::number(bet));
-        ui->BalanceLabel->setText("Balance: $" + QString::number(money));
+        ui->BalanceLabel->setText("Balance: $" + QString::number(money, 'f', 2));
         endCallFlag = true;
         return;
     }
@@ -446,7 +446,7 @@ void Game::delayedWin()
 void Game::delayedBJW()
 {
     L *gameover = new L;
-    money = money + (1.5 * bet);
+    money = money + (3 * bet/2.0);
     gameover->show();
     this->hide();
 }
@@ -459,7 +459,7 @@ Game::~Game()
 void Game::on_BetSlider_valueChanged(int value)
 {
     bet = value;
-    ui->BetValue->setText("Bet Value: $" + QString::number(bet));
+    ui->BetValue->setText("Bet Value: $" + QString::number(bet, 'f', 2));
     if (bet != 0) {
         ui->Deal->setDisabled(false);
     }
