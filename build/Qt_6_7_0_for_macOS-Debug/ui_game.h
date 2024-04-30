@@ -84,7 +84,7 @@ public:
         Hit->setObjectName("Hit");
         Hit->setGeometry(QRect(40, 550, 100, 32));
         QFont font;
-        font.setFamilies({QString::fromUtf8("Kohinoor Gujarati")});
+        font.setFamilies({QString::fromUtf8("Arial")});
         font.setBold(true);
         Hit->setFont(font);
         Hit->setStyleSheet(QString::fromUtf8("color:white;\n"
@@ -103,7 +103,7 @@ public:
         Deal->setObjectName("Deal");
         Deal->setGeometry(QRect(260, 550, 100, 32));
         QFont font1;
-        font1.setFamilies({QString::fromUtf8("Kohinoor Gujarati")});
+        font1.setFamilies({QString::fromUtf8("Arial")});
         font1.setPointSize(13);
         font1.setBold(true);
         Deal->setFont(font1);
@@ -114,13 +114,16 @@ public:
         PlayerScore = new QLabel(Game);
         PlayerScore->setObjectName("PlayerScore");
         PlayerScore->setGeometry(QRect(100, 25, 141, 21));
-        PlayerScore->setFont(font);
+        QFont font2;
+        font2.setFamilies({QString::fromUtf8("Kohinoor Gujarati")});
+        font2.setBold(true);
+        PlayerScore->setFont(font2);
         PlayerScore->setStyleSheet(QString::fromUtf8("color:white;"));
         PlayerScore->setScaledContents(true);
         Dealer = new QLabel(Game);
         Dealer->setObjectName("Dealer");
         Dealer->setGeometry(QRect(100, 175, 131, 21));
-        Dealer->setFont(font);
+        Dealer->setFont(font2);
         Dealer->setStyleSheet(QString::fromUtf8("color:white;"));
         DC2 = new QLabel(Game);
         DC2->setObjectName("DC2");
@@ -265,7 +268,7 @@ public:
         SplitScore = new QLabel(Game);
         SplitScore->setObjectName("SplitScore");
         SplitScore->setGeometry(QRect(400, 25, 141, 21));
-        SplitScore->setFont(font);
+        SplitScore->setFont(font2);
         SplitScore->setStyleSheet(QString::fromUtf8("color:white;"));
         BetSlider = new QSlider(Game);
         BetSlider->setObjectName("BetSlider");
@@ -278,7 +281,7 @@ public:
         BetValue = new QLabel(Game);
         BetValue->setObjectName("BetValue");
         BetValue->setGeometry(QRect(490, 520, 111, 16));
-        BetValue->setFont(font);
+        BetValue->setFont(font2);
         BetValue->setStyleSheet(QString::fromUtf8("color:white;"));
         BalanceLabel = new QLabel(Game);
         BalanceLabel->setObjectName("BalanceLabel");
@@ -288,11 +291,11 @@ public:
         Home = new QPushButton(Game);
         Home->setObjectName("Home");
         Home->setGeometry(QRect(709, 50, 81, 32));
-        QFont font2;
-        font2.setFamilies({QString::fromUtf8("Kohinoor Gujarati")});
-        font2.setPointSize(14);
-        font2.setBold(true);
-        Home->setFont(font2);
+        QFont font3;
+        font3.setFamilies({QString::fromUtf8("Arial")});
+        font3.setPointSize(14);
+        font3.setBold(true);
+        Home->setFont(font3);
         Home->setStyleSheet(QString::fromUtf8("color:white;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(58, 58, 58, 255), stop:1 rgba(0, 0, 0, 255));\n"
 "border-radius:10px;"));
