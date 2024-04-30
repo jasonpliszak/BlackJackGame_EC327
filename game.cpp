@@ -445,8 +445,8 @@ void Game::delayedWin()
 
 void Game::delayedBJW()
 {
+    money = money + (1.5 * bet);
     L *gameover = new L;
-    money = money + (3 * bet/2.0);
     gameover->show();
     this->hide();
 }
