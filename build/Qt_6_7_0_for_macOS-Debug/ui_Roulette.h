@@ -1652,7 +1652,7 @@ public:
         Background->setStyleSheet(QString::fromUtf8("background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(2, 74, 2, 255), stop:0.926108 rgba(0, 101, 0, 255))"));
         BlackJack = new QPushButton(centralwidget);
         BlackJack->setObjectName("BlackJack");
-        BlackJack->setGeometry(QRect(710, 90, 101, 32));
+        BlackJack->setGeometry(QRect(710, 130, 101, 32));
         BlackJack->setFont(font);
         BlackJack->setAutoFillBackground(false);
         BlackJack->setStyleSheet(QString::fromUtf8("color:white;\n"
