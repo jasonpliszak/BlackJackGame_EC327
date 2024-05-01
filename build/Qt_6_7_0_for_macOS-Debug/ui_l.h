@@ -25,30 +25,32 @@ public:
     QPushButton *return_Home;
     QLabel *HandOver;
     QLabel *balanceLabel;
+    QPushButton *Play_Roulette;
 
     void setupUi(QWidget *L)
     {
         if (L->objectName().isEmpty())
             L->setObjectName("L");
-        L->resize(1000, 650);
+        L->resize(850, 600);
+        L->setBaseSize(QSize(850, 600));
         Lscreen = new QLabel(L);
         Lscreen->setObjectName("Lscreen");
-        Lscreen->setGeometry(QRect(0, 10, 1001, 651));
+        Lscreen->setGeometry(QRect(0, 0, 850, 600));
         Lscreen->setAutoFillBackground(true);
         Lscreen->setScaledContents(true);
         Play_Again = new QPushButton(L);
         Play_Again->setObjectName("Play_Again");
-        Play_Again->setGeometry(QRect(375, 560, 100, 32));
+        Play_Again->setGeometry(QRect(375, 520, 100, 32));
         Play_Again->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "background-color: rgb(255, 255, 255);"));
         return_Home = new QPushButton(L);
         return_Home->setObjectName("return_Home");
-        return_Home->setGeometry(QRect(575, 560, 100, 32));
+        return_Home->setGeometry(QRect(530, 520, 100, 32));
         return_Home->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "background-color: rgb(255, 255, 255);"));
         HandOver = new QLabel(L);
         HandOver->setObjectName("HandOver");
-        HandOver->setGeometry(QRect(325, 30, 400, 61));
+        HandOver->setGeometry(QRect(225, 30, 400, 61));
         QFont font;
         font.setPointSize(45);
         font.setBold(true);
@@ -58,12 +60,17 @@ public:
         HandOver->setAlignment(Qt::AlignCenter);
         balanceLabel = new QLabel(L);
         balanceLabel->setObjectName("balanceLabel");
-        balanceLabel->setGeometry(QRect(740, 550, 171, 41));
+        balanceLabel->setGeometry(QRect(640, 514, 171, 41));
         QFont font1;
         font1.setPointSize(15);
         font1.setBold(true);
         balanceLabel->setFont(font1);
         balanceLabel->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
+        Play_Roulette = new QPushButton(L);
+        Play_Roulette->setObjectName("Play_Roulette");
+        Play_Roulette->setGeometry(QRect(220, 520, 100, 32));
+        Play_Roulette->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
+"background-color: rgb(255, 255, 255);"));
 
         retranslateUi(L);
 
@@ -78,6 +85,7 @@ public:
         return_Home->setText(QCoreApplication::translate("L", "Return Home", nullptr));
         HandOver->setText(QCoreApplication::translate("L", "Hand Over", nullptr));
         balanceLabel->setText(QCoreApplication::translate("L", "Balance: ", nullptr));
+        Play_Roulette->setText(QCoreApplication::translate("L", "Play Roulette", nullptr));
     } // retranslateUi
 
 };

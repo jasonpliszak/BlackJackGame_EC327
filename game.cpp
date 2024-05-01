@@ -14,6 +14,7 @@
 #include "player.h"
 #include "ui_game.h"
 #include "mainwindow.h"
+#include "roulette.h"
 
 using namespace std;
 
@@ -31,6 +32,7 @@ Game::Game(QWidget *parent)
     ui->Split->setDisabled(true);
     ui->Deal->setDisabled(true);
 
+    ui->BalanceLabel->setText("Balance: $" + QString::number(money, 'f', 2));
     ui->BetSlider->setRange(1, money); // Set the range
 }
 
@@ -408,7 +410,7 @@ void Game::delayedLose()
     }
     L *gameover = new L;
     gameover->show();
-    this->hide();
+    this->close();
 }
 
 void Game::delayedTie()
@@ -424,7 +426,7 @@ void Game::delayedTie()
     money += bet;
     L *gameover = new L;
     gameover->show();
-    this->hide();
+    this->close();
 }
 
 void Game::delayedWin()
@@ -440,7 +442,7 @@ void Game::delayedWin()
     money = money + (2 * bet);
     L *gameover = new L;
     gameover->show();
-    this->hide();
+    this->close();
 }
 
 void Game::delayedBJW()
@@ -448,7 +450,7 @@ void Game::delayedBJW()
     money = money + (1.5 * bet);
     L *gameover = new L;
     gameover->show();
-    this->hide();
+    this->close();
 }
 
 Game::~Game()
@@ -469,5 +471,13 @@ void Game::on_Home_clicked()
 {
     MainWindow *main = new MainWindow;
     main->show();
-    this->hide();
+    this->close();
 }
+
+void Game::on_openRoulette_clicked()
+{
+    Roulette *roulette = new Roulette;
+    roulette->show();
+    this->close();
+}
+

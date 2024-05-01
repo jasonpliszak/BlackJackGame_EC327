@@ -34,6 +34,8 @@ private slots:
     void on_Stand_clicked();
     void on_Split_clicked();
 
+    void on_openRoulette_clicked();     // Open Roulette with same balance
+
     //delay functions so that you can see the state of the cards before you are sent to the game over screen
     void delayedLose();
     void delayedTie();

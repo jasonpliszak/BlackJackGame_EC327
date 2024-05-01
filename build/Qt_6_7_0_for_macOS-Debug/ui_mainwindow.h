@@ -32,14 +32,15 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(1000, 650);
+        MainWindow->resize(850, 600);
+        MainWindow->setBaseSize(QSize(850, 600));
         MainWindow->setStyleSheet(QString::fromUtf8("background-color: rgb(34, 129, 20);"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         centralwidget->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 0, 0);"));
         play_button = new QPushButton(centralwidget);
         play_button->setObjectName("play_button");
-        play_button->setGeometry(QRect(280, 530, 150, 40));
+        play_button->setGeometry(QRect(240, 530, 150, 40));
         QFont font;
         font.setPointSize(15);
         font.setBold(true);
@@ -48,11 +49,11 @@ public:
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(58, 58, 58, 255), stop:1 rgba(0, 0, 0, 255));"));
         home_screen = new QLabel(centralwidget);
         home_screen->setObjectName("home_screen");
-        home_screen->setGeometry(QRect(0, 0, 1000, 650));
+        home_screen->setGeometry(QRect(0, 0, 850, 600));
         home_screen->setScaledContents(true);
         label = new QLabel(centralwidget);
         label->setObjectName("label");
-        label->setGeometry(QRect(310, -20, 381, 91));
+        label->setGeometry(QRect(250, -20, 381, 91));
         QFont font1;
         font1.setFamilies({QString::fromUtf8("PT Sans Caption")});
         font1.setPointSize(25);
@@ -64,13 +65,13 @@ public:
         label->setAlignment(Qt::AlignCenter);
         Balance = new QLabel(centralwidget);
         Balance->setObjectName("Balance");
-        Balance->setGeometry(QRect(100, 540, 151, 21));
+        Balance->setGeometry(QRect(60, 540, 151, 21));
         Balance->setFont(font);
         Balance->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "background-color: transparent;"));
         play_roulette = new QPushButton(centralwidget);
         play_roulette->setObjectName("play_roulette");
-        play_roulette->setGeometry(QRect(580, 530, 150, 40));
+        play_roulette->setGeometry(QRect(540, 530, 150, 40));
         play_roulette->setFont(font);
         play_roulette->setStyleSheet(QString::fromUtf8("color:white;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(58, 58, 58, 255), stop:1 rgba(0, 0, 0, 255));"));
@@ -88,7 +89,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Home Screen", nullptr));
         play_button->setText(QCoreApplication::translate("MainWindow", "Play BlackJack", nullptr));
         home_screen->setText(QString());
         label->setText(QCoreApplication::translate("MainWindow", "EC327 Casino App", nullptr));

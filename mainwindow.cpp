@@ -30,12 +30,12 @@ void MainWindow::on_play_button_clicked()
 {
     Game *game = new Game;
     game->show();
-    this->hide();
+    this->close();
 }
 
 void MainWindow::on_play_roulette_clicked()
 {
     Roulette *roulette = new Roulette;
     roulette->show();
-    this->hide();
+    this->close();
 }

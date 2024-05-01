@@ -1,30 +1,38 @@
 #include "roulette.h"
-#include "ui_roulette.h"
+#include "ui_Roulette.h"
 #include "mainwindow.h"
+#include "game.h"
 #include <QRandomGenerator>
 #include <QDebug>
 #include <QString>
 #include <QList>
 #include <map>
+#include "global.h"
 
 Roulette::Roulette(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::Roulette)
 {
+    // Setup Roulette board and all buttons to place bets
     ui->setupUi(this);
 
     numbers = new int[37];
-
     for (int i = 0; i <= 36; ++i) {
         numbers[i] = i;
     }
 
-    balance = 1000;
-    ui->WalletLabel->setText("Balance: " + QString::number(balance));
+    // Initial text displays
+    balance = (int) money; // Balance initialised to money everytime a user wants to play roulette
+    ui->WalletLabel->setText("Balance: $" + QString::number(balance));
 
+    // Load in images for all roulette outcomes (0-36)
     loadlist();
+
+    // Set up roulette wheen image on display. Initalised to zero when starting
     ui->WheelLabel->setPixmap(wheel.at(0));
     ui->WheelLabel->setScaledContents(true);
+
+    // Set the Range so betAmount cannnot exceed balance
     ui->BetSlider->setRange(1, balance);
 }
 
@@ -40,11 +48,11 @@ void Roulette::loadlist()
     wheel.clear();
 
     // Load in Images
-    QPixmap spin0(":/imagesWheel/Spin0.png");
-    QPixmap spin1(":/imagesWheel/Spin1.png");
-    QPixmap spin2(":/imagesWheel/Spin2.png");
-    QPixmap spin3(":/imagesWheel/Spin3.png");
-    QPixmap spin4(":/imagesWheel/Spin4.png");
+    QPixmap spin0(":/imagesWheel/Spin0.png");   // Roulette Image with ball on 0
+    QPixmap spin1(":/imagesWheel/Spin1.png");   // Roulette Image with ball on 1
+    QPixmap spin2(":/imagesWheel/Spin2.png");   // Roulette Image with ball on 2
+    QPixmap spin3(":/imagesWheel/Spin3.png");   // Roulette Image with ball on 3
+    QPixmap spin4(":/imagesWheel/Spin4.png");   // etc.
     QPixmap spin5(":/imagesWheel/Spin5.png");
     QPixmap spin6(":/imagesWheel/Spin6.png");
     QPixmap spin7(":/imagesWheel/Spin7.png");
@@ -79,11 +87,11 @@ void Roulette::loadlist()
     QPixmap spin36(":/imagesWheel/Spin36.png");
 
     // add images to List
-    wheel.append(spin0);
-    wheel.append(spin1);
-    wheel.append(spin2);
-    wheel.append(spin3);
-    wheel.append(spin4);
+    wheel.append(spin0);    // Roulette spin lands on 0
+    wheel.append(spin1);    // Roulette spin lands on 1
+    wheel.append(spin2);    // Roulette spin lands on 2
+    wheel.append(spin3);    // Roulette spin lands on 3
+    wheel.append(spin4);    // etc.
     wheel.append(spin5);
     wheel.append(spin6);
     wheel.append(spin7);
@@ -120,6 +128,7 @@ void Roulette::loadlist()
 
 void Roulette::on_BetSlider_valueChanged(int value)
 {
+    // Updating text to display bet amount based on selection from slider
     betAmount = value;
     ui->BetValueLabel->setText("Bet Amount: $" + QString::number(betAmount));
 }
@@ -127,15 +136,17 @@ void Roulette::on_BetSlider_valueChanged(int value)
 void Roulette::on_Spin_clicked()
 {
     ui->WinLabel->setText("");
+
+    // Obtain a number from 0-36 from a high-quality random number generator (Roulette Spin)
     randomNumber = QRandomGenerator::global()->bounded(0, 36);
 
-    ui->resultLabel->setText(QString::number(randomNumber));
+    // Display the number that roulette landed on
     ui->WheelLabel->setPixmap(wheel.at(randomNumber));
     ui->WheelLabel->setScaledContents(true);
 
+    // Logic to determine if a successful bet was placed. Updates text labels and balance based on betAmount and payout odds
     switch(check) {
     case 1:
-        ui->BetLabel->setText("Straight up: " + QString::number(bet));
         ui->OddsLabel->setText("35:1");
         if (bet == randomNumber) {
             winnings = betAmount*35;
@@ -146,10 +157,9 @@ void Roulette::on_Spin_clicked()
         }
         break;
     case 2:
-        ui->BetLabel->setText("Split Bet: " + QString::number(bets[0]) +" "+ QString::number(bets[1]));
         ui->OddsLabel->setText("17:1");
         if (bets[0] == randomNumber || bets[1] == randomNumber) {
-            winnings = betAmount*37;
+            winnings = betAmount*17;
             balance += winnings;
             ui->WinLabel->setText("You Win!");
         } else {
@@ -158,14 +168,7 @@ void Roulette::on_Spin_clicked()
         break;
     case 3:
         ui->OddsLabel->setText("11:1");
-        if (bets[0] == 0) {
-            PlacedBet = "Basket: ";
-        } else {
-            PlacedBet = "Street Bet: ";
-        }
         for (int i = 0; i < 3; i++) {
-            PlacedBet.append(QString::number(bets[i]));
-            PlacedBet.append(" ");
             if (bets[i] == randomNumber) {
                 winnings = betAmount*11;
                 ui->WinLabel->setText("You Win!");
@@ -173,15 +176,13 @@ void Roulette::on_Spin_clicked()
             } else {
                 winnings = -betAmount;
             }
-        } balance += winnings;
+        }
+        balance += winnings;
         ui->BetLabel->setText(PlacedBet);
         break;
     case 4:
         ui->OddsLabel->setText("8:1");
-        PlacedBet = "Corner Bet: ";
         for (int i = 0; i < 4; i++) {
-            PlacedBet.append(QString::number(bets[i]));
-            PlacedBet.append(" ");
             if (bets[i] == randomNumber) {
                 winnings = betAmount*8;
                 ui->WinLabel->setText("You Win!");
@@ -189,15 +190,13 @@ void Roulette::on_Spin_clicked()
             } else {
                 winnings = -betAmount;
             }
-        } balance += winnings;
+        }
+        balance += winnings;
         ui->BetLabel->setText(PlacedBet);
         break;
     case 6:
         ui->OddsLabel->setText("5:1");
-        PlacedBet = "Six Line Bet: ";
         for (int i = 0; i < 6; i++) {
-            PlacedBet.append(QString::number(bets[i]));
-            PlacedBet.append(" ");
             if (bets[i] == randomNumber) {
                 winnings = betAmount*5;
                 ui->WinLabel->setText("You Win!");
@@ -205,19 +204,13 @@ void Roulette::on_Spin_clicked()
             } else {
                 winnings = -betAmount;
             }
-        } balance += winnings;
+        }
+        balance += winnings;
         ui->BetLabel->setText(PlacedBet);
         break;
     case 7:
         ui->OddsLabel->setText("2:1");
-        if (bets[1]-bets[0] == 1) {
-            PlacedBet = "Dozen Bet: ";
-        } else {
-            PlacedBet = "Column Bet: ";
-        }
         for (int i = 0; i < 12; i++) {
-            PlacedBet.append(QString::number(bets[i]));
-            PlacedBet.append(" ");
             if (bets[i] == randomNumber) {
                 winnings = betAmount*2;
                 ui->WinLabel->setText("You Win!");
@@ -225,7 +218,8 @@ void Roulette::on_Spin_clicked()
             } else {
                 winnings = -betAmount;
             }
-        } balance += winnings;
+        }
+        balance += winnings;
         ui->BetLabel->setText(PlacedBet);
         break;
     case 8:
@@ -251,7 +245,8 @@ void Roulette::on_Spin_clicked()
             } else {
                 winnings = -betAmount;
             }
-        } balance += winnings;
+        }
+        balance += winnings;
         ui->BetLabel->setText(PlacedBet);
         break;
     default:
@@ -263,20 +258,24 @@ void Roulette::on_Spin_clicked()
         break;
     }
 
-    ui->BetSlider->setRange(1, balance);
+    ui->BetSlider->setRange(1, balance);    // Rescale slider based on new balance after roulette spin
 
-    ui->WalletLabel->setText("Balance: " + QString::number(balance));
+    ui->WalletLabel->setText("Balance: $" + QString::number(balance));
     if (balance <= 0) {
-        ui->Spin->setEnabled(false);
+        ui->Spin->setEnabled(false);       // Disable spin button if no balance is left to place a bet
+        ui->BlackJack->setEnabled(false);
     }
+    money = balance;
 }
 
 void Roulette::on_Reset_clicked()
 {
     ui->Spin->setEnabled(true);
+    ui->BlackJack->setEnabled(true);
     balance = 1000;
+    money = balance;
     ui->BetSlider->setRange(1, balance);
-    ui->WalletLabel->setText("Balance: " + QString::number(balance));
+    ui->WalletLabel->setText("Balance: $" + QString::number(balance));
     ui->WheelLabel->setPixmap(wheel.at(0));
     ui->WheelLabel->setScaledContents(true);
     ui->BetLabel->setText("Placed Bet: ");
@@ -284,19 +283,21 @@ void Roulette::on_Reset_clicked()
     ui->OddsLabel->setText("Payout:");
 }
 
-void Roulette::on_actionQuit_triggered()
-{
-    QApplication::quit();
-}
-
-
 void Roulette::on_Home_clicked()
 {
     MainWindow *main = new MainWindow;
     main->show();
-    this->hide();
+    this->close();
 }
 
+void Roulette::on_BlackJack_clicked()
+{
+    Game *game = new Game;
+    game->show();
+    this->close();
+}
+
+// Displays Placed bet and its payouts. Used to update text labels when a button is pressed to place a bet
 void Roulette::textUpdate()
 {
     switch(check) {
@@ -377,6 +378,10 @@ void Roulette::textUpdate()
     }
 }
 
+
+// Buttons to place a bet
+
+// Straight up bet placed (one number)
 void Roulette::on_Bet00_clicked()
 {
     bet = 0;
@@ -477,6 +482,7 @@ void Roulette::on_Bet16_clicked()
 {
     bet = 16;
     check = 1;
+    textUpdate();
 }
 void Roulette::on_Bet17_clicked()
 {
@@ -600,12 +606,15 @@ void Roulette::on_Bet36_clicked()
 }
 
 
+// Corner Bet on 0, 1, 2 and 3
 void Roulette::on_Quad0_clicked()
 {
     bets = new int[4]{0,1,2,3};
     check = 4;
     textUpdate();
 }
+
+// Corner Bet placed (4 adjacent numbers on roulette board - placed where 4 corners meet)
 void Roulette::on_Quad1_clicked()
 {
     bets = new int[4]{1,2,4,5};
@@ -739,7 +748,7 @@ void Roulette::on_Quad22_clicked()
     textUpdate();
 }
 
-
+// Street Bet placed (3 numbers in a top-down line - placed on bottom edge of the lowest number square)
 void Roulette::on_Street1_clicked()
 {
     bets = new int[3];
@@ -783,14 +792,15 @@ void Roulette::on_Street5_clicked()
         bets[i] = i+13;
     }
     check = 3;
+    textUpdate();
 }
 void Roulette::on_Street6_clicked()
 {
     bets = new int[3];
     for (int i = 0; i<3; i++){
-        bets[i] = i+1;
+        bets[i] = i+16;
     }
-    check = 16;
+    check = 3;
     textUpdate();
 }
 void Roulette::on_Street7_clicked()
@@ -847,6 +857,8 @@ void Roulette::on_Street12_clicked()
     check = 3;
     textUpdate();
 }
+
+// Basket bet placed (0,1,2 or 0,2,3 - placed on intersecting corner between 0 and the two numbers)
 void Roulette::on_Basket1_clicked()
 {
     bets = new int[3];
@@ -863,7 +875,7 @@ void Roulette::on_Basket2_clicked()
     textUpdate();
 }
 
-
+// Six-line bet placed (six numbers in a top-down line - placed on intersecting corner of two squares on the bottom row)
 void Roulette::on_Six1_clicked()
 {
     bets = new int[6];
@@ -965,7 +977,8 @@ void Roulette::on_Six11_clicked()
 }
 
 
-
+// Column bet placed (12 numbers in a row)
+// Button is named 'Row' because the roulette board is rotated 90˚ on the UI for a better display
 void Roulette::on_Row1_clicked()
 {
     bets = new int[12];
@@ -995,6 +1008,8 @@ void Roulette::on_Row3_clicked()
     textUpdate();
 
 }
+
+// Dozen bet placed (1-12, 13-24 or 25-36)
 void Roulette::on_Dozen1_clicked()
 {
     bets = new int[12];
@@ -1024,7 +1039,7 @@ void Roulette::on_Dozen3_clicked()
 }
 
 
-
+// Even payouts (Red, Black, Odd, Even, 1-18, or 19-36)
 void Roulette::on_Odd_clicked()
 {
     bets = new int[18];
@@ -1074,6 +1089,7 @@ void Roulette::on_High_clicked()
     textUpdate();
 }
 
+// Split bet placed (two adjacent squares - placed on intersecting edge of two numbers)
 void Roulette::on_Split01_clicked()
 {
     bets = new int[2]{0,1};

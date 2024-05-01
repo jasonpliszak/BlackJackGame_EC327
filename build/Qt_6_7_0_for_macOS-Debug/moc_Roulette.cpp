@@ -42,8 +42,8 @@ constexpr auto qt_meta_stringdata_CLASSRouletteENDCLASS = QtMocHelpers::stringDa
     "value",
     "on_Spin_clicked",
     "on_Reset_clicked",
-    "on_actionQuit_triggered",
     "on_Home_clicked",
+    "on_BlackJack_clicked",
     "on_Bet00_clicked",
     "on_Bet01_clicked",
     "on_Bet02_clicked",
@@ -571,9 +571,9 @@ Q_CONSTINIT const QMetaObject Roulette::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_Reset_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'on_actionQuit_triggered'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_Home_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_BlackJack_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_Bet00_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
@@ -903,8 +903,8 @@ void Roulette::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         case 1: _t->on_BetSlider_valueChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
         case 2: _t->on_Spin_clicked(); break;
         case 3: _t->on_Reset_clicked(); break;
-        case 4: _t->on_actionQuit_triggered(); break;
-        case 5: _t->on_Home_clicked(); break;
+        case 4: _t->on_Home_clicked(); break;
+        case 5: _t->on_BlackJack_clicked(); break;
         case 6: _t->on_Bet00_clicked(); break;
         case 7: _t->on_Bet01_clicked(); break;
         case 8: _t->on_Bet02_clicked(); break;

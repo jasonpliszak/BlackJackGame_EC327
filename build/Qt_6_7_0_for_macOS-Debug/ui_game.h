@@ -63,12 +63,14 @@ public:
     QLabel *BetValue;
     QLabel *BalanceLabel;
     QPushButton *Home;
+    QPushButton *openRoulette;
 
     void setupUi(QWidget *Game)
     {
         if (Game->objectName().isEmpty())
             Game->setObjectName("Game");
         Game->resize(850, 600);
+        Game->setBaseSize(QSize(850, 600));
         Game->setAutoFillBackground(true);
         Game->setStyleSheet(QString::fromUtf8(""));
         PC1 = new QLabel(Game);
@@ -280,7 +282,7 @@ public:
         BetSlider->setOrientation(Qt::Horizontal);
         BetValue = new QLabel(Game);
         BetValue->setObjectName("BetValue");
-        BetValue->setGeometry(QRect(490, 520, 111, 16));
+        BetValue->setGeometry(QRect(490, 520, 141, 16));
         BetValue->setFont(font2);
         BetValue->setStyleSheet(QString::fromUtf8("color:white;"));
         BalanceLabel = new QLabel(Game);
@@ -297,6 +299,13 @@ public:
         font3.setBold(true);
         Home->setFont(font3);
         Home->setStyleSheet(QString::fromUtf8("color:white;\n"
+"background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(58, 58, 58, 255), stop:1 rgba(0, 0, 0, 255));\n"
+"border-radius:10px;"));
+        openRoulette = new QPushButton(Game);
+        openRoulette->setObjectName("openRoulette");
+        openRoulette->setGeometry(QRect(710, 90, 81, 32));
+        openRoulette->setFont(font3);
+        openRoulette->setStyleSheet(QString::fromUtf8("color:white;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(58, 58, 58, 255), stop:1 rgba(0, 0, 0, 255));\n"
 "border-radius:10px;"));
         Background->raise();
@@ -341,6 +350,7 @@ public:
         BetValue->raise();
         BalanceLabel->raise();
         Home->raise();
+        openRoulette->raise();
 
         retranslateUi(Game);
 
@@ -349,7 +359,7 @@ public:
 
     void retranslateUi(QWidget *Game)
     {
-        Game->setWindowTitle(QCoreApplication::translate("Game", "Form", nullptr));
+        Game->setWindowTitle(QCoreApplication::translate("Game", "BlackJack", nullptr));
         PC1->setText(QString());
         DC1->setText(QString());
         Hit->setText(QCoreApplication::translate("Game", "Hit", nullptr));
@@ -391,6 +401,7 @@ public:
         BetValue->setText(QString());
         BalanceLabel->setText(QCoreApplication::translate("Game", "Balance: ", nullptr));
         Home->setText(QCoreApplication::translate("Game", "Home", nullptr));
+        openRoulette->setText(QCoreApplication::translate("Game", "Roulette", nullptr));
     } // retranslateUi
 
 };

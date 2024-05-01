@@ -6,25 +6,43 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>823</width>
-    <height>598</height>
+    <width>850</width>
+    <height>600</height>
    </rect>
+  </property>
+  <property name="baseSize">
+   <size>
+    <width>850</width>
+    <height>600</height>
+   </size>
   </property>
   <property name="cursor">
    <cursorShape>ArrowCursor</cursorShape>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Roulette</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="Bet01">
     <property name="geometry">
      <rect>
-      <x>53</x>
-      <y>340</y>
+      <x>70</x>
+      <y>392</y>
       <width>51</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>51</width>
+      <height>51</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -39,7 +57,8 @@
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(208, 0, 67, 255), stop:1 rgba(255, 0, 0, 255))</string>
+background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(208, 0, 67, 255), stop:1 rgba(255, 0, 0, 255));
+border-radius:8px;</string>
     </property>
     <property name="text">
      <string>1</string>
@@ -57,11 +76,23 @@ background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5,
    <widget class="QPushButton" name="Bet02">
     <property name="geometry">
      <rect>
-      <x>53</x>
-      <y>280</y>
+      <x>70</x>
+      <y>332</y>
       <width>51</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>51</width>
+      <height>51</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -76,7 +107,8 @@ background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5,
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(57, 57, 57, 255), stop:0.960591 rgba(0, 0, 0, 255));</string>
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(57, 57, 57, 255), stop:0.960591 rgba(0, 0, 0, 255));
+border-radius:8px;</string>
     </property>
     <property name="text">
      <string>2</string>
@@ -94,11 +126,23 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Bet03">
     <property name="geometry">
      <rect>
-      <x>53</x>
-      <y>220</y>
+      <x>70</x>
+      <y>272</y>
       <width>51</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>51</width>
+      <height>51</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -113,7 +157,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(208, 0, 67, 255), stop:1 rgba(255, 0, 0, 255))</string>
+background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(208, 0, 67, 255), stop:1 rgba(255, 0, 0, 255));
+border-radius:8px;</string>
     </property>
     <property name="text">
      <string>3</string>
@@ -131,11 +176,23 @@ background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5,
    <widget class="QPushButton" name="Bet05">
     <property name="geometry">
      <rect>
-      <x>113</x>
-      <y>280</y>
+      <x>130</x>
+      <y>332</y>
       <width>51</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>51</width>
+      <height>51</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -150,7 +207,8 @@ background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5,
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(208, 0, 67, 255), stop:1 rgba(255, 0, 0, 255))</string>
+background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(208, 0, 67, 255), stop:1 rgba(255, 0, 0, 255));
+border-radius:8px;</string>
     </property>
     <property name="text">
      <string>5</string>
@@ -168,11 +226,23 @@ background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5,
    <widget class="QPushButton" name="Bet06">
     <property name="geometry">
      <rect>
-      <x>113</x>
-      <y>220</y>
+      <x>130</x>
+      <y>272</y>
       <width>51</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>51</width>
+      <height>51</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -187,7 +257,8 @@ background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5,
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(57, 57, 57, 255), stop:0.960591 rgba(0, 0, 0, 255));</string>
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(57, 57, 57, 255), stop:0.960591 rgba(0, 0, 0, 255));
+border-radius:8px;</string>
     </property>
     <property name="text">
      <string>6</string>
@@ -205,11 +276,23 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Bet04">
     <property name="geometry">
      <rect>
-      <x>113</x>
-      <y>340</y>
+      <x>130</x>
+      <y>392</y>
       <width>51</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>51</width>
+      <height>51</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -224,7 +307,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(57, 57, 57, 255), stop:0.960591 rgba(0, 0, 0, 255));</string>
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(57, 57, 57, 255), stop:0.960591 rgba(0, 0, 0, 255));
+border-radius:8px;</string>
     </property>
     <property name="text">
      <string>4</string>
@@ -242,11 +326,23 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Bet08">
     <property name="geometry">
      <rect>
-      <x>173</x>
-      <y>280</y>
+      <x>190</x>
+      <y>332</y>
       <width>51</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>51</width>
+      <height>51</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -261,7 +357,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(57, 57, 57, 255), stop:0.960591 rgba(0, 0, 0, 255));</string>
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(57, 57, 57, 255), stop:0.960591 rgba(0, 0, 0, 255));
+border-radius:8px;</string>
     </property>
     <property name="text">
      <string>8</string>
@@ -279,11 +376,23 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Bet11">
     <property name="geometry">
      <rect>
-      <x>233</x>
-      <y>280</y>
+      <x>250</x>
+      <y>332</y>
       <width>51</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>51</width>
+      <height>51</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -298,7 +407,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(57, 57, 57, 255), stop:0.960591 rgba(0, 0, 0, 255));</string>
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(57, 57, 57, 255), stop:0.960591 rgba(0, 0, 0, 255));
+border-radius:8px;</string>
     </property>
     <property name="text">
      <string>11</string>
@@ -316,11 +426,23 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Bet09">
     <property name="geometry">
      <rect>
-      <x>173</x>
-      <y>220</y>
+      <x>190</x>
+      <y>272</y>
       <width>51</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>51</width>
+      <height>51</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -335,8 +457,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(208, 0, 67, 255), stop:1 rgba(255, 0, 0, 255))
-</string>
+background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(208, 0, 67, 255), stop:1 rgba(255, 0, 0, 255));
+border-radius:8px;</string>
     </property>
     <property name="text">
      <string>9</string>
@@ -354,11 +476,23 @@ background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5,
    <widget class="QPushButton" name="Bet07">
     <property name="geometry">
      <rect>
-      <x>173</x>
-      <y>340</y>
+      <x>190</x>
+      <y>392</y>
       <width>51</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>51</width>
+      <height>51</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -373,7 +507,8 @@ background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5,
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(208, 0, 67, 255), stop:1 rgba(255, 0, 0, 255))</string>
+background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(208, 0, 67, 255), stop:1 rgba(255, 0, 0, 255));
+border-radius:8px;</string>
     </property>
     <property name="text">
      <string>7</string>
@@ -391,11 +526,23 @@ background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5,
    <widget class="QPushButton" name="Bet12">
     <property name="geometry">
      <rect>
-      <x>233</x>
-      <y>220</y>
+      <x>250</x>
+      <y>272</y>
       <width>51</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>51</width>
+      <height>51</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -410,7 +557,8 @@ background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5,
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(208, 0, 67, 255), stop:1 rgba(255, 0, 0, 255))</string>
+background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(208, 0, 67, 255), stop:1 rgba(255, 0, 0, 255));
+border-radius:8px;</string>
     </property>
     <property name="text">
      <string>12</string>
@@ -428,11 +576,23 @@ background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5,
    <widget class="QPushButton" name="Bet10">
     <property name="geometry">
      <rect>
-      <x>233</x>
-      <y>340</y>
+      <x>250</x>
+      <y>392</y>
       <width>51</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>51</width>
+      <height>51</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -447,7 +607,8 @@ background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5,
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(57, 57, 57, 255), stop:0.960591 rgba(0, 0, 0, 255));</string>
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(57, 57, 57, 255), stop:0.960591 rgba(0, 0, 0, 255));
+border-radius:8px;</string>
     </property>
     <property name="text">
      <string>10</string>
@@ -465,11 +626,23 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Bet17">
     <property name="geometry">
      <rect>
-      <x>353</x>
-      <y>280</y>
+      <x>370</x>
+      <y>332</y>
       <width>51</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>51</width>
+      <height>51</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -484,7 +657,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(57, 57, 57, 255), stop:0.960591 rgba(0, 0, 0, 255));</string>
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(57, 57, 57, 255), stop:0.960591 rgba(0, 0, 0, 255));
+border-radius:8px;</string>
     </property>
     <property name="text">
      <string>17</string>
@@ -502,11 +676,23 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Bet15">
     <property name="geometry">
      <rect>
-      <x>293</x>
-      <y>220</y>
+      <x>310</x>
+      <y>272</y>
       <width>51</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>51</width>
+      <height>51</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -521,7 +707,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(57, 57, 57, 255), stop:0.960591 rgba(0, 0, 0, 255));</string>
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(57, 57, 57, 255), stop:0.960591 rgba(0, 0, 0, 255));
+border-radius:8px;</string>
     </property>
     <property name="text">
      <string>15</string>
@@ -539,11 +726,23 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Bet18">
     <property name="geometry">
      <rect>
-      <x>353</x>
-      <y>220</y>
+      <x>370</x>
+      <y>272</y>
       <width>51</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>51</width>
+      <height>51</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -558,7 +757,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(208, 0, 67, 255), stop:1 rgba(255, 0, 0, 255))</string>
+background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(208, 0, 67, 255), stop:1 rgba(255, 0, 0, 255));
+border-radius:8px;</string>
     </property>
     <property name="text">
      <string>18</string>
@@ -576,11 +776,23 @@ background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5,
    <widget class="QPushButton" name="Bet16">
     <property name="geometry">
      <rect>
-      <x>353</x>
-      <y>340</y>
+      <x>370</x>
+      <y>392</y>
       <width>51</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>51</width>
+      <height>51</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -595,7 +807,8 @@ background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5,
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(208, 0, 67, 255), stop:1 rgba(255, 0, 0, 255))</string>
+background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(208, 0, 67, 255), stop:1 rgba(255, 0, 0, 255));
+border-radius:8px;</string>
     </property>
     <property name="text">
      <string>16</string>
@@ -613,11 +826,23 @@ background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5,
    <widget class="QPushButton" name="Bet14">
     <property name="geometry">
      <rect>
-      <x>293</x>
-      <y>280</y>
+      <x>310</x>
+      <y>332</y>
       <width>51</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>51</width>
+      <height>51</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -632,7 +857,8 @@ background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5,
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(208, 0, 67, 255), stop:1 rgba(255, 0, 0, 255))</string>
+background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(208, 0, 67, 255), stop:1 rgba(255, 0, 0, 255));
+border-radius:8px;</string>
     </property>
     <property name="text">
      <string>14</string>
@@ -650,11 +876,23 @@ background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5,
    <widget class="QPushButton" name="Bet13">
     <property name="geometry">
      <rect>
-      <x>293</x>
-      <y>340</y>
+      <x>310</x>
+      <y>392</y>
       <width>51</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>51</width>
+      <height>51</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -669,7 +907,8 @@ background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5,
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(57, 57, 57, 255), stop:0.960591 rgba(0, 0, 0, 255));</string>
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(57, 57, 57, 255), stop:0.960591 rgba(0, 0, 0, 255));
+border-radius:8px;</string>
     </property>
     <property name="text">
      <string>13</string>
@@ -687,11 +926,23 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Bet34">
     <property name="geometry">
      <rect>
-      <x>713</x>
-      <y>340</y>
+      <x>730</x>
+      <y>392</y>
       <width>51</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>51</width>
+      <height>51</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -706,7 +957,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(208, 0, 67, 255), stop:1 rgba(255, 0, 0, 255))</string>
+background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(208, 0, 67, 255), stop:1 rgba(255, 0, 0, 255));
+border-radius:8px;</string>
     </property>
     <property name="text">
      <string>34</string>
@@ -724,11 +976,23 @@ background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5,
    <widget class="QPushButton" name="Bet29">
     <property name="geometry">
      <rect>
-      <x>593</x>
-      <y>280</y>
+      <x>610</x>
+      <y>332</y>
       <width>51</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>51</width>
+      <height>51</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -743,7 +1007,8 @@ background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5,
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(57, 57, 57, 255), stop:0.960591 rgba(0, 0, 0, 255));</string>
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(57, 57, 57, 255), stop:0.960591 rgba(0, 0, 0, 255));
+border-radius:8px;</string>
     </property>
     <property name="text">
      <string>29</string>
@@ -761,11 +1026,23 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Bet32">
     <property name="geometry">
      <rect>
-      <x>653</x>
-      <y>280</y>
+      <x>670</x>
+      <y>332</y>
       <width>51</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>51</width>
+      <height>51</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -780,7 +1057,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(208, 0, 67, 255), stop:1 rgba(255, 0, 0, 255))</string>
+background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(208, 0, 67, 255), stop:1 rgba(255, 0, 0, 255));
+border-radius:8px;</string>
     </property>
     <property name="text">
      <string>32</string>
@@ -798,11 +1076,23 @@ background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5,
    <widget class="QPushButton" name="Bet25">
     <property name="geometry">
      <rect>
-      <x>533</x>
-      <y>340</y>
+      <x>550</x>
+      <y>392</y>
       <width>51</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>51</width>
+      <height>51</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -817,7 +1107,8 @@ background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5,
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(208, 0, 67, 255), stop:1 rgba(255, 0, 0, 255))</string>
+background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(208, 0, 67, 255), stop:1 rgba(255, 0, 0, 255));
+border-radius:8px;</string>
     </property>
     <property name="text">
      <string>25</string>
@@ -835,11 +1126,23 @@ background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5,
    <widget class="QPushButton" name="Bet20">
     <property name="geometry">
      <rect>
-      <x>413</x>
-      <y>280</y>
+      <x>430</x>
+      <y>332</y>
       <width>51</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>51</width>
+      <height>51</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -854,7 +1157,8 @@ background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5,
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(57, 57, 57, 255), stop:0.960591 rgba(0, 0, 0, 255));</string>
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(57, 57, 57, 255), stop:0.960591 rgba(0, 0, 0, 255));
+border-radius:8px;</string>
     </property>
     <property name="text">
      <string>20</string>
@@ -872,11 +1176,23 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Bet24">
     <property name="geometry">
      <rect>
-      <x>473</x>
-      <y>220</y>
+      <x>490</x>
+      <y>272</y>
       <width>51</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>51</width>
+      <height>51</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -891,7 +1207,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(57, 57, 57, 255), stop:0.960591 rgba(0, 0, 0, 255));</string>
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(57, 57, 57, 255), stop:0.960591 rgba(0, 0, 0, 255));
+border-radius:8px;</string>
     </property>
     <property name="text">
      <string>24</string>
@@ -909,11 +1226,23 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Bet28">
     <property name="geometry">
      <rect>
-      <x>593</x>
-      <y>340</y>
+      <x>610</x>
+      <y>392</y>
       <width>51</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>51</width>
+      <height>51</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -928,7 +1257,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(57, 57, 57, 255), stop:0.960591 rgba(0, 0, 0, 255));</string>
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(57, 57, 57, 255), stop:0.960591 rgba(0, 0, 0, 255));
+border-radius:8px;</string>
     </property>
     <property name="text">
      <string>28</string>
@@ -946,11 +1276,23 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Bet30">
     <property name="geometry">
      <rect>
-      <x>593</x>
-      <y>220</y>
+      <x>610</x>
+      <y>272</y>
       <width>51</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>51</width>
+      <height>51</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -965,7 +1307,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(208, 0, 67, 255), stop:1 rgba(255, 0, 0, 255))</string>
+background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(208, 0, 67, 255), stop:1 rgba(255, 0, 0, 255));
+border-radius:8px;</string>
     </property>
     <property name="text">
      <string>30</string>
@@ -983,11 +1326,23 @@ background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5,
    <widget class="QPushButton" name="Bet36">
     <property name="geometry">
      <rect>
-      <x>713</x>
-      <y>220</y>
+      <x>730</x>
+      <y>272</y>
       <width>51</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>51</width>
+      <height>51</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -1002,7 +1357,8 @@ background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5,
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(208, 0, 67, 255), stop:1 rgba(255, 0, 0, 255))</string>
+background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(208, 0, 67, 255), stop:1 rgba(255, 0, 0, 255));
+border-radius:8px;</string>
     </property>
     <property name="text">
      <string>36</string>
@@ -1020,11 +1376,23 @@ background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5,
    <widget class="QPushButton" name="Bet33">
     <property name="geometry">
      <rect>
-      <x>653</x>
-      <y>220</y>
+      <x>670</x>
+      <y>272</y>
       <width>51</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>51</width>
+      <height>51</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -1039,7 +1407,8 @@ background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5,
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(57, 57, 57, 255), stop:0.960591 rgba(0, 0, 0, 255));</string>
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(57, 57, 57, 255), stop:0.960591 rgba(0, 0, 0, 255));
+border-radius:8px;</string>
     </property>
     <property name="text">
      <string>33</string>
@@ -1057,11 +1426,23 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Bet21">
     <property name="geometry">
      <rect>
-      <x>413</x>
-      <y>220</y>
+      <x>430</x>
+      <y>272</y>
       <width>51</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>51</width>
+      <height>51</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -1076,7 +1457,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(208, 0, 67, 255), stop:1 rgba(255, 0, 0, 255))</string>
+background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(208, 0, 67, 255), stop:1 rgba(255, 0, 0, 255));
+border-radius:8px;</string>
     </property>
     <property name="text">
      <string>21</string>
@@ -1094,11 +1476,23 @@ background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5,
    <widget class="QPushButton" name="Bet19">
     <property name="geometry">
      <rect>
-      <x>413</x>
-      <y>340</y>
+      <x>430</x>
+      <y>392</y>
       <width>51</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>51</width>
+      <height>51</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -1113,7 +1507,8 @@ background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5,
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(208, 0, 67, 255), stop:1 rgba(255, 0, 0, 255))</string>
+background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(208, 0, 67, 255), stop:1 rgba(255, 0, 0, 255));
+border-radius:8px;</string>
     </property>
     <property name="text">
      <string>19</string>
@@ -1131,11 +1526,23 @@ background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5,
    <widget class="QPushButton" name="Bet23">
     <property name="geometry">
      <rect>
-      <x>473</x>
-      <y>280</y>
+      <x>490</x>
+      <y>332</y>
       <width>51</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>51</width>
+      <height>51</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -1150,7 +1557,8 @@ background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5,
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(208, 0, 67, 255), stop:1 rgba(255, 0, 0, 255))</string>
+background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(208, 0, 67, 255), stop:1 rgba(255, 0, 0, 255));
+border-radius:8px;</string>
     </property>
     <property name="text">
      <string>23</string>
@@ -1168,11 +1576,23 @@ background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5,
    <widget class="QPushButton" name="Bet22">
     <property name="geometry">
      <rect>
-      <x>473</x>
-      <y>340</y>
+      <x>490</x>
+      <y>392</y>
       <width>51</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>51</width>
+      <height>51</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -1187,7 +1607,8 @@ background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5,
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(57, 57, 57, 255), stop:0.960591 rgba(0, 0, 0, 255));</string>
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(57, 57, 57, 255), stop:0.960591 rgba(0, 0, 0, 255));
+border-radius:8px;</string>
     </property>
     <property name="text">
      <string>22</string>
@@ -1205,11 +1626,23 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Bet26">
     <property name="geometry">
      <rect>
-      <x>533</x>
-      <y>280</y>
+      <x>550</x>
+      <y>332</y>
       <width>51</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>51</width>
+      <height>51</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -1224,7 +1657,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(57, 57, 57, 255), stop:0.960591 rgba(0, 0, 0, 255));</string>
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(57, 57, 57, 255), stop:0.960591 rgba(0, 0, 0, 255));
+border-radius:8px;</string>
     </property>
     <property name="text">
      <string>26</string>
@@ -1242,11 +1676,23 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Bet35">
     <property name="geometry">
      <rect>
-      <x>713</x>
-      <y>280</y>
+      <x>730</x>
+      <y>332</y>
       <width>51</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>51</width>
+      <height>51</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -1261,7 +1707,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(57, 57, 57, 255), stop:0.960591 rgba(0, 0, 0, 255));</string>
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(57, 57, 57, 255), stop:0.960591 rgba(0, 0, 0, 255));
+border-radius:8px;</string>
     </property>
     <property name="text">
      <string>35</string>
@@ -1279,11 +1726,23 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Bet27">
     <property name="geometry">
      <rect>
-      <x>533</x>
-      <y>220</y>
+      <x>550</x>
+      <y>272</y>
       <width>51</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>51</width>
+      <height>51</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -1298,7 +1757,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(208, 0, 67, 255), stop:1 rgba(255, 0, 0, 255))</string>
+background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(208, 0, 67, 255), stop:1 rgba(255, 0, 0, 255));
+border-radius:8px;</string>
     </property>
     <property name="text">
      <string>27</string>
@@ -1316,11 +1776,23 @@ background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5,
    <widget class="QPushButton" name="Bet31">
     <property name="geometry">
      <rect>
-      <x>653</x>
-      <y>340</y>
+      <x>670</x>
+      <y>392</y>
       <width>51</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>51</width>
+      <height>51</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -1335,7 +1807,8 @@ background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5,
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(57, 57, 57, 255), stop:0.960591 rgba(0, 0, 0, 255));</string>
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(57, 57, 57, 255), stop:0.960591 rgba(0, 0, 0, 255));
+border-radius:8px;</string>
     </property>
     <property name="text">
      <string>31</string>
@@ -1353,8 +1826,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Row3">
     <property name="geometry">
      <rect>
-      <x>773</x>
-      <y>220</y>
+      <x>790</x>
+      <y>272</y>
       <width>41</width>
       <height>51</height>
      </rect>
@@ -1372,7 +1845,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 67, 255), stop:1 rgba(0, 167, 0, 255))</string>
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 67, 255), stop:1 rgba(0, 167, 0, 255));
+border-radius:7px;</string>
     </property>
     <property name="text">
      <string>2:1</string>
@@ -1390,8 +1864,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Row2">
     <property name="geometry">
      <rect>
-      <x>773</x>
-      <y>280</y>
+      <x>790</x>
+      <y>332</y>
       <width>41</width>
       <height>51</height>
      </rect>
@@ -1409,7 +1883,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 67, 255), stop:1 rgba(0, 167, 0, 255))</string>
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 67, 255), stop:1 rgba(0, 167, 0, 255));
+border-radius:7px;</string>
     </property>
     <property name="text">
      <string>2:1</string>
@@ -1427,8 +1902,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Row1">
     <property name="geometry">
      <rect>
-      <x>773</x>
-      <y>340</y>
+      <x>790</x>
+      <y>392</y>
       <width>41</width>
       <height>51</height>
      </rect>
@@ -1446,7 +1921,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 67, 255), stop:1 rgba(0, 167, 0, 255))</string>
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 67, 255), stop:1 rgba(0, 167, 0, 255));
+border-radius:7px;</string>
     </property>
     <property name="text">
      <string>2:1</string>
@@ -1464,8 +1940,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Dozen1">
     <property name="geometry">
      <rect>
-      <x>53</x>
-      <y>408</y>
+      <x>70</x>
+      <y>460</y>
       <width>231</width>
       <height>51</height>
      </rect>
@@ -1483,7 +1959,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 67, 255), stop:1 rgba(0, 167, 0, 255))</string>
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 67, 255), stop:1 rgba(0, 167, 0, 255));
+border-radius:10px;</string>
     </property>
     <property name="text">
      <string>1st 12</string>
@@ -1501,8 +1978,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Dozen2">
     <property name="geometry">
      <rect>
-      <x>293</x>
-      <y>408</y>
+      <x>310</x>
+      <y>460</y>
       <width>231</width>
       <height>51</height>
      </rect>
@@ -1520,7 +1997,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 67, 255), stop:1 rgba(0, 167, 0, 255))</string>
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 67, 255), stop:1 rgba(0, 167, 0, 255));
+border-radius:10px;</string>
     </property>
     <property name="text">
      <string>2nd 12</string>
@@ -1538,8 +2016,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Dozen3">
     <property name="geometry">
      <rect>
-      <x>533</x>
-      <y>408</y>
+      <x>550</x>
+      <y>460</y>
       <width>231</width>
       <height>51</height>
      </rect>
@@ -1557,7 +2035,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 67, 255), stop:1 rgba(0, 167, 0, 255))</string>
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 67, 255), stop:1 rgba(0, 167, 0, 255));
+border-radius:10px;</string>
     </property>
     <property name="text">
      <string>3rd 12</string>
@@ -1575,8 +2054,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Odd">
     <property name="geometry">
      <rect>
-      <x>53</x>
-      <y>468</y>
+      <x>70</x>
+      <y>520</y>
       <width>111</width>
       <height>51</height>
      </rect>
@@ -1594,7 +2073,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 67, 255), stop:1 rgba(0, 167, 0, 255))</string>
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 67, 255), stop:1 rgba(0, 167, 0, 255));
+border-radius:10px;</string>
     </property>
     <property name="text">
      <string>Odd</string>
@@ -1612,8 +2092,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Even">
     <property name="geometry">
      <rect>
-      <x>173</x>
-      <y>468</y>
+      <x>190</x>
+      <y>520</y>
       <width>111</width>
       <height>51</height>
      </rect>
@@ -1631,7 +2111,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 67, 255), stop:1 rgba(0, 167, 0, 255))</string>
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 67, 255), stop:1 rgba(0, 167, 0, 255));
+border-radius:10px;</string>
     </property>
     <property name="text">
      <string>Even</string>
@@ -1649,8 +2130,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Low">
     <property name="geometry">
      <rect>
-      <x>533</x>
-      <y>468</y>
+      <x>550</x>
+      <y>520</y>
       <width>111</width>
       <height>51</height>
      </rect>
@@ -1668,7 +2149,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 67, 255), stop:1 rgba(0, 167, 0, 255))</string>
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 67, 255), stop:1 rgba(0, 167, 0, 255));
+border-radius:10px;</string>
     </property>
     <property name="text">
      <string>Low Number</string>
@@ -1686,8 +2168,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="High">
     <property name="geometry">
      <rect>
-      <x>653</x>
-      <y>468</y>
+      <x>670</x>
+      <y>520</y>
       <width>111</width>
       <height>51</height>
      </rect>
@@ -1705,7 +2187,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 67, 255), stop:1 rgba(0, 167, 0, 255))</string>
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 67, 255), stop:1 rgba(0, 167, 0, 255));
+border-radius:10px;</string>
     </property>
     <property name="text">
      <string>High Number</string>
@@ -1723,8 +2206,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Red">
     <property name="geometry">
      <rect>
-      <x>293</x>
-      <y>468</y>
+      <x>310</x>
+      <y>520</y>
       <width>111</width>
       <height>51</height>
      </rect>
@@ -1742,7 +2225,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(208, 0, 67, 255), stop:1 rgba(255, 0, 0, 255))</string>
+background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(208, 0, 67, 255), stop:1 rgba(255, 0, 0, 255));
+border-radius:10px;</string>
     </property>
     <property name="text">
      <string>Red</string>
@@ -1760,8 +2244,8 @@ background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5,
    <widget class="QPushButton" name="Black">
     <property name="geometry">
      <rect>
-      <x>413</x>
-      <y>468</y>
+      <x>430</x>
+      <y>520</y>
       <width>111</width>
       <height>51</height>
      </rect>
@@ -1779,7 +2263,8 @@ background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5,
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(57, 57, 57, 255), stop:0.960591 rgba(0, 0, 0, 255));</string>
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(57, 57, 57, 255), stop:0.960591 rgba(0, 0, 0, 255));
+border-radius:10px;</string>
     </property>
     <property name="text">
      <string>Black</string>
@@ -1797,8 +2282,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Spin">
     <property name="geometry">
      <rect>
-      <x>363</x>
-      <y>170</y>
+      <x>380</x>
+      <y>222</y>
       <width>91</width>
       <height>31</height>
      </rect>
@@ -1816,7 +2301,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 67, 255), stop:1 rgba(0, 167, 0, 255))</string>
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 67, 255), stop:1 rgba(0, 167, 0, 255));
+border-radius:10px;</string>
     </property>
     <property name="text">
      <string>Spin</string>
@@ -1834,8 +2320,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Bet00">
     <property name="geometry">
      <rect>
-      <x>5</x>
-      <y>220</y>
+      <x>20</x>
+      <y>272</y>
       <width>41</width>
       <height>171</height>
      </rect>
@@ -1853,7 +2339,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 67, 255), stop:1 rgba(0, 167, 0, 255))</string>
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 67, 255), stop:1 rgba(0, 167, 0, 255));
+border-radius:10px;</string>
     </property>
     <property name="text">
      <string>0</string>
@@ -1871,10 +2358,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split23">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>268</y>
-      <width>16</width>
-      <height>16</height>
+      <x>87</x>
+      <y>319</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -1893,10 +2380,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Quad2">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>268</y>
-      <width>16</width>
-      <height>16</height>
+      <x>117</x>
+      <y>319</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -1915,10 +2402,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Quad1">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>327</y>
-      <width>16</width>
-      <height>16</height>
+      <x>117</x>
+      <y>379</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -1937,10 +2424,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split12">
     <property name="geometry">
      <rect>
-      <x>72</x>
-      <y>328</y>
-      <width>16</width>
-      <height>16</height>
+      <x>87</x>
+      <y>379</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -1959,10 +2446,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Quad3">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>327</y>
-      <width>16</width>
-      <height>16</height>
+      <x>177</x>
+      <y>379</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -1981,10 +2468,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Quad4">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>268</y>
-      <width>16</width>
-      <height>16</height>
+      <x>177</x>
+      <y>319</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -2003,10 +2490,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split45">
     <property name="geometry">
      <rect>
-      <x>131</x>
-      <y>327</y>
-      <width>16</width>
-      <height>16</height>
+      <x>147</x>
+      <y>379</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -2025,10 +2512,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split56">
     <property name="geometry">
      <rect>
-      <x>129</x>
-      <y>268</y>
-      <width>16</width>
-      <height>16</height>
+      <x>147</x>
+      <y>319</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -2047,10 +2534,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Quad5">
     <property name="geometry">
      <rect>
-      <x>221</x>
-      <y>327</y>
-      <width>16</width>
-      <height>16</height>
+      <x>237</x>
+      <y>379</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -2069,10 +2556,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Quad6">
     <property name="geometry">
      <rect>
-      <x>221</x>
-      <y>268</y>
-      <width>16</width>
-      <height>16</height>
+      <x>237</x>
+      <y>319</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -2091,10 +2578,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split1011">
     <property name="geometry">
      <rect>
-      <x>254</x>
-      <y>327</y>
-      <width>16</width>
-      <height>16</height>
+      <x>267</x>
+      <y>379</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -2113,10 +2600,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split1112">
     <property name="geometry">
      <rect>
-      <x>252</x>
-      <y>268</y>
-      <width>16</width>
-      <height>16</height>
+      <x>267</x>
+      <y>319</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -2135,10 +2622,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split78">
     <property name="geometry">
      <rect>
-      <x>190</x>
-      <y>327</y>
-      <width>16</width>
-      <height>16</height>
+      <x>207</x>
+      <y>379</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -2157,10 +2644,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Quad8">
     <property name="geometry">
      <rect>
-      <x>281</x>
-      <y>268</y>
-      <width>16</width>
-      <height>16</height>
+      <x>297</x>
+      <y>319</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -2179,10 +2666,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Quad7">
     <property name="geometry">
      <rect>
-      <x>281</x>
-      <y>327</y>
-      <width>16</width>
-      <height>16</height>
+      <x>297</x>
+      <y>379</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -2201,10 +2688,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split89">
     <property name="geometry">
      <rect>
-      <x>190</x>
-      <y>268</y>
-      <width>16</width>
-      <height>16</height>
+      <x>207</x>
+      <y>319</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -2223,10 +2710,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split1314">
     <property name="geometry">
      <rect>
-      <x>311</x>
-      <y>327</y>
-      <width>16</width>
-      <height>16</height>
+      <x>327</x>
+      <y>379</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -2245,10 +2732,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Quad9">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>327</y>
-      <width>16</width>
-      <height>16</height>
+      <x>357</x>
+      <y>379</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -2267,10 +2754,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Quad10">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>267</y>
-      <width>16</width>
-      <height>16</height>
+      <x>357</x>
+      <y>319</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -2289,10 +2776,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Quad16">
     <property name="geometry">
      <rect>
-      <x>520</x>
-      <y>267</y>
-      <width>16</width>
-      <height>16</height>
+      <x>537</x>
+      <y>319</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -2311,10 +2798,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split2223">
     <property name="geometry">
      <rect>
-      <x>491</x>
-      <y>327</y>
-      <width>16</width>
-      <height>16</height>
+      <x>507</x>
+      <y>379</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -2333,10 +2820,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split1617">
     <property name="geometry">
      <rect>
-      <x>373</x>
-      <y>327</y>
-      <width>16</width>
-      <height>16</height>
+      <x>387</x>
+      <y>379</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -2355,10 +2842,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split1718">
     <property name="geometry">
      <rect>
-      <x>371</x>
-      <y>267</y>
-      <width>16</width>
-      <height>16</height>
+      <x>387</x>
+      <y>319</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -2377,10 +2864,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split1920">
     <property name="geometry">
      <rect>
-      <x>431</x>
-      <y>327</y>
-      <width>16</width>
-      <height>16</height>
+      <x>447</x>
+      <y>379</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -2399,10 +2886,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split2021">
     <property name="geometry">
      <rect>
-      <x>429</x>
-      <y>267</y>
-      <width>16</width>
-      <height>16</height>
+      <x>447</x>
+      <y>319</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -2421,10 +2908,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Quad12">
     <property name="geometry">
      <rect>
-      <x>400</x>
-      <y>267</y>
-      <width>16</width>
-      <height>16</height>
+      <x>417</x>
+      <y>319</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -2443,10 +2930,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Quad13">
     <property name="geometry">
      <rect>
-      <x>460</x>
-      <y>327</y>
-      <width>16</width>
-      <height>16</height>
+      <x>477</x>
+      <y>379</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -2465,10 +2952,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Quad11">
     <property name="geometry">
      <rect>
-      <x>400</x>
-      <y>327</y>
-      <width>16</width>
-      <height>16</height>
+      <x>417</x>
+      <y>379</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -2487,10 +2974,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split1415">
     <property name="geometry">
      <rect>
-      <x>309</x>
-      <y>267</y>
-      <width>16</width>
-      <height>16</height>
+      <x>327</x>
+      <y>319</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -2509,10 +2996,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Quad14">
     <property name="geometry">
      <rect>
-      <x>460</x>
-      <y>267</y>
-      <width>16</width>
-      <height>16</height>
+      <x>477</x>
+      <y>319</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -2531,10 +3018,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Quad15">
     <property name="geometry">
      <rect>
-      <x>520</x>
-      <y>327</y>
-      <width>16</width>
-      <height>16</height>
+      <x>537</x>
+      <y>379</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -2553,10 +3040,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split2324">
     <property name="geometry">
      <rect>
-      <x>491</x>
-      <y>267</y>
-      <width>16</width>
-      <height>16</height>
+      <x>507</x>
+      <y>319</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -2575,10 +3062,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Quad21">
     <property name="geometry">
      <rect>
-      <x>701</x>
-      <y>326</y>
-      <width>16</width>
-      <height>16</height>
+      <x>717</x>
+      <y>379</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -2597,10 +3084,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Quad22">
     <property name="geometry">
      <rect>
-      <x>701</x>
-      <y>267</y>
-      <width>16</width>
-      <height>16</height>
+      <x>717</x>
+      <y>319</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -2619,10 +3106,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split3435">
     <property name="geometry">
      <rect>
-      <x>732</x>
-      <y>327</y>
-      <width>16</width>
-      <height>16</height>
+      <x>747</x>
+      <y>379</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -2641,10 +3128,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split3536">
     <property name="geometry">
      <rect>
-      <x>732</x>
-      <y>267</y>
-      <width>16</width>
-      <height>16</height>
+      <x>747</x>
+      <y>319</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -2663,10 +3150,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split3132">
     <property name="geometry">
      <rect>
-      <x>672</x>
-      <y>327</y>
-      <width>16</width>
-      <height>16</height>
+      <x>687</x>
+      <y>379</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -2685,10 +3172,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split3233">
     <property name="geometry">
      <rect>
-      <x>670</x>
-      <y>267</y>
-      <width>16</width>
-      <height>16</height>
+      <x>687</x>
+      <y>319</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -2707,10 +3194,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split2627">
     <property name="geometry">
      <rect>
-      <x>550</x>
-      <y>267</y>
-      <width>16</width>
-      <height>16</height>
+      <x>567</x>
+      <y>319</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -2729,10 +3216,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Quad20">
     <property name="geometry">
      <rect>
-      <x>641</x>
-      <y>267</y>
-      <width>16</width>
-      <height>16</height>
+      <x>657</x>
+      <y>319</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -2751,10 +3238,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Quad19">
     <property name="geometry">
      <rect>
-      <x>641</x>
-      <y>326</y>
-      <width>16</width>
-      <height>16</height>
+      <x>657</x>
+      <y>379</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -2773,10 +3260,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split2526">
     <property name="geometry">
      <rect>
-      <x>552</x>
-      <y>327</y>
-      <width>16</width>
-      <height>16</height>
+      <x>567</x>
+      <y>379</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -2795,10 +3282,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split2930">
     <property name="geometry">
      <rect>
-      <x>611</x>
-      <y>267</y>
-      <width>16</width>
-      <height>16</height>
+      <x>627</x>
+      <y>319</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -2817,10 +3304,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Quad17">
     <property name="geometry">
      <rect>
-      <x>581</x>
-      <y>327</y>
-      <width>16</width>
-      <height>16</height>
+      <x>597</x>
+      <y>379</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -2839,10 +3326,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split2829">
     <property name="geometry">
      <rect>
-      <x>612</x>
-      <y>326</y>
-      <width>16</width>
-      <height>16</height>
+      <x>627</x>
+      <y>379</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -2861,10 +3348,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Quad18">
     <property name="geometry">
      <rect>
-      <x>581</x>
-      <y>267</y>
-      <width>16</width>
-      <height>16</height>
+      <x>597</x>
+      <y>319</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -2883,10 +3370,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split3336">
     <property name="geometry">
      <rect>
-      <x>700</x>
-      <y>240</y>
-      <width>16</width>
-      <height>16</height>
+      <x>717</x>
+      <y>289</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -2905,10 +3392,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split36">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>241</y>
-      <width>16</width>
-      <height>16</height>
+      <x>117</x>
+      <y>289</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -2927,10 +3414,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split1821">
     <property name="geometry">
      <rect>
-      <x>400</x>
-      <y>240</y>
-      <width>16</width>
-      <height>16</height>
+      <x>417</x>
+      <y>289</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -2949,10 +3436,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split2427">
     <property name="geometry">
      <rect>
-      <x>520</x>
-      <y>240</y>
-      <width>16</width>
-      <height>16</height>
+      <x>537</x>
+      <y>289</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -2971,10 +3458,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split1518">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>240</y>
-      <width>16</width>
-      <height>16</height>
+      <x>357</x>
+      <y>289</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -2993,10 +3480,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split912">
     <property name="geometry">
      <rect>
-      <x>221</x>
-      <y>241</y>
-      <width>16</width>
-      <height>16</height>
+      <x>237</x>
+      <y>289</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -3015,10 +3502,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split69">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>241</y>
-      <width>16</width>
-      <height>16</height>
+      <x>177</x>
+      <y>289</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -3037,10 +3524,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split2124">
     <property name="geometry">
      <rect>
-      <x>460</x>
-      <y>240</y>
-      <width>16</width>
-      <height>16</height>
+      <x>477</x>
+      <y>289</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -3059,10 +3546,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split2730">
     <property name="geometry">
      <rect>
-      <x>581</x>
-      <y>240</y>
-      <width>16</width>
-      <height>16</height>
+      <x>597</x>
+      <y>289</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -3081,10 +3568,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split1215">
     <property name="geometry">
      <rect>
-      <x>281</x>
-      <y>241</y>
-      <width>16</width>
-      <height>16</height>
+      <x>297</x>
+      <y>289</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -3103,10 +3590,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split3033">
     <property name="geometry">
      <rect>
-      <x>641</x>
-      <y>240</y>
-      <width>16</width>
-      <height>16</height>
+      <x>657</x>
+      <y>289</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -3125,10 +3612,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split2629">
     <property name="geometry">
      <rect>
-      <x>581</x>
-      <y>299</y>
-      <width>16</width>
-      <height>16</height>
+      <x>597</x>
+      <y>349</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -3147,10 +3634,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split1720">
     <property name="geometry">
      <rect>
-      <x>400</x>
-      <y>299</y>
-      <width>16</width>
-      <height>16</height>
+      <x>417</x>
+      <y>349</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -3169,10 +3656,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split3235">
     <property name="geometry">
      <rect>
-      <x>701</x>
-      <y>299</y>
-      <width>16</width>
-      <height>16</height>
+      <x>717</x>
+      <y>349</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -3191,10 +3678,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split58">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>300</y>
-      <width>16</width>
-      <height>16</height>
+      <x>177</x>
+      <y>349</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -3213,10 +3700,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split1417">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>299</y>
-      <width>16</width>
-      <height>16</height>
+      <x>357</x>
+      <y>349</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -3235,10 +3722,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split25">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>300</y>
-      <width>16</width>
-      <height>16</height>
+      <x>117</x>
+      <y>349</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -3257,10 +3744,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split2932">
     <property name="geometry">
      <rect>
-      <x>641</x>
-      <y>299</y>
-      <width>16</width>
-      <height>16</height>
+      <x>657</x>
+      <y>349</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -3279,10 +3766,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split2023">
     <property name="geometry">
      <rect>
-      <x>460</x>
-      <y>299</y>
-      <width>16</width>
-      <height>16</height>
+      <x>477</x>
+      <y>349</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -3301,10 +3788,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split2326">
     <property name="geometry">
      <rect>
-      <x>521</x>
-      <y>299</y>
-      <width>16</width>
-      <height>16</height>
+      <x>537</x>
+      <y>349</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -3323,10 +3810,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split811">
     <property name="geometry">
      <rect>
-      <x>221</x>
-      <y>300</y>
-      <width>16</width>
-      <height>16</height>
+      <x>237</x>
+      <y>349</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -3345,10 +3832,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split1114">
     <property name="geometry">
      <rect>
-      <x>281</x>
-      <y>300</y>
-      <width>16</width>
-      <height>16</height>
+      <x>297</x>
+      <y>349</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -3367,10 +3854,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split2831">
     <property name="geometry">
      <rect>
-      <x>641</x>
-      <y>359</y>
-      <width>16</width>
-      <height>16</height>
+      <x>657</x>
+      <y>409</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -3389,10 +3876,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split2528">
     <property name="geometry">
      <rect>
-      <x>581</x>
-      <y>359</y>
-      <width>16</width>
-      <height>16</height>
+      <x>597</x>
+      <y>409</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -3411,10 +3898,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split1922">
     <property name="geometry">
      <rect>
-      <x>460</x>
-      <y>359</y>
-      <width>16</width>
-      <height>16</height>
+      <x>477</x>
+      <y>409</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -3433,10 +3920,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split3134">
     <property name="geometry">
      <rect>
-      <x>701</x>
-      <y>359</y>
-      <width>16</width>
-      <height>16</height>
+      <x>717</x>
+      <y>409</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -3455,10 +3942,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split2225">
     <property name="geometry">
      <rect>
-      <x>520</x>
-      <y>359</y>
-      <width>16</width>
-      <height>16</height>
+      <x>537</x>
+      <y>409</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -3477,10 +3964,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split1619">
     <property name="geometry">
      <rect>
-      <x>400</x>
-      <y>359</y>
-      <width>16</width>
-      <height>16</height>
+      <x>417</x>
+      <y>409</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -3499,10 +3986,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split1316">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>359</y>
-      <width>16</width>
-      <height>16</height>
+      <x>357</x>
+      <y>409</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -3521,10 +4008,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split1013">
     <property name="geometry">
      <rect>
-      <x>281</x>
-      <y>360</y>
-      <width>16</width>
-      <height>16</height>
+      <x>297</x>
+      <y>409</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -3543,10 +4030,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split47">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>360</y>
-      <width>16</width>
-      <height>16</height>
+      <x>177</x>
+      <y>409</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -3565,10 +4052,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split14">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>360</y>
-      <width>16</width>
-      <height>16</height>
+      <x>117</x>
+      <y>409</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -3587,10 +4074,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split710">
     <property name="geometry">
      <rect>
-      <x>221</x>
-      <y>360</y>
-      <width>16</width>
-      <height>16</height>
+      <x>237</x>
+      <y>409</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -3606,36 +4093,13 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="resultLabel">
-    <property name="geometry">
-     <rect>
-      <x>440</x>
-      <y>10</y>
-      <width>21</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Arial</family>
-      <pointsize>18</pointsize>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color:white;</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
    <widget class="QPushButton" name="Six8">
     <property name="geometry">
      <rect>
-      <x>521</x>
-      <y>388</y>
-      <width>16</width>
-      <height>16</height>
+      <x>537</x>
+      <y>439</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -3654,10 +4118,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Six5">
     <property name="geometry">
      <rect>
-      <x>338</x>
-      <y>388</y>
-      <width>16</width>
-      <height>16</height>
+      <x>357</x>
+      <y>439</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -3676,10 +4140,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Six7">
     <property name="geometry">
      <rect>
-      <x>460</x>
-      <y>388</y>
-      <width>16</width>
-      <height>16</height>
+      <x>477</x>
+      <y>439</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -3698,10 +4162,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Six11">
     <property name="geometry">
      <rect>
-      <x>701</x>
-      <y>388</y>
-      <width>16</width>
-      <height>16</height>
+      <x>717</x>
+      <y>439</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -3720,10 +4184,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Street4">
     <property name="geometry">
      <rect>
-      <x>252</x>
-      <y>388</y>
-      <width>16</width>
-      <height>16</height>
+      <x>267</x>
+      <y>439</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -3742,10 +4206,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Street10">
     <property name="geometry">
      <rect>
-      <x>613</x>
-      <y>388</y>
-      <width>16</width>
-      <height>16</height>
+      <x>627</x>
+      <y>439</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -3764,10 +4228,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Six2">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>388</y>
-      <width>16</width>
-      <height>16</height>
+      <x>177</x>
+      <y>439</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -3786,10 +4250,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Street12">
     <property name="geometry">
      <rect>
-      <x>732</x>
-      <y>388</y>
-      <width>16</width>
-      <height>16</height>
+      <x>747</x>
+      <y>439</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -3808,10 +4272,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Six3">
     <property name="geometry">
      <rect>
-      <x>220</x>
-      <y>388</y>
-      <width>16</width>
-      <height>16</height>
+      <x>237</x>
+      <y>439</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -3830,10 +4294,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Six4">
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>388</y>
-      <width>16</width>
-      <height>16</height>
+      <x>297</x>
+      <y>439</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -3852,10 +4316,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Street7">
     <property name="geometry">
      <rect>
-      <x>429</x>
-      <y>388</y>
-      <width>16</width>
-      <height>16</height>
+      <x>447</x>
+      <y>439</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -3874,10 +4338,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Six9">
     <property name="geometry">
      <rect>
-      <x>581</x>
-      <y>388</y>
-      <width>16</width>
-      <height>16</height>
+      <x>597</x>
+      <y>439</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -3896,10 +4360,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Street1">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>388</y>
-      <width>16</width>
-      <height>16</height>
+      <x>87</x>
+      <y>439</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -3918,10 +4382,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Street5">
     <property name="geometry">
      <rect>
-      <x>309</x>
-      <y>388</y>
-      <width>16</width>
-      <height>16</height>
+      <x>327</x>
+      <y>439</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -3940,10 +4404,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Six10">
     <property name="geometry">
      <rect>
-      <x>641</x>
-      <y>388</y>
-      <width>16</width>
-      <height>16</height>
+      <x>657</x>
+      <y>439</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -3962,10 +4426,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Six6">
     <property name="geometry">
      <rect>
-      <x>399</x>
-      <y>388</y>
-      <width>16</width>
-      <height>16</height>
+      <x>417</x>
+      <y>439</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -3984,10 +4448,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Six1">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>388</y>
-      <width>16</width>
-      <height>16</height>
+      <x>117</x>
+      <y>439</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -4006,10 +4470,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Street9">
     <property name="geometry">
      <rect>
-      <x>550</x>
-      <y>389</y>
-      <width>16</width>
-      <height>16</height>
+      <x>567</x>
+      <y>439</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -4028,10 +4492,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Street2">
     <property name="geometry">
      <rect>
-      <x>131</x>
-      <y>388</y>
-      <width>16</width>
-      <height>16</height>
+      <x>147</x>
+      <y>439</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -4050,10 +4514,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Street6">
     <property name="geometry">
      <rect>
-      <x>371</x>
-      <y>388</y>
-      <width>16</width>
-      <height>16</height>
+      <x>387</x>
+      <y>439</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -4072,10 +4536,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Street3">
     <property name="geometry">
      <rect>
-      <x>190</x>
-      <y>388</y>
-      <width>16</width>
-      <height>16</height>
+      <x>207</x>
+      <y>439</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -4094,10 +4558,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Street8">
     <property name="geometry">
      <rect>
-      <x>491</x>
-      <y>388</y>
-      <width>16</width>
-      <height>16</height>
+      <x>507</x>
+      <y>439</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -4116,10 +4580,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Street11">
     <property name="geometry">
      <rect>
-      <x>670</x>
-      <y>388</y>
-      <width>16</width>
-      <height>16</height>
+      <x>687</x>
+      <y>439</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -4138,10 +4602,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Basket1">
     <property name="geometry">
      <rect>
-      <x>42</x>
-      <y>328</y>
-      <width>16</width>
-      <height>16</height>
+      <x>57</x>
+      <y>379</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -4160,10 +4624,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split01">
     <property name="geometry">
      <rect>
-      <x>42</x>
-      <y>360</y>
-      <width>16</width>
-      <height>16</height>
+      <x>57</x>
+      <y>409</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -4182,10 +4646,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split02">
     <property name="geometry">
      <rect>
-      <x>42</x>
-      <y>300</y>
-      <width>16</width>
-      <height>16</height>
+      <x>57</x>
+      <y>349</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -4204,10 +4668,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Basket2">
     <property name="geometry">
      <rect>
-      <x>42</x>
-      <y>268</y>
-      <width>16</width>
-      <height>16</height>
+      <x>57</x>
+      <y>319</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -4226,10 +4690,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Split03">
     <property name="geometry">
      <rect>
-      <x>42</x>
-      <y>241</y>
-      <width>16</width>
-      <height>16</height>
+      <x>57</x>
+      <y>289</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -4248,10 +4712,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Quad0">
     <property name="geometry">
      <rect>
-      <x>41</x>
-      <y>389</y>
-      <width>16</width>
-      <height>16</height>
+      <x>57</x>
+      <y>439</y>
+      <width>17</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
@@ -4270,7 +4734,7 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QLabel" name="WalletLabel">
     <property name="geometry">
      <rect>
-      <x>630</x>
+      <x>667</x>
       <y>10</y>
       <width>181</width>
       <height>20</height>
@@ -4287,14 +4751,14 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
      <string notr="true">color:white;</string>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string>Balance: </string>
     </property>
    </widget>
    <widget class="QPushButton" name="Reset">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>170</y>
+      <x>250</x>
+      <y>222</y>
       <width>91</width>
       <height>31</height>
      </rect>
@@ -4312,7 +4776,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(58, 58, 58, 255), stop:1 rgba(0, 0, 0, 255))</string>
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(58, 58, 58, 255), stop:1 rgba(0, 0, 0, 255));
+border-radius:10px;</string>
     </property>
     <property name="text">
      <string>Reset</string>
@@ -4330,7 +4795,7 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QLabel" name="BetLabel">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>57</x>
       <y>10</y>
       <width>601</width>
       <height>20</height>
@@ -4340,6 +4805,7 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
      <font>
       <family>Arial</family>
       <pointsize>18</pointsize>
+      <italic>true</italic>
      </font>
     </property>
     <property name="styleSheet">
@@ -4352,10 +4818,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QLabel" name="WheelLabel">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>40</y>
-      <width>501</width>
-      <height>121</height>
+      <x>165</x>
+      <y>52</y>
+      <width>521</width>
+      <height>161</height>
      </rect>
     </property>
     <property name="text">
@@ -4365,7 +4831,7 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QLabel" name="WinLabel">
     <property name="geometry">
      <rect>
-      <x>350</x>
+      <x>367</x>
       <y>30</y>
       <width>121</width>
       <height>41</height>
@@ -4379,7 +4845,7 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color:rgb(0, 143, 0)</string>
+     <string notr="true">color:white;</string>
     </property>
     <property name="text">
      <string/>
@@ -4388,7 +4854,7 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QLabel" name="OddsLabel">
     <property name="geometry">
      <rect>
-      <x>50</x>
+      <x>57</x>
       <y>40</y>
       <width>241</width>
       <height>20</height>
@@ -4411,8 +4877,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QPushButton" name="Home">
     <property name="geometry">
      <rect>
-      <x>500</x>
-      <y>170</y>
+      <x>510</x>
+      <y>222</y>
       <width>91</width>
       <height>31</height>
      </rect>
@@ -4430,7 +4896,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
     <property name="styleSheet">
      <string notr="true">color:white;
 border:none;
-background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(58, 58, 58, 255), stop:1 rgba(0, 0, 0, 255))</string>
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(58, 58, 58, 255), stop:1 rgba(0, 0, 0, 255));
+border-radius:10px;</string>
     </property>
     <property name="text">
      <string>Home</string>
@@ -4448,10 +4915,10 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5
    <widget class="QSlider" name="BetSlider">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>50</y>
+      <x>30</x>
+      <y>30</y>
       <width>22</width>
-      <height>161</height>
+      <height>191</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -4467,7 +4934,7 @@ border-radius:10px
    <widget class="QLabel" name="BetValueLabel">
     <property name="geometry">
      <rect>
-      <x>50</x>
+      <x>57</x>
       <y>110</y>
       <width>201</width>
       <height>20</height>
@@ -4492,8 +4959,8 @@ border-radius:10px
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>821</width>
-      <height>541</height>
+      <width>850</width>
+      <height>600</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -4501,6 +4968,44 @@ border-radius:10px
     </property>
     <property name="text">
      <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BlackJack">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>90</y>
+      <width>101</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>14</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:white;
+border:none;
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(58, 58, 58, 255), stop:1 rgba(0, 0, 0, 255));
+border-radius:10px;</string>
+    </property>
+    <property name="text">
+     <string>BlackJack</string>
+    </property>
+    <property name="icon">
+     <iconset theme="accessories-character-map"/>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+    <property name="checked">
+     <bool>false</bool>
     </property>
    </widget>
    <zorder>Background</zorder>
@@ -4593,7 +5098,6 @@ border-radius:10px
    <zorder>Split47</zorder>
    <zorder>Split14</zorder>
    <zorder>Split710</zorder>
-   <zorder>resultLabel</zorder>
    <zorder>Six8</zorder>
    <zorder>Six5</zorder>
    <zorder>Six7</zorder>
@@ -4631,66 +5135,49 @@ border-radius:10px
    <zorder>Home</zorder>
    <zorder>BetSlider</zorder>
    <zorder>BetValueLabel</zorder>
-   <zorder>Bet12</zorder>
-   <zorder>Bet21</zorder>
-   <zorder>Bet30</zorder>
-   <zorder>Bet18</zorder>
-   <zorder>Bet27</zorder>
-   <zorder>Bet33</zorder>
-   <zorder>Bet06</zorder>
-   <zorder>Bet15</zorder>
-   <zorder>Bet03</zorder>
-   <zorder>Bet24</zorder>
-   <zorder>Bet36</zorder>
-   <zorder>Bet09</zorder>
-   <zorder>Bet16</zorder>
-   <zorder>Bet04</zorder>
-   <zorder>Bet25</zorder>
-   <zorder>Bet28</zorder>
-   <zorder>Bet13</zorder>
    <zorder>Split12</zorder>
-   <zorder>Bet31</zorder>
-   <zorder>Bet19</zorder>
    <zorder>Row1</zorder>
    <zorder>Basket1</zorder>
-   <zorder>Bet22</zorder>
+   <zorder>Row2</zorder>
+   <zorder>BlackJack</zorder>
+   <zorder>Bet05</zorder>
+   <zorder>Bet33</zorder>
+   <zorder>Bet26</zorder>
+   <zorder>Bet32</zorder>
+   <zorder>Bet31</zorder>
    <zorder>Bet07</zorder>
+   <zorder>Bet24</zorder>
+   <zorder>Bet30</zorder>
+   <zorder>Bet03</zorder>
+   <zorder>Bet12</zorder>
+   <zorder>Bet36</zorder>
+   <zorder>Bet16</zorder>
+   <zorder>Bet04</zorder>
+   <zorder>Bet21</zorder>
+   <zorder>Bet29</zorder>
+   <zorder>Bet08</zorder>
    <zorder>Bet10</zorder>
    <zorder>Bet34</zorder>
-   <zorder>Bet17</zorder>
-   <zorder>Bet23</zorder>
-   <zorder>Bet32</zorder>
-   <zorder>Bet26</zorder>
-   <zorder>Bet08</zorder>
-   <zorder>Bet05</zorder>
-   <zorder>Bet00</zorder>
-   <zorder>Bet20</zorder>
+   <zorder>Bet18</zorder>
+   <zorder>Bet28</zorder>
    <zorder>Bet14</zorder>
-   <zorder>Row2</zorder>
-   <zorder>Bet02</zorder>
-   <zorder>Bet35</zorder>
+   <zorder>Bet27</zorder>
+   <zorder>Bet13</zorder>
    <zorder>Bet11</zorder>
-   <zorder>Bet29</zorder>
+   <zorder>Bet20</zorder>
+   <zorder>Bet15</zorder>
+   <zorder>Bet23</zorder>
+   <zorder>Bet35</zorder>
+   <zorder>Bet25</zorder>
+   <zorder>Bet02</zorder>
+   <zorder>Bet17</zorder>
+   <zorder>Bet06</zorder>
+   <zorder>Bet19</zorder>
+   <zorder>Bet09</zorder>
+   <zorder>Bet22</zorder>
    <zorder>Bet01</zorder>
+   <zorder>Bet00</zorder>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>823</width>
-     <height>37</height>
-    </rect>
-   </property>
-   <widget class="QMenu" name="menuFile">
-    <property name="title">
-     <string>File</string>
-    </property>
-    <addaction name="actionQuit"/>
-   </widget>
-   <addaction name="menuFile"/>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
   <action name="actionQuit">
    <property name="text">
     <string>Quit</string>

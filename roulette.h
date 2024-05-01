@@ -16,16 +16,19 @@ class Roulette : public QMainWindow
 public:
     Roulette(QWidget *parent = nullptr);
     ~Roulette();
-    int bet;
-    int* bets;
-    int* numbers;
-    int randomNumber;
-    int check;
+    // Variables that are modified in multiple parts of Roulette
+    int bet;            // allocated a seperate variable for straight up bets
+    int* bets;          // array storing all numbers that bets are placed on
+    int* numbers;       // wheel numbers (0-36)
+    int randomNumber;   // random number picked from numbers to determine roulette spin
+    int check;          // checking what type of bet is placed
     int balance;
     int betAmount;
-    int winnings;
+    int winnings;       // payout based on odds of placed bet
+    // Pixmap for images of roulette wheel
     QList<QPixmap> wheel;
     QString PlacedBet;
+    // Function to update text labels as game progresses
     void textUpdate();
 
 
@@ -33,14 +36,19 @@ private:
     Ui::Roulette *ui;
 
 public slots:
-    void loadlist();
+    void loadlist();    // loading all images for wheel outcomes
 
 private slots:
+    // Slider adjusting betAmount
     void on_BetSlider_valueChanged(int value);
+
+    // Buttons for other functions
     void on_Spin_clicked();
-    void on_Reset_clicked();
-    void on_actionQuit_triggered();
+    void on_Reset_clicked();        // Reset money to 1000
     void on_Home_clicked();
+    void on_BlackJack_clicked();    // Open BlackJack with same balance as roulette
+
+    // Buttons for placing bets
     void on_Bet00_clicked();
     void on_Bet01_clicked();
     void on_Bet02_clicked();
