@@ -13,7 +13,7 @@ L::L(QWidget *parent)
     ui->Lscreen->setPixmap(pix);
     ui->Lscreen->lower();
     ui->balanceLabel->setText("Balance: $" + QString::number(money, 'f', 2));
-    if(money == 0){
+    if(money < 0){
         ui->Play_Again->setDisabled(true);
     }
 }

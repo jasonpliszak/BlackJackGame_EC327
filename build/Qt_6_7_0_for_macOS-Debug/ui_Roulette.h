@@ -217,7 +217,7 @@ public:
         Bet01->setObjectName("Bet01");
         Bet01->setGeometry(QRect(53, 340, 51, 51));
         QFont font;
-        font.setFamilies({QString::fromUtf8("Kohinoor Gujarati")});
+        font.setFamilies({QString::fromUtf8("Arial")});
         font.setPointSize(14);
         font.setBold(true);
         Bet01->setFont(font);
@@ -772,555 +772,665 @@ public:
         Split23 = new QPushButton(centralwidget);
         Split23->setObjectName("Split23");
         Split23->setGeometry(QRect(70, 268, 16, 16));
+        QFont font1;
+        font1.setFamilies({QString::fromUtf8("Arial")});
+        Split23->setFont(font1);
         Split23->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Quad2 = new QPushButton(centralwidget);
         Quad2->setObjectName("Quad2");
         Quad2->setGeometry(QRect(100, 268, 16, 16));
+        Quad2->setFont(font1);
         Quad2->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Quad1 = new QPushButton(centralwidget);
         Quad1->setObjectName("Quad1");
         Quad1->setGeometry(QRect(100, 327, 16, 16));
+        Quad1->setFont(font1);
         Quad1->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split12 = new QPushButton(centralwidget);
         Split12->setObjectName("Split12");
         Split12->setGeometry(QRect(72, 328, 16, 16));
+        Split12->setFont(font1);
         Split12->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Quad3 = new QPushButton(centralwidget);
         Quad3->setObjectName("Quad3");
         Quad3->setGeometry(QRect(160, 327, 16, 16));
+        Quad3->setFont(font1);
         Quad3->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Quad4 = new QPushButton(centralwidget);
         Quad4->setObjectName("Quad4");
         Quad4->setGeometry(QRect(160, 268, 16, 16));
+        Quad4->setFont(font1);
         Quad4->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split45 = new QPushButton(centralwidget);
         Split45->setObjectName("Split45");
         Split45->setGeometry(QRect(131, 327, 16, 16));
+        Split45->setFont(font1);
         Split45->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split56 = new QPushButton(centralwidget);
         Split56->setObjectName("Split56");
         Split56->setGeometry(QRect(129, 268, 16, 16));
+        Split56->setFont(font1);
         Split56->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Quad5 = new QPushButton(centralwidget);
         Quad5->setObjectName("Quad5");
         Quad5->setGeometry(QRect(221, 327, 16, 16));
+        Quad5->setFont(font1);
         Quad5->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Quad6 = new QPushButton(centralwidget);
         Quad6->setObjectName("Quad6");
         Quad6->setGeometry(QRect(221, 268, 16, 16));
+        Quad6->setFont(font1);
         Quad6->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split1011 = new QPushButton(centralwidget);
         Split1011->setObjectName("Split1011");
         Split1011->setGeometry(QRect(254, 327, 16, 16));
+        Split1011->setFont(font1);
         Split1011->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split1112 = new QPushButton(centralwidget);
         Split1112->setObjectName("Split1112");
         Split1112->setGeometry(QRect(252, 268, 16, 16));
+        Split1112->setFont(font1);
         Split1112->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split78 = new QPushButton(centralwidget);
         Split78->setObjectName("Split78");
         Split78->setGeometry(QRect(190, 327, 16, 16));
+        Split78->setFont(font1);
         Split78->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Quad8 = new QPushButton(centralwidget);
         Quad8->setObjectName("Quad8");
         Quad8->setGeometry(QRect(281, 268, 16, 16));
+        Quad8->setFont(font1);
         Quad8->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Quad7 = new QPushButton(centralwidget);
         Quad7->setObjectName("Quad7");
         Quad7->setGeometry(QRect(281, 327, 16, 16));
+        Quad7->setFont(font1);
         Quad7->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split89 = new QPushButton(centralwidget);
         Split89->setObjectName("Split89");
         Split89->setGeometry(QRect(190, 268, 16, 16));
+        Split89->setFont(font1);
         Split89->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split1314 = new QPushButton(centralwidget);
         Split1314->setObjectName("Split1314");
         Split1314->setGeometry(QRect(311, 327, 16, 16));
+        Split1314->setFont(font1);
         Split1314->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Quad9 = new QPushButton(centralwidget);
         Quad9->setObjectName("Quad9");
         Quad9->setGeometry(QRect(340, 327, 16, 16));
+        Quad9->setFont(font1);
         Quad9->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Quad10 = new QPushButton(centralwidget);
         Quad10->setObjectName("Quad10");
         Quad10->setGeometry(QRect(340, 267, 16, 16));
+        Quad10->setFont(font1);
         Quad10->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Quad16 = new QPushButton(centralwidget);
         Quad16->setObjectName("Quad16");
         Quad16->setGeometry(QRect(520, 267, 16, 16));
+        Quad16->setFont(font1);
         Quad16->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split2223 = new QPushButton(centralwidget);
         Split2223->setObjectName("Split2223");
         Split2223->setGeometry(QRect(491, 327, 16, 16));
+        Split2223->setFont(font1);
         Split2223->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split1617 = new QPushButton(centralwidget);
         Split1617->setObjectName("Split1617");
         Split1617->setGeometry(QRect(373, 327, 16, 16));
+        Split1617->setFont(font1);
         Split1617->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split1718 = new QPushButton(centralwidget);
         Split1718->setObjectName("Split1718");
         Split1718->setGeometry(QRect(371, 267, 16, 16));
+        Split1718->setFont(font1);
         Split1718->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split1920 = new QPushButton(centralwidget);
         Split1920->setObjectName("Split1920");
         Split1920->setGeometry(QRect(431, 327, 16, 16));
+        Split1920->setFont(font1);
         Split1920->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split2021 = new QPushButton(centralwidget);
         Split2021->setObjectName("Split2021");
         Split2021->setGeometry(QRect(429, 267, 16, 16));
+        Split2021->setFont(font1);
         Split2021->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Quad12 = new QPushButton(centralwidget);
         Quad12->setObjectName("Quad12");
         Quad12->setGeometry(QRect(400, 267, 16, 16));
+        Quad12->setFont(font1);
         Quad12->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Quad13 = new QPushButton(centralwidget);
         Quad13->setObjectName("Quad13");
         Quad13->setGeometry(QRect(460, 327, 16, 16));
+        Quad13->setFont(font1);
         Quad13->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Quad11 = new QPushButton(centralwidget);
         Quad11->setObjectName("Quad11");
         Quad11->setGeometry(QRect(400, 327, 16, 16));
+        Quad11->setFont(font1);
         Quad11->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split1415 = new QPushButton(centralwidget);
         Split1415->setObjectName("Split1415");
         Split1415->setGeometry(QRect(309, 267, 16, 16));
+        Split1415->setFont(font1);
         Split1415->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Quad14 = new QPushButton(centralwidget);
         Quad14->setObjectName("Quad14");
         Quad14->setGeometry(QRect(460, 267, 16, 16));
+        Quad14->setFont(font1);
         Quad14->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Quad15 = new QPushButton(centralwidget);
         Quad15->setObjectName("Quad15");
         Quad15->setGeometry(QRect(520, 327, 16, 16));
+        Quad15->setFont(font1);
         Quad15->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split2324 = new QPushButton(centralwidget);
         Split2324->setObjectName("Split2324");
         Split2324->setGeometry(QRect(491, 267, 16, 16));
+        Split2324->setFont(font1);
         Split2324->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Quad21 = new QPushButton(centralwidget);
         Quad21->setObjectName("Quad21");
         Quad21->setGeometry(QRect(701, 326, 16, 16));
+        Quad21->setFont(font1);
         Quad21->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Quad22 = new QPushButton(centralwidget);
         Quad22->setObjectName("Quad22");
         Quad22->setGeometry(QRect(701, 267, 16, 16));
+        Quad22->setFont(font1);
         Quad22->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split3435 = new QPushButton(centralwidget);
         Split3435->setObjectName("Split3435");
         Split3435->setGeometry(QRect(732, 327, 16, 16));
+        Split3435->setFont(font1);
         Split3435->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split3536 = new QPushButton(centralwidget);
         Split3536->setObjectName("Split3536");
         Split3536->setGeometry(QRect(732, 267, 16, 16));
+        Split3536->setFont(font1);
         Split3536->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split3132 = new QPushButton(centralwidget);
         Split3132->setObjectName("Split3132");
         Split3132->setGeometry(QRect(672, 327, 16, 16));
+        Split3132->setFont(font1);
         Split3132->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split3233 = new QPushButton(centralwidget);
         Split3233->setObjectName("Split3233");
         Split3233->setGeometry(QRect(670, 267, 16, 16));
+        Split3233->setFont(font1);
         Split3233->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split2627 = new QPushButton(centralwidget);
         Split2627->setObjectName("Split2627");
         Split2627->setGeometry(QRect(550, 267, 16, 16));
+        Split2627->setFont(font1);
         Split2627->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Quad20 = new QPushButton(centralwidget);
         Quad20->setObjectName("Quad20");
         Quad20->setGeometry(QRect(641, 267, 16, 16));
+        Quad20->setFont(font1);
         Quad20->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Quad19 = new QPushButton(centralwidget);
         Quad19->setObjectName("Quad19");
         Quad19->setGeometry(QRect(641, 326, 16, 16));
+        Quad19->setFont(font1);
         Quad19->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split2526 = new QPushButton(centralwidget);
         Split2526->setObjectName("Split2526");
         Split2526->setGeometry(QRect(552, 327, 16, 16));
+        Split2526->setFont(font1);
         Split2526->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split2930 = new QPushButton(centralwidget);
         Split2930->setObjectName("Split2930");
         Split2930->setGeometry(QRect(611, 267, 16, 16));
+        Split2930->setFont(font1);
         Split2930->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Quad17 = new QPushButton(centralwidget);
         Quad17->setObjectName("Quad17");
         Quad17->setGeometry(QRect(581, 327, 16, 16));
+        Quad17->setFont(font1);
         Quad17->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split2829 = new QPushButton(centralwidget);
         Split2829->setObjectName("Split2829");
         Split2829->setGeometry(QRect(612, 326, 16, 16));
+        Split2829->setFont(font1);
         Split2829->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Quad18 = new QPushButton(centralwidget);
         Quad18->setObjectName("Quad18");
         Quad18->setGeometry(QRect(581, 267, 16, 16));
+        Quad18->setFont(font1);
         Quad18->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split3336 = new QPushButton(centralwidget);
         Split3336->setObjectName("Split3336");
         Split3336->setGeometry(QRect(700, 240, 16, 16));
+        Split3336->setFont(font1);
         Split3336->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split36 = new QPushButton(centralwidget);
         Split36->setObjectName("Split36");
         Split36->setGeometry(QRect(100, 241, 16, 16));
+        Split36->setFont(font1);
         Split36->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split1821 = new QPushButton(centralwidget);
         Split1821->setObjectName("Split1821");
         Split1821->setGeometry(QRect(400, 240, 16, 16));
+        Split1821->setFont(font1);
         Split1821->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split2427 = new QPushButton(centralwidget);
         Split2427->setObjectName("Split2427");
         Split2427->setGeometry(QRect(520, 240, 16, 16));
+        Split2427->setFont(font1);
         Split2427->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split1518 = new QPushButton(centralwidget);
         Split1518->setObjectName("Split1518");
         Split1518->setGeometry(QRect(340, 240, 16, 16));
+        Split1518->setFont(font1);
         Split1518->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split912 = new QPushButton(centralwidget);
         Split912->setObjectName("Split912");
         Split912->setGeometry(QRect(221, 241, 16, 16));
+        Split912->setFont(font1);
         Split912->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split69 = new QPushButton(centralwidget);
         Split69->setObjectName("Split69");
         Split69->setGeometry(QRect(160, 241, 16, 16));
+        Split69->setFont(font1);
         Split69->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split2124 = new QPushButton(centralwidget);
         Split2124->setObjectName("Split2124");
         Split2124->setGeometry(QRect(460, 240, 16, 16));
+        Split2124->setFont(font1);
         Split2124->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split2730 = new QPushButton(centralwidget);
         Split2730->setObjectName("Split2730");
         Split2730->setGeometry(QRect(581, 240, 16, 16));
+        Split2730->setFont(font1);
         Split2730->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split1215 = new QPushButton(centralwidget);
         Split1215->setObjectName("Split1215");
         Split1215->setGeometry(QRect(281, 241, 16, 16));
+        Split1215->setFont(font1);
         Split1215->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split3033 = new QPushButton(centralwidget);
         Split3033->setObjectName("Split3033");
         Split3033->setGeometry(QRect(641, 240, 16, 16));
+        Split3033->setFont(font1);
         Split3033->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split2629 = new QPushButton(centralwidget);
         Split2629->setObjectName("Split2629");
         Split2629->setGeometry(QRect(581, 299, 16, 16));
+        Split2629->setFont(font1);
         Split2629->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split1720 = new QPushButton(centralwidget);
         Split1720->setObjectName("Split1720");
         Split1720->setGeometry(QRect(400, 299, 16, 16));
+        Split1720->setFont(font1);
         Split1720->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split3235 = new QPushButton(centralwidget);
         Split3235->setObjectName("Split3235");
         Split3235->setGeometry(QRect(701, 299, 16, 16));
+        Split3235->setFont(font1);
         Split3235->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split58 = new QPushButton(centralwidget);
         Split58->setObjectName("Split58");
         Split58->setGeometry(QRect(160, 300, 16, 16));
+        Split58->setFont(font1);
         Split58->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split1417 = new QPushButton(centralwidget);
         Split1417->setObjectName("Split1417");
         Split1417->setGeometry(QRect(340, 299, 16, 16));
+        Split1417->setFont(font1);
         Split1417->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split25 = new QPushButton(centralwidget);
         Split25->setObjectName("Split25");
         Split25->setGeometry(QRect(100, 300, 16, 16));
+        Split25->setFont(font1);
         Split25->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split2932 = new QPushButton(centralwidget);
         Split2932->setObjectName("Split2932");
         Split2932->setGeometry(QRect(641, 299, 16, 16));
+        Split2932->setFont(font1);
         Split2932->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split2023 = new QPushButton(centralwidget);
         Split2023->setObjectName("Split2023");
         Split2023->setGeometry(QRect(460, 299, 16, 16));
+        Split2023->setFont(font1);
         Split2023->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split2326 = new QPushButton(centralwidget);
         Split2326->setObjectName("Split2326");
         Split2326->setGeometry(QRect(521, 299, 16, 16));
+        Split2326->setFont(font1);
         Split2326->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split811 = new QPushButton(centralwidget);
         Split811->setObjectName("Split811");
         Split811->setGeometry(QRect(221, 300, 16, 16));
+        Split811->setFont(font1);
         Split811->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split1114 = new QPushButton(centralwidget);
         Split1114->setObjectName("Split1114");
         Split1114->setGeometry(QRect(281, 300, 16, 16));
+        Split1114->setFont(font1);
         Split1114->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split2831 = new QPushButton(centralwidget);
         Split2831->setObjectName("Split2831");
         Split2831->setGeometry(QRect(641, 359, 16, 16));
+        Split2831->setFont(font1);
         Split2831->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split2528 = new QPushButton(centralwidget);
         Split2528->setObjectName("Split2528");
         Split2528->setGeometry(QRect(581, 359, 16, 16));
+        Split2528->setFont(font1);
         Split2528->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split1922 = new QPushButton(centralwidget);
         Split1922->setObjectName("Split1922");
         Split1922->setGeometry(QRect(460, 359, 16, 16));
+        Split1922->setFont(font1);
         Split1922->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split3134 = new QPushButton(centralwidget);
         Split3134->setObjectName("Split3134");
         Split3134->setGeometry(QRect(701, 359, 16, 16));
+        Split3134->setFont(font1);
         Split3134->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split2225 = new QPushButton(centralwidget);
         Split2225->setObjectName("Split2225");
         Split2225->setGeometry(QRect(520, 359, 16, 16));
+        Split2225->setFont(font1);
         Split2225->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split1619 = new QPushButton(centralwidget);
         Split1619->setObjectName("Split1619");
         Split1619->setGeometry(QRect(400, 359, 16, 16));
+        Split1619->setFont(font1);
         Split1619->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split1316 = new QPushButton(centralwidget);
         Split1316->setObjectName("Split1316");
         Split1316->setGeometry(QRect(340, 359, 16, 16));
+        Split1316->setFont(font1);
         Split1316->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split1013 = new QPushButton(centralwidget);
         Split1013->setObjectName("Split1013");
         Split1013->setGeometry(QRect(281, 360, 16, 16));
+        Split1013->setFont(font1);
         Split1013->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split47 = new QPushButton(centralwidget);
         Split47->setObjectName("Split47");
         Split47->setGeometry(QRect(160, 360, 16, 16));
+        Split47->setFont(font1);
         Split47->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split14 = new QPushButton(centralwidget);
         Split14->setObjectName("Split14");
         Split14->setGeometry(QRect(100, 360, 16, 16));
+        Split14->setFont(font1);
         Split14->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split710 = new QPushButton(centralwidget);
         Split710->setObjectName("Split710");
         Split710->setGeometry(QRect(221, 360, 16, 16));
+        Split710->setFont(font1);
         Split710->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         resultLabel = new QLabel(centralwidget);
         resultLabel->setObjectName("resultLabel");
         resultLabel->setGeometry(QRect(440, 10, 21, 21));
-        QFont font1;
-        font1.setFamilies({QString::fromUtf8("Kohinoor Gujarati")});
-        font1.setPointSize(18);
-        font1.setBold(true);
-        resultLabel->setFont(font1);
+        QFont font2;
+        font2.setFamilies({QString::fromUtf8("Arial")});
+        font2.setPointSize(18);
+        font2.setBold(true);
+        resultLabel->setFont(font2);
         resultLabel->setStyleSheet(QString::fromUtf8("color:white;"));
         Six8 = new QPushButton(centralwidget);
         Six8->setObjectName("Six8");
         Six8->setGeometry(QRect(521, 388, 16, 16));
+        Six8->setFont(font1);
         Six8->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Six5 = new QPushButton(centralwidget);
         Six5->setObjectName("Six5");
         Six5->setGeometry(QRect(338, 388, 16, 16));
+        Six5->setFont(font1);
         Six5->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Six7 = new QPushButton(centralwidget);
         Six7->setObjectName("Six7");
         Six7->setGeometry(QRect(460, 388, 16, 16));
+        Six7->setFont(font1);
         Six7->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Six11 = new QPushButton(centralwidget);
         Six11->setObjectName("Six11");
         Six11->setGeometry(QRect(701, 388, 16, 16));
+        Six11->setFont(font1);
         Six11->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Street4 = new QPushButton(centralwidget);
         Street4->setObjectName("Street4");
         Street4->setGeometry(QRect(252, 388, 16, 16));
+        Street4->setFont(font1);
         Street4->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Street10 = new QPushButton(centralwidget);
         Street10->setObjectName("Street10");
         Street10->setGeometry(QRect(613, 388, 16, 16));
+        Street10->setFont(font1);
         Street10->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Six2 = new QPushButton(centralwidget);
         Six2->setObjectName("Six2");
         Six2->setGeometry(QRect(160, 388, 16, 16));
+        Six2->setFont(font1);
         Six2->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Street12 = new QPushButton(centralwidget);
         Street12->setObjectName("Street12");
         Street12->setGeometry(QRect(732, 388, 16, 16));
+        Street12->setFont(font1);
         Street12->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Six3 = new QPushButton(centralwidget);
         Six3->setObjectName("Six3");
         Six3->setGeometry(QRect(220, 388, 16, 16));
+        Six3->setFont(font1);
         Six3->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Six4 = new QPushButton(centralwidget);
         Six4->setObjectName("Six4");
         Six4->setGeometry(QRect(280, 388, 16, 16));
+        Six4->setFont(font1);
         Six4->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Street7 = new QPushButton(centralwidget);
         Street7->setObjectName("Street7");
         Street7->setGeometry(QRect(429, 388, 16, 16));
+        Street7->setFont(font1);
         Street7->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Six9 = new QPushButton(centralwidget);
         Six9->setObjectName("Six9");
         Six9->setGeometry(QRect(581, 388, 16, 16));
+        Six9->setFont(font1);
         Six9->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Street1 = new QPushButton(centralwidget);
         Street1->setObjectName("Street1");
         Street1->setGeometry(QRect(70, 388, 16, 16));
+        Street1->setFont(font1);
         Street1->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Street5 = new QPushButton(centralwidget);
         Street5->setObjectName("Street5");
         Street5->setGeometry(QRect(309, 388, 16, 16));
+        Street5->setFont(font1);
         Street5->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Six10 = new QPushButton(centralwidget);
         Six10->setObjectName("Six10");
         Six10->setGeometry(QRect(641, 388, 16, 16));
+        Six10->setFont(font1);
         Six10->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Six6 = new QPushButton(centralwidget);
         Six6->setObjectName("Six6");
         Six6->setGeometry(QRect(399, 388, 16, 16));
+        Six6->setFont(font1);
         Six6->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Six1 = new QPushButton(centralwidget);
         Six1->setObjectName("Six1");
         Six1->setGeometry(QRect(100, 388, 16, 16));
+        Six1->setFont(font1);
         Six1->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Street9 = new QPushButton(centralwidget);
         Street9->setObjectName("Street9");
         Street9->setGeometry(QRect(550, 389, 16, 16));
+        Street9->setFont(font1);
         Street9->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Street2 = new QPushButton(centralwidget);
         Street2->setObjectName("Street2");
         Street2->setGeometry(QRect(131, 388, 16, 16));
+        Street2->setFont(font1);
         Street2->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Street6 = new QPushButton(centralwidget);
         Street6->setObjectName("Street6");
         Street6->setGeometry(QRect(371, 388, 16, 16));
+        Street6->setFont(font1);
         Street6->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Street3 = new QPushButton(centralwidget);
         Street3->setObjectName("Street3");
         Street3->setGeometry(QRect(190, 388, 16, 16));
+        Street3->setFont(font1);
         Street3->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Street8 = new QPushButton(centralwidget);
         Street8->setObjectName("Street8");
         Street8->setGeometry(QRect(491, 388, 16, 16));
+        Street8->setFont(font1);
         Street8->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Street11 = new QPushButton(centralwidget);
         Street11->setObjectName("Street11");
         Street11->setGeometry(QRect(670, 388, 16, 16));
+        Street11->setFont(font1);
         Street11->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Basket1 = new QPushButton(centralwidget);
         Basket1->setObjectName("Basket1");
         Basket1->setGeometry(QRect(42, 328, 16, 16));
+        Basket1->setFont(font1);
         Basket1->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split01 = new QPushButton(centralwidget);
         Split01->setObjectName("Split01");
         Split01->setGeometry(QRect(42, 360, 16, 16));
+        Split01->setFont(font1);
         Split01->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split02 = new QPushButton(centralwidget);
         Split02->setObjectName("Split02");
         Split02->setGeometry(QRect(42, 300, 16, 16));
+        Split02->setFont(font1);
         Split02->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Basket2 = new QPushButton(centralwidget);
         Basket2->setObjectName("Basket2");
         Basket2->setGeometry(QRect(42, 268, 16, 16));
+        Basket2->setFont(font1);
         Basket2->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Split03 = new QPushButton(centralwidget);
         Split03->setObjectName("Split03");
         Split03->setGeometry(QRect(42, 241, 16, 16));
+        Split03->setFont(font1);
         Split03->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         Quad0 = new QPushButton(centralwidget);
         Quad0->setObjectName("Quad0");
         Quad0->setGeometry(QRect(41, 389, 16, 16));
+        Quad0->setFont(font1);
         Quad0->setStyleSheet(QString::fromUtf8("border:none;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.494, stop:0 rgba(0, 110, 206, 255), stop:1 rgba(0, 167, 255, 255));"));
         WalletLabel = new QLabel(centralwidget);
         WalletLabel->setObjectName("WalletLabel");
-        WalletLabel->setGeometry(QRect(700, 10, 111, 20));
+        WalletLabel->setGeometry(QRect(630, 10, 181, 20));
         WalletLabel->setFont(font);
         WalletLabel->setStyleSheet(QString::fromUtf8("color:white;"));
         Reset = new QPushButton(centralwidget);
@@ -1336,11 +1446,11 @@ public:
         Reset->setChecked(false);
         BetLabel = new QLabel(centralwidget);
         BetLabel->setObjectName("BetLabel");
-        BetLabel->setGeometry(QRect(10, 10, 381, 20));
-        QFont font2;
-        font2.setFamilies({QString::fromUtf8("Kohinoor Gujarati")});
-        font2.setPointSize(18);
-        BetLabel->setFont(font2);
+        BetLabel->setGeometry(QRect(10, 10, 601, 20));
+        QFont font3;
+        font3.setFamilies({QString::fromUtf8("Arial")});
+        font3.setPointSize(18);
+        BetLabel->setFont(font3);
         BetLabel->setStyleSheet(QString::fromUtf8("color:white;"));
         WheelLabel = new QLabel(centralwidget);
         WheelLabel->setObjectName("WheelLabel");
@@ -1348,20 +1458,20 @@ public:
         WinLabel = new QLabel(centralwidget);
         WinLabel->setObjectName("WinLabel");
         WinLabel->setGeometry(QRect(350, 30, 121, 41));
-        QFont font3;
-        font3.setFamilies({QString::fromUtf8("Kohinoor Gujarati")});
-        font3.setPointSize(24);
-        font3.setBold(true);
-        WinLabel->setFont(font3);
+        QFont font4;
+        font4.setFamilies({QString::fromUtf8("Kohinoor Gujarati")});
+        font4.setPointSize(24);
+        font4.setBold(true);
+        WinLabel->setFont(font4);
         WinLabel->setStyleSheet(QString::fromUtf8("color:rgb(0, 143, 0)"));
         OddsLabel = new QLabel(centralwidget);
         OddsLabel->setObjectName("OddsLabel");
-        OddsLabel->setGeometry(QRect(50, 40, 91, 20));
-        QFont font4;
-        font4.setFamilies({QString::fromUtf8("Kohinoor Gujarati")});
-        font4.setPointSize(16);
-        font4.setBold(true);
-        OddsLabel->setFont(font4);
+        OddsLabel->setGeometry(QRect(50, 40, 241, 20));
+        QFont font5;
+        font5.setFamilies({QString::fromUtf8("Arial")});
+        font5.setPointSize(16);
+        font5.setBold(true);
+        OddsLabel->setFont(font5);
         OddsLabel->setStyleSheet(QString::fromUtf8("color:white;"));
         Home = new QPushButton(centralwidget);
         Home->setObjectName("Home");
@@ -1384,7 +1494,7 @@ public:
         BetSlider->setOrientation(Qt::Vertical);
         BetValueLabel = new QLabel(centralwidget);
         BetValueLabel->setObjectName("BetValueLabel");
-        BetValueLabel->setGeometry(QRect(50, 110, 131, 20));
+        BetValueLabel->setGeometry(QRect(50, 110, 201, 20));
         BetValueLabel->setFont(font);
         BetValueLabel->setStyleSheet(QString::fromUtf8("color:white;"));
         Background = new QLabel(centralwidget);
@@ -1563,7 +1673,7 @@ public:
         Bet01->raise();
         menubar = new QMenuBar(Roulette);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 823, 24));
+        menubar->setGeometry(QRect(0, 0, 823, 37));
         menuFile = new QMenu(menubar);
         menuFile->setObjectName("menuFile");
         Roulette->setMenuBar(menubar);
