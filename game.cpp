@@ -33,7 +33,7 @@ Game::Game(QWidget *parent)
     ui->Deal->setDisabled(true);
 
     ui->BalanceLabel->setText("Balance: $" + QString::number(money, 'f', 2));
-    ui->BetSlider->setRange(1, money); // Set the range
+    ui->BetSlider->setRange(1, money); // Set the range so you can't bet more than you have
 }
 
 void Game::on_Deal_clicked()
@@ -47,9 +47,9 @@ void Game::on_Deal_clicked()
     //draw player cards
     card p1 = Deck.draw();
     ui->PC1->setPixmap(p1.getImg()); //sets image with first player card
-    User.addCard(p1);
+    User.addCard(p1); //add card to player hand
 
-    card p2 = Deck.draw(); //FIX THIS WHEN DONE WITH SPLIT TESTING
+    card p2 = Deck.draw();
     ui->PC2->setPixmap(p2.getImg());
     User.addCard(p2);
     int pscore = User.getVal();
@@ -94,6 +94,7 @@ void Game::on_Deal_clicked()
         ui->Stand->setDisabled(true);
         QTimer::singleShot(1500, this, &Game::delayedBJW);
     }
+    //check if the two cards are splittable, and check if the player has enough money to split
     if ((p1.getRank() == p2.getRank() && money >= bet)) {
         ui->Split->setDisabled(false);
     }
@@ -101,19 +102,19 @@ void Game::on_Deal_clicked()
 
 void Game::on_Split_clicked()
 {
-    splitFlag = true;
-    endCallFlag = false;
+    splitFlag = true; //set splitflag
+    endCallFlag = false; //set end screen called flag
     ui->Split->setDisabled(true);
-    money = money - bet;
-    bet = 2 * bet;
+    money = money - bet; //reduce balance
+    bet = 2 * bet; //double the bed
     ui->BetValue->setText("Bet Value: $" + QString::number(bet));
     ui->BalanceLabel->setText("Balance: $" + QString::number(money, 'f', 2));
-    QPixmap bcard(":/images/blank.png");
-    card s1 = User.getCards()[1];
+    QPixmap bcard(":/images/blank.png"); //load blank to display
+    card s1 = User.getCards()[1]; //transfer card to split hand
     User.removeCard();
-    ui->PC2->setPixmap(bcard);
+    ui->PC2->setPixmap(bcard); //replace player's 2nd card with nothing
     split.addCard(s1);
-    ui->SC1->setPixmap(s1.getImg());
+    ui->SC1->setPixmap(s1.getImg()); //set the player's second card as the 1st of split hand
     ui->PlayerScore->setText("Score: " + QString::number(User.getVal()));
     ui->SplitScore->setText("Score: " + QString::number(split.getVal()));
     hitcounter--; //hitcounter decrement to ensure on_Hit_clicked() works for split hand
@@ -124,12 +125,12 @@ void Game::on_Hit_clicked()
     hitcounter++; //amount of times hit has been pressed
     int pscore = 0;
     if (!splitFlag) {
-        ui->Split->setDisabled(true);
+        ui->Split->setDisabled(true); //make sure to disable split if player chose not to split
     }
-    //initialize cards outside of case statement (these are all test cards that cannot affect score value)
-    if (spStandFlag) {
+
+    if (spStandFlag) { //hitting for split hand commences once you stand on main hand
         int sscore = 0;
-        card s2;
+        card s2; //initialize cards outside of case statement (these are all test cards that cannot affect score value)
         card s3;
         card s4;
         card s5;
@@ -182,7 +183,7 @@ void Game::on_Hit_clicked()
         }
         return;
     }
-    card p2; //if split
+    card p2; //if split, this card is used
     card p3;
     card p4;
     card p5;
@@ -193,7 +194,7 @@ void Game::on_Hit_clicked()
     card p10;
     card p11; //11 cards to catch the most extreme edge case of four A, four 2, three 3
 
-    //switch statement to handle multiple hits as needed
+    //case statement to handle multiple hits as needed
     switch (hitcounter) {
     case 0: //if split
         p2 = Deck.draw();
@@ -270,7 +271,7 @@ void Game::on_Hit_clicked()
     //bust logic
     if (User.getVal() > 21) {
         if (splitFlag) {
-            spStandFlag = true;
+            spStandFlag = true; //set stand flag if you bust your main hand on a split
             QTimer::singleShot(1500, this, &Game::delayedLose);
             hitcounter = 0;
             return;
@@ -284,12 +285,12 @@ void Game::on_Hit_clicked()
 void Game::on_Stand_clicked()
 {
     if (splitFlag && !spStandFlag) {
-        spStandFlag = true;
-        hitcounter = 0;
+        spStandFlag = true; //set stand flag to move onto split hand handling
+        hitcounter = 0; //reset hit counter for split hand
         return;
     }
     if (!splitFlag) {
-        ui->Split->setDisabled(true);
+        ui->Split->setDisabled(true); //ensures the player cannot split after pressing stand
     }
 
     if ((splitFlag == false) or (splitFlag == true && spStandFlag == true)) {
@@ -383,15 +384,15 @@ void Game::on_Stand_clicked()
                    && User.getVal() <= 21) { //ensures bust from split hand not counted
             QTimer::singleShot(1500, this, &Game::delayedWin);
         }
-        //implement code to check against split hand if split flag is true
+        //check against split hand as well if split flag is true
         if (splitFlag) {
             if (dscore > 21 && split.getVal() <= 21) { //dealer bust
                 QTimer::singleShot(1500, this, &Game::delayedWin);
-            } else if (dscore == split.getVal()) { //ensures bust from split hand not counted
+            } else if (dscore == split.getVal()) {
                 QTimer::singleShot(1500, this, &Game::delayedTie);
-            } else if (dscore > split.getVal()) { //ensures bust from split hand not counted
+            } else if (dscore > split.getVal()) {
                 QTimer::singleShot(1500, this, &Game::delayedLose);
-            } else if (dscore < split.getVal()) { //ensures bust from split hand not counted
+            } else if (dscore < split.getVal()) {
                 QTimer::singleShot(1500, this, &Game::delayedWin);
             }
         }
@@ -401,7 +402,7 @@ void Game::on_Stand_clicked()
 //delayed game over screen functions to use with QTimer::singleShot()
 void Game::delayedLose()
 {
-    if (!endCallFlag) {
+    if (!endCallFlag) { //split hand handling
         bet = bet / 2;
         ui->BetValue->setText("Bet Value: $" + QString::number(bet));
         ui->BalanceLabel->setText("Balance: $" + QString::number(money, 'f', 2));
@@ -415,7 +416,7 @@ void Game::delayedLose()
 
 void Game::delayedTie()
 {
-    if (!endCallFlag) {
+    if (!endCallFlag) { //split hand handling
         money = money + bet / 2;
         bet = bet / 2;
         ui->BetValue->setText("Bet Value: $" + QString::number(bet));
@@ -431,7 +432,7 @@ void Game::delayedTie()
 
 void Game::delayedWin()
 {
-    if (!endCallFlag) {
+    if (!endCallFlag) { //split hand handling
         money = money + bet;
         bet = bet / 2;
         ui->BetValue->setText("Bet Value: $" + QString::number(bet));
@@ -445,7 +446,7 @@ void Game::delayedWin()
     this->close();
 }
 
-void Game::delayedBJW()
+void Game::delayedBJW() //win on blackjack from draw
 {
     money = money + (1.5 * bet);
     L *gameover = new L;
@@ -458,7 +459,7 @@ Game::~Game()
     delete ui;
 }
 
-void Game::on_BetSlider_valueChanged(int value)
+void Game::on_BetSlider_valueChanged(int value) //betslider implementation
 {
     bet = value;
     ui->BetValue->setText("Bet Value: $" + QString::number(bet, 'f', 2));
@@ -467,14 +468,14 @@ void Game::on_BetSlider_valueChanged(int value)
     }
 }
 
-void Game::on_Home_clicked()
+void Game::on_Home_clicked() //return to home
 {
     MainWindow *main = new MainWindow;
     main->show();
     this->close();
 }
 
-void Game::on_openRoulette_clicked()
+void Game::on_openRoulette_clicked() //switch to playing roulette
 {
     Roulette *roulette = new Roulette;
     roulette->show();
